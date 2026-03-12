@@ -1,0 +1,430 @@
+=== Character Creation ===
+
+Keine - 'Before you start your adventure, there's something you need to do.
+What race are you? What class are you? What stats do you have?
+How difficult your quest is going to be? Let's answer those questions.'
+
+***** <Difficulty>
+=== Difficulty Level ===
+
+Keine - 'First of all, let's pick the difficulty level of your quest.
+The difficulties are Easy, Normal, Hard, Lunatic and Extra.
+Here's more detailed description:
+
+  "Easy" is a simple mode for training.
+You are unnaturally strong, your enemies are weak; your quest will be easy.
+Also, even if you get defeated, you still can continue. Feel free to pick
+this difficulty level if you're a complete newcomer. 
+By the way, once you defeat Yukari Yakumo at dungeon level 50 in this mode, 
+you've cleared the game. You can't go any further. Also, your score will be
+extremely lowered.
+
+  "Normal" is normal mode. That being said, it's notably easier compared
+to Hengband. Enemy health is only 75% of the original. Also, enemies cannot
+cast spells or use breath attacks several times in a row without giving you
+a turn. You're free to attack without worrying too much about what elements
+you're vulnerable to.
+Once you defeat Yukari Yakumo in this mode, it counts as you having cleared
+the game, but you still can go further on. If you play carefully enough, you
+should clear this difficulty with comparative ease.
+
+  "Hard" is, more or less, around the same level as Hengband.
+Enemies learn what elements are effective against you and won't use
+ineffective attacks. You also might get hit by multiple powerful attacks in
+a row from a fast-moving enemy. There also will be strong enemies that easily
+can defeat you in no time if you're careless.
+Score is doubled compared to Normal.
+
+  "Lunatic" is close the the 'Nightmare Mode' from Hengband.
+All enemies get +5 to speed, and their health is doubled, with an upper limit
+of 30000. They always start out awake and know all of your vulnerabilities
+from the start. That's not all; powerful enemies might be lurking around
+early dungeon levels. If you run into one, start praying.
+
+On top of that, bad things can happen at midnight.
+If you sleep at an inn, you see insanity-inducing nightmares.
+Stat sustaining abilities won't always work, and stat drain might end up
+being permanent.
+Mutations can occasionally be incurable.
+You are more likely to get caught off-guard by summoned enemies or being
+ambushed.
+If you dig up dungeon walls, you may cause a cave-in.
+Maintenance cost for followers is doubled.
+
+Feel free to try if you've gotten used to the game and miss getting defeated
+in completely unreasonable ways. Score is multiplied eight times compared to
+Normal difficulty.
+
+  "Extra" is an extremely special game mode with its own unique rules.
+Explaining it would take too long, so we'll do it somewhere else. Handling
+consumables and equipment will be far more important in this mode; it's a
+difficulty you can attempt after clearing Hard mode several times.
+Score is quadrupled compared to Normal difficulty.'
+
+
+***** <Status_main>
+=== Primary Stats ===
+
+Keine - 'Next, you'll have to pick your race and class, but let's take a look
+at your stats first. You can say they're the statistics representing your
+abilities.
+
+We'll start with the 6 primary stats:
+Strength, Intelligence, Wisdom, Dexterity, Constitution, and Charisma.
+Their interpretation and role have changed slightly from Hengband.
+
+- "Strength" is your physical strength.
+It affects your combat attack power, equipment weight you're comfortable with,
+amount of weapon attacks per round, and how much weight you can comfortably
+carry around.
+Of course, it's important for warriors, but since your spell MP cost gets
+higher if you're wearing too heavy equipment, mages can't neglect it either.
+
+- "Intelligence" represents how smart are you and how good is your memory.
+It affects spell failure rate, amount of spells you can learn, success rate
+for magic devices and so on.
+It's very important for spellcasters, and warriors might not need it as much.
+In contrast to Hengband, 'priestly' classes like Shrine Maidens still use 
+Intelligence to calculate spell failure rate.
+
+- "Wisdom" is your spiritual power and faith.
+It affects amount of MP and protection from magic.
+It's not that important for pure warriors, but other classes will need it.
+In particular, it's directly linked to combat capability for pure mages.
+
+- "Dexterity" is both your manual dexterity and agility in general.
+It affects armor class, amount of weapon attack per round, disarming skill,
+and so on.
+It's important for warrior classes, but spellcasters don't need it as much.
+If it's too low, you might end up crying after a thief steals something
+important from you.
+
+- "Constitution" is your physical sturdiness.
+It affects your HP and how quickly you recover from status abnormalities.
+Naturally, it's important for warriors, but it's vital for spellcasters as
+well. Past midgame, you'll be in danger unless you have enough HP left;
+this is a stat you can't neglect.
+
+- "Charisma" is your attractiveness and popularity.
+It mainly affects buying/selling prices in stores. If your charisma is low,
+you might have trouble getting enough money.
+Also, the unique classes we'll talk about later on have many special
+abilities that increase in power depending on your charisma.
+After all, "Danmaku is a contest of beauty".
+
+Those stats will occasionally increase as you level up.
+They also might increase if you drink a magical potion.
+Maximum stat value, without taking race/class/personality/equipment
+modifiers into account, is 30.
+With those modifiers, the maximum is 40; there are some special ways to
+temporarily increase them up to 50.
+
+By the way, in original Hengband, stats beyond 18 were shown as, for example,
+'18/40'; they went up to '18/***', never reaching 19.
+
+It was a reference to D&D setting that '19 is reserved for gods', but
+there already are gods in Gensoukyou, so...'
+
+***** <Status_other>
+=== Other Parameters ===
+
+Keine - 'Next, let's talk about parameters other than primary stats.
+If you're a complete newcomer, feel free to skip this.
+Come back once you've reached around dungeon level 30.
+
+- "Stealth" is the ability to avoid waking up enemies.
+If your stealth is low, nearby enemies will keep waking up and coming
+after you, likely making dungeon exploration harder.
+Stealth is affected by your race, class and equipment.
+There are very few classes that increase stealth as they level up.
+
+- "Speed" is the ability to act quickly. +10 makes you act twice as often,
++20 makes you act three times as often.
+It doesn't affect just your movement, it affects all actions you perform.
+It's very important when going against powerful enemies.
+Equipment with speed bonus will be mainly available post midgame, in early
+game you can temporarily increase your speed with something like 
+'Potion of Speed'.
+Once you go very deep into the dungeon, you want speed of at least +20.
+Once you reach +30, raising it further won't have much effect.
+
+- "Infravision" is the ability to see warm-blooded living beings in
+darkness. +1 to infravision lets you see enemies from distance of 10 feet, 
+or one grid on the screen.
+It's somewhat useful in early game, but past midgame there will be many
+cold-blooded enemies like demons and undead.
+You'll have to get other means of sensing enemies like telepathy by then.
+
+- "Tunneling" is the ability to dig through walls. The higher it is, the
+faster you dig up walls.
+In order to dig up treasures buried in walls, you have to raise this parameter
+by, for example, wielding a digging tool.
+Past midgame, it's not going to be very useful unless it's high enough.
+
+- "Searching" is the ability to discover hidden things.
+If it is high, you'll have easier time discovering traps and hidden doors,
+and you'll be able to quicker get a general feeling about the level.
+Also, you'll find more special items (like materials) in dungeons.
+You can't have too much of Searching, but you shouldn't be too concerned
+with having low Searching either.
+It's going to be more important on Extra difficulty.
+
+- "Magic Devices" is the ability to use magic devices.
+It affects your success rate of using staves/wands/rods or activating
+equipped items.
+It's not that important in early game, but becomes a very vital parameter
+at endgame. Deep in the dungeon, no matter how strong you are, you always
+might run into enemies you can't handle; you need powerful magic devices
+like Staves of *Destruction* or Staves of Healing.
+Pure warriors aren't good at this, so you'll need to raise this skill with 
+equipment.
+
+- "Protection from Magic" (also can be called "Saving Throw") represents
+your resistance to magic.
+It doesn't protect you from magic in general, though; it lets you resist
+effects like 'curse' or 'mental attack'/'mind blasting'.
+If you manage to resist the effect, you take no damage.
+There will be many powerful attacks past midgame, so you never can have
+enough of this skill.
+Its value mainly depends on you race, class, level, and wisdom.
+Some equipment can raise your protection from magic, and being temporarily
+'blessed' will raise it as well.
+Equipment with 'anti-magic' also boosts it, but it makes you unable to use
+magic yourself.
+
+- "Disarming" is the ability to disarm traps and unlock doors.
+Mainly depends on your race, class, level and dexterity. Some equipment can
+raise your disarming skill.
+However, it's not that useful past midgame. It's faster and safer to disarm
+using magic devices.
+
+- "Fighting" is your skill at martial arts and weapon combat.
+It affects your accuracy, indirectly increasing attack power.
+It is mainly dependent on your class and level, but in early game you can't
+ignore your racial modifier as well.
+Oni and vampires are good at it, magicians and inchlings aren't.
+
+- "Shooting" is your skill at shooting or throwing.
+It also affects your accuracy and mainly depends on your class and level.
+
+- "HP" should be obvious. Once you go below zero, it's game over.
+Amount of HP depends on your constitution, race and class.
+An oni and an inchling of the same level, class and constitution
+will have very different amounts of HP.
+
+- "MP" should be obvious as well. You can't cast spells if you don't have
+enough.
+Amount of MP depends mainly on level, class, and wisdom. Your race and class
+wisdom modifier also affects it somewhat.
+Spells usually use MP, but some class special abilities might use HP instead.
+Racial powers mainly use MP; if you don't have enough, they use HP as well.
+Even warriors have a bit of MP, but they probably aren't going to use it
+unless wielding a 'force-branded' weapon.
+Spells, special abilities and racial powers will be covered in details
+later on.
+
+- "Experience" should sound familiar. It is required to raise your level.
+In-game, this value is called both 'experience' and 'life force'.
+It's a bit hard to interpret; think of it as you like.
+It can temporarily decrease if you get hit by nether element attacks or 
+attacked by undead.
+If you drink a Potion of Restore Life Levels, it will return to normal.
+
+- "AC" is short for Armor Class. The higher it is, the less likely you are
+to get hit by enemy melee attacks. Its effect becomes less noticeable once
+you go past 150.
+
+Those are your parameters.
+You can check those values with 'C' command.'
+
+***** <Race>
+=== Races ===
+
+Keine - 'Various beings live in Gensoukyou.
+At this point, pick which race you are.
+Race greatly affects your stats, class aptitude, and resistance to enemy 
+attacks. If you're not used to adventuring, pick a powerful race that gains
+levels slowly like Oni, Great-Youkai or Celestial.
+Races with good hearing like Beastman or Moon-Rabbit can detect enemies.
+Humans, Fairies and Inchlings have low stats, and races like Vampires or
+Youkai-Dolls have very specific games, so it's probably to leave them for
+later until you get used to the game.
+That being said, you also can have fun by picking the one you like the most
+without thinking too much about it.
+
+Races will be explored in more details later on.'
+
+***** <Class>
+=== Classes ===
+
+Keine - 'Picking your class is very important.
+Different classes can have completely different strategies for clearing the
+dungeon.
+
+For warrior classes, you need a good weapon and high enough strength, 
+dexterity and constitution. In early game, you'll be able to deal with most 
+of the enemies by hitting them, but it'll be tough past midgame once enemies
+start using various special attacks.
+
+Spellcaster classes require high intelligence and wisdom, and they fight
+by using many spells. You have to properly assess the situation by observing
+both your and enemy strength. You'll get plenty of tools to deal with various
+situations past midgame, but you'll have to get used to properly utilizing
+them.
+
+There also are classes competent both with weapon combat and spellcasting,
+and some classes have their own special way of combat. If you're not that
+experienced, pick a warrior class like Warrior or Marksman.
+
+Classes will be explored in more details later on.
+
+Race/class characteristics are roughly described at the point you pick them.
+By pressing '~' during game and picking 'About yourself' you can check
+them again.'
+
+***** <UniqueClass>
+=== What are Unique Classes? ===
+
+Keine - 'There are other special classes specific to Gensouband.
+They're the girls of Gensoukyou known due to many incidents.
+If you're one of them, say your name.
+They have their own special class, and their race, gender and name are fixed.
+Those classes have their own parameters, magic realms, special abilities and
+other unique characteristics; they're generally called 'unique classes'.
+There are over 100 unique classes right now, and the amount is going to
+increase as new Touhou Project material comes out.'
+
+***** <Outsider>
+=== Who are Outsiders? ===
+
+Keine - 'What? How did you get here without having heard of Gensoukyou?
+Right, you're an human who came here from the Outside World?
+
+It'd be the best for you to just come back alive; go to south-east from the
+Human Village to the Hakurei Shrine.
+The shrine maiden, Reimu Hakurei, will send you back outside if you ask her.
+Just don't even think of getting involved in the incident, okay?'
+
+***** <Personality>
+=== Personality ===
+
+Keine - 'You might be calculating or you might be quick to pick a fight.
+Personalities like this slightly affect your parameters. Well, pick the one
+you like.
+The 'Munchkin' personality ridiculously powers you up in all aspects; think
+of it as a training mode.
+
+Several unique classes can choose a specific unique personality, which can
+significantly change their parameters and special abilities.
+
+There also are some other obviously weird personalities, but I can't recommend
+them to new players.'
+
+***** <Realm>
+=== Choosing your Magic Realm ===
+
+Keine - 'Several classed can learn spells.
+In this context, the 'spells' refers to magic you learn from a spellbook
+that you can use with 'm' command when you are carrying that spellbook and
+have enough MP.
+You can't learn spells unless you reach high enough level, and you will often
+fail to cast them properly unless you're smart enough.
+There are some other restrictions, but those spells are powerful and diverse.
+If you're not an experienced adventurer, classes that don't cast spells will
+be easier for you to handle, but you eventually want to learn how to use
+spellcasters.
+
+Spells are divided in 3 major realms - Arcane Arts, Hermit Arts, 
+and Sorcery Arts.
+Arcane Arts has the Elements, Divination, Enchantment and Summoning realms.
+Hermit Arts has the Mysticism, Life, Exorcism and Nature realms.
+Sorcery Arts has the Transformation, Darkness, Necromancy and Chaos realms.
+Each realm has 4 spellbooks - from the 1st volume to the final one, and each
+of the spellbooks has 8 spells in it.
+
+Those who are familiar with Hengband probably already understand that,
+but Gensouband greatly changes the magic realms.
+Chaos is basically the same as Hengband's Chaos realm.
+Life and Nature are 50%+ the same as the corresponding Hengband realms.
+Summoning resembles Trump realm, Enchantment resembles Craft realm, Exorcism
+resemebles Crusade realm.
+Many of the other realms have been greatly changed or replaced by new ones.
+
+Out of those 12 realms, you'll be able to study only one of them you choose.
+However, several classes like Mage, Teacher, Shrine-Maiden can study 2
+realms. You learn spells from your second realm at a slightly slower pace, but
+you can change it at any time. However, once you've changed it, you'll forget
+all spells you've learned from your previous realm.
+There's a limit on how many spells you can learn in total, so I don't
+recommend changing your realms without a good reason. Also, if your second
+realm belongs to a different major realm than your first, its spells will
+be harder for you to cast. Keep that in mind.
+
+Classes have their own aptitudes to the magic realms.
+Let's take a look at an Explorer and a Mage studying realm of Elements.
+Even if they have the same intelligence, Explorer will have to be at higher
+level to learn spells compared to Mage; MP cost will be higher as well,
+along with failure rate. And several high-end spells will be simply
+unavailable.
+
+Races also have aptitudes, though not to the same extent.
+For example, youkai are bad at Hermit Arts but good at Sorcery Arts.
+Hermits and Celestial have it the other way around.
+Magicians are very good at Arcane Arts, but still can use other realms
+with some level of competence.
+
+Version 1.1.08 introduced a 13th realm, 'Occult'.
+
+That's it for the general description.
+Magic will be described in more details later on.'
+
+
+***** <BirthOptions>
+=== Birth Options ===
+
+Keine - 'Aside from the game difficulty level,
+there are some options you can pick that change the difficulty and add
+some restrictions.
+If you're on a quest with difficult options set to 'on', your score will be
+increased.
+By pressing '?', you can view detailed information about a given option.'
+
+***** <BonusPoint>
+=== Allocating Bonus Points ===
+
+Keine - 'Your base primary stats depend on the race, class and personality
+you picked. You can increase them by allocating bonus points.
+
+Amount of bonus points depends on your luck.
+If you don't like it, press 'r' key after finishing allocation to reroll.
+It's similar to a certain famous dungeon crawler game, but it's a bit hard
+to get a good amount of bonus points here. Getting 25 will be good enough.
+If it's annoying, you can use a birth option to set bonus points to a fixed
+amount of 20. It also slightly raises your score.'
+
+***** <BackgroundEditor>
+=== Background Editor ===
+
+Keine - 'Where were you born, and how were you raised?
+And why did you decide to enter the dungeon?
+If you wish to express that, write it down here.
+Put your thoughts in it.
+Once you've written it down, it can't be changed expect for some
+*special cases*.'
+
+***** <Name>
+=== Name/Class Name ===
+
+Keine - 'Now that we're here, let's hear your name.
+If you're an unique class, your name is already known.
+If your class is 'Civilian', you can change your class name at this point.
+If you started a 'New Game', you also write down your savefile name here.'
+
+***** <QuickStart>
+=== Quick Start ===
+
+Keine - 'If you get defeated, you have to start the game over from the
+beginning. However, information about character you've created is preserved,
+and you can start your new quest in the exact same state you started your
+previous one.'
+

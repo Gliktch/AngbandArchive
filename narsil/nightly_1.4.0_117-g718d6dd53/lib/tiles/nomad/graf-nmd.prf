@@ -1,0 +1,593 @@
+# File: graf-nmd.prf
+
+# This file defines special attr/char mappings for use in "graphics" mode
+# with the 8x16 tile set by Nomad.
+#
+# Adapted from the tile assignments for Vanilla Angband.  Those assignments
+# inclue the work of Robert Ruehlmann and Nomad.  Some things specific to
+# NarSil are still unassigned.  Such lines are commented out and use
+# placeholder assignments of 0x80 for both the attribute and character so
+# a search for lines that begin with "#" and end with "0x80:0x80" will find
+# those missing assignments.
+#
+# See "docs/customize.rst" and "src/ui-prefs.c" for more information.
+#
+
+
+##### Spell attr/char values #####
+
+GF:*:0:0x97:0x84
+GF:*:135:0x97:0x87
+GF:*:45:0x97:0x86
+GF:*:90:0x97:0x85
+GF:*:static:0x99:0x89
+
+# GF:CONFUSION:0:0x98:0x9C
+# GF:CONFUSION:135:0x98:0x9F
+# GF:CONFUSION:45:0x98:0x9E
+# GF:CONFUSION:90:0x98:0x9D
+# GF:CONFUSION:static:0x99:0x97
+
+GF:ACID:0:0x97:0x88
+GF:ACID:135:0x97:0x8B
+GF:ACID:45:0x97:0x8A
+GF:ACID:90:0x97:0x89
+GF:ACID:static:0x99:0x8A
+
+GF:FIRE:0:0x97:0x90
+GF:FIRE:135:0x97:0x93
+GF:FIRE:45:0x97:0x92
+GF:FIRE:90:0x97:0x91
+GF:FIRE:static:0x99:0x8C
+
+GF:POIS:0:0x97:0x94
+GF:POIS:135:0x97:0x97
+GF:POIS:45:0x97:0x96
+GF:POIS:90:0x97:0x95
+GF:POIS:static:0x99:0x8D
+
+GF:DARK | DARK_WEAK:0:0x98:0x84
+GF:DARK | DARK_WEAK:135:0x98:0x87
+GF:DARK | DARK_WEAK:45:0x98:0x86
+GF:DARK | DARK_WEAK:90:0x98:0x85
+GF:DARK | DARK_WEAK:static:0x99:0x91
+
+
+
+
+##### Feature attr/char definitions #####
+
+# nothing
+feat:NONE:*:0x80:0x80
+
+# open floor
+feat:FLOOR:torch:0x80:0x84
+feat:FLOOR:los:0x80:0x84
+feat:FLOOR:lit:0x80:0x82
+feat:FLOOR:dark:0x80:0x83
+
+# closed door
+feat:CLOSED:*:0x80:0x9C
+
+# open door
+feat:OPEN:*:0x80:0x9D
+
+# broken door
+feat:BROKEN:*:0x80:0x9E
+
+# up staircase
+feat:LESS:*:0x80:0x94
+
+# down staircase
+feat:MORE:*:0x80:0x96
+
+# up shaft
+feat:LESS_SHAFT:*:0x80:0x95
+
+# down shaft
+feat:MORE_SHAFT:*:0x80:0x97
+
+# chasm
+feat:CHASM:*:0x82:0x9B
+
+# rubble
+feat:RUBBLE:*:0x80:0x98
+
+# quartz vein
+feat:QUARTZ:torch:0x80:0x8A
+feat:QUARTZ:los:0x80:0x8A
+feat:QUARTZ:lit:0x80:0x88
+feat:QUARTZ:dark:0x80:0x89
+
+# granite wall
+feat:GRANITE:torch:0x80:0x87
+feat:GRANITE:los:0x80:0x87
+feat:GRANITE:lit:0x80:0x85
+feat:GRANITE:dark:0x80:0x86
+
+# permanent wall
+feat:PERM:torch:0x80:0x92
+feat:PERM:los:0x80:0x92
+feat:PERM:lit:0x80:0x90
+feat:PERM:dark:0x80:0x91
+
+# forge
+#feat:FORGE:*:0x80:0x80
+
+# enchanted forge
+#feat:FORGE_GOOD:*:0x80:0x80
+
+# unique forge
+#feat:FORGE_UNIQUE:*:0x80:0x80
+
+# pit (as terrain) (3 tiles)
+feat:PIT:torch:0x81:0x8B
+feat:PIT:los:0x81:0x8B
+feat:PIT:lit:0x81:0x89
+feat:PIT:dark:0x81:0x8A
+
+# spiked pit (as terrain) (3 tiles)
+feat:SPIKED_PIT:torch:0x81:0x8B
+feat:SPIKED_PIT:los:0x81:0x8B
+feat:SPIKED_PIT:lit:0x81:0x89
+feat:SPIKED_PIT:dark:0x81:0x8A
+
+
+# glyph of warding
+trap:glyph of warding:*:0x80:0x9A
+
+# visible trap -- false floor(3 tiles)
+trap:false floor:torch:0x81:0x8E
+trap:false floor:los:0x81:0x8E
+trap:false floor:lit:0x81:0x8C
+trap:false floor:dark:0x81:0x8D
+
+# visible trap -- open pit (3 tiles)
+trap:pit:torch:0x81:0x8B
+trap:pit:los:0x81:0x8B
+trap:pit:lit:0x81:0x89
+trap:pit:dark:0x81:0x8A
+
+# visible trap -- spiked pit (3 tiles)
+trap:spiked pit:torch:0x81:0x8B
+trap:spiked pit:los:0x81:0x8B
+trap:spiked pit:lit:0x81:0x89
+trap:spiked pit:dark:0x81:0x8A
+
+# visible trap -- dart (3 tiles)
+trap:dart:torch:0x81:0x82
+trap:dart:los:0x81:0x82
+trap:dart:lit:0x81:0x80
+trap:dart:dark:0x81:0x81
+
+# visible trap -- confusion gas (3 tiles)
+trap:confusion gas trap:torch:0x81:0x85
+trap:confusion gas trap:los:0x81:0x85
+trap:confusion gas trap:lit:0x81:0x83
+trap:confusion gas trap:dark:0x81:0x84
+
+# visible trap -- alarm (3 tiles)
+trap:bell:torch:0x82:0x82
+trap:bell:los:0x82:0x82
+trap:bell:lit:0x82:0x80
+trap:bell:dark:0x82:0x81
+
+# visible trap -- flash (3 tiles)
+trap:flash:torch:0x82:0x8E
+trap:flash:los:0x82:0x8E
+trap:flash:lit:0x82:0x8C
+trap:flash:dark:0x82:0x8D
+
+# visible trap -- caltrop field (3 tiles)
+trap:caltrops:torch:0x82:0x97
+trap:caltrops:los:0x82:0x97
+trap:caltrops:lit:0x82:0x95
+trap:caltrops:dark:0x82:0x96
+
+# visible trap -- roost (3 tiles)
+trap:roost:torch:0x81:0x91
+trap:roost:los:0x81:0x91
+trap:roost:lit:0x81:0x8F
+trap:roost:dark:0x81:0x90
+
+# visible trap -- web (3 tiles)
+#trap:web:torch:0x80:0x80
+#trap:web:los:0x80:0x80
+#trap:web:lit:0x80:0x80
+#trap:web:dark:0x80:0x80
+
+# visible trap -- deadfall (3 tiles)
+trap:deadfall trap:torch:0x82:0x85
+trap:deadfall trap:los:0x82:0x85
+trap:deadfall trap:lit:0x82:0x83
+trap:deadfall trap:dark:0x82:0x84
+
+# visible trap -- acid trap (3 tiles)
+trap:acid trap:torch:0x81:0x88
+trap:acid trap:los:0x81:0x88
+trap:acid trap:lit:0x81:0x86
+trap:acid trap:dark:0x81:0x87
+
+##### Object attr/char definitions #####
+
+##### Non-kind (contains the "pile" picture) #####
+
+object:none:<pile>:129:151
+
+
+##### The 'Special Artifacts' #####
+
+object:ring:Ring:0x84:0x88
+object:amulet:Amulet:0x84:0x9D
+object:hafted:Mighty Hammer:0x8A:0x88
+object:crown:Massive Iron Crown:0x8A:0x89
+
+
+
+
+##### The Normal Item Types #####
+
+##### Armor #####
+
+#object:soft armor:Filthy Rag:0x80:0x80
+object:soft armor:Robe:0x95:0x80
+object:soft armor:Leather Armour:0x95:0x83
+object:soft armor:Studded Leather:0x95:0x84
+object:soft armor:Galvorn Armour:0x94:0x90
+object:mail:Mail Corslet:0x95:0x93
+object:mail:Hauberk:0x95:0x92
+object:mail:Mithril Corslet:0x95:0x98
+
+
+
+
+##### Shields #####
+
+object:shield:Round Shield:0x92:0x84
+object:shield:Kite Shield:0x92:0x81
+object:shield:Mithril Shield:0x92:0x83
+
+
+
+
+##### Edged Weapons #####
+
+#object:sword:Broken Sword:0x80:0x80
+object:sword:Dagger:0x8D:0x84
+object:sword:Curved Sword:0x8D:0x8A
+object:sword:Shortsword:0x8D:0x8B
+object:sword:Deathblade:0x8D:0x81
+object:sword:Longsword:0x8D:0x87
+object:sword:Bastard Sword:0x8D:0x80
+object:sword:Greatsword:0x8D:0x8D
+#object:sword:Mithril longsword:0x80:0x80
+#object:sword:Mithril Greatsword:0x80:0x80
+
+
+
+
+##### Axes & Polearms #####
+
+object:polearm:Spear:0x8E:0x8D
+object:polearm:Great Spear:0x8E:0x8A
+object:polearm:Glaive:0x8E:0x84
+object:polearm:Throwing Axe:0x8E:0x82
+object:polearm:Battle Axe:0x8E:0x81
+object:polearm:Great Axe:0x8E:0x85
+
+
+
+
+##### Blunt Weapons #####
+
+object:hafted:Quarterstaff:0x8F:0x88
+object:hafted:War Hammer:0x8F:0x8A
+object:hafted:Sceptre:0x8F:0x84
+
+
+
+
+##### Digging Tools #####
+
+object:digger:Shovel:0x89:0x92
+object:digger:Mattock:0x89:0x90
+
+
+
+
+##### Helms/Crowns #####
+
+object:helm:Helm:0x92:0x92
+object:helm:Great Helm:0x92:0x91
+#object:helm:Dwarf Mask:0x80:0x80
+object:helm:Mithril Helm:0x92:0x93
+object:crown:Crown:0x92:0x98
+object:crown:Jewelled Crown:0x92:0x9A
+
+
+
+
+##### Cloaks #####
+
+object:cloak:Cloak:0x94:0x80
+object:cloak:Shadow Cloak:0x94:0x81
+object:cloak:Wolf-Hame:0x94:0x83
+#object:cloak:Bat-Fell:0x80:0x80
+
+
+
+
+##### Bows #####
+
+object:bow:ShortBow:0x90:0x83
+object:bow:LongBow:0x90:0x82
+#object:bow:Dragon-horn Bow:0x80:0x80
+
+
+
+
+##### Arrows #####
+
+object:arrow:Arrow:0x90:0x90
+
+
+
+
+##### Boots #####
+
+object:boots:Pair of Boots:0x93:0x92
+object:boots:Pair of Greaves:0x93:0x91
+object:boots:Pair of Mithril Greaves:0x93:0x94
+
+
+
+
+##### Gloves #####
+
+object:gloves:Set of Gloves:0x93:0x83
+object:gloves:Set of Gauntlets:0x93:0x82
+object:gloves:Set of Mithril Gauntlets:0x93:0x85
+
+
+
+
+##### Lights #####
+
+object:light:Wooden Torch:0x89:0x80
+object:light:Brass Lantern:0x89:0x81
+object:light:Lesser Jewel:0x83:0x85
+object:light:Feanorian Lamp:0x8A:0x80
+object:light:Silmaril:0x83:0x89
+
+
+
+
+##### Amulets #####
+# Graphics are sourced from flavor entries in flvr-nmd.prf
+
+
+
+
+##### Rings #####
+# Graphics are sourced from flavor entries in flvr-nmd.prf
+
+
+
+
+##### Staves #####
+# Graphics are sourced from flavor entries in flvr-nmd.prf
+
+
+
+
+##### Horns #####
+# Graphics are sourced from flavor entries in flvr-nmd.prf
+
+
+
+
+##### Potions #####
+# Graphics are sourced from flavor entries in flvr-nmd.prf
+
+
+
+
+##### Chests #####
+
+object:chest:Small wooden chest:0x83:0x90
+object:chest:Small steel chest:0x83:0x92
+object:chest:Small jewelled chest:0x83:0x94
+object:chest:Large wooden chest:0x83:0x91
+object:chest:Large steel chest:0x83:0x93
+object:chest:Large jewelled chest:0x83:0x95
+#object:chest:Finely wrapped present:0x80:0x80
+
+
+
+
+##### Herbs #####
+# Graphics are sourced from flavor entries in flvr-nmd.prf
+
+
+
+
+##### Food #####
+
+object:food:Piece of Dark Bread:0x89:0x8D
+#object:food:Strip of Dried Meat:0x80:0x80
+object:food:Fragment of Lembas:0x89:0x8A
+
+
+
+
+##### Various #####
+
+object:flask:Flask of oil:0x89:0x83
+object:metal:Piece of Mithril:0x83:0x87
+#object:skeleton:Orc Skeleton:0x80:0x80
+#object:skeleton:Human Skeleton:0x80:0x80
+#object:skeleton:Elf Skeleton:0x80:0x80
+object:note:Tutorial Note:0x87:0x91
+
+
+
+
+##### Monster attr/char definitions #####
+
+
+monster:<player>:0x9B:0x89
+monster:Wolf:0xA1:0x96
+#monster:Tanglethorn:0x80:0x80
+monster:Orc:0xAC:0x80
+monster:Grimhawk:0xA1:0x82
+monster:Orc scout:0xAC:0x82
+monster:Spider hatchling:0xB0:0x86
+#monster:Blue serpent:0x80:0x80
+monster:Orc soldier:0xAC:0x81
+#monster:Madthorn:0x80:0x80
+monster:Gorcrow:0xA1:0x80
+monster:Orc archer:0xAC:0x87
+monster:White wolf:0xA1:0x97
+#monster:Red serpent:0x80:0x80
+monster:Gorgol, the Butcher:0xAC:0x8D
+monster:Orc warrior:0xAC:0x89
+monster:Sword spider:0xB0:0x85
+monster:Crebain:0xA1:0x83
+#monster:Mewlip:0x80:0x80
+monster:Orc thief:0xAC:0x84
+#monster:Nightthorn:0x80:0x80
+#monster:Green serpent:0x80:0x80
+monster:Mountain troll:0xB1:0x8C
+monster:Tattered wight:0xB4:0x80
+monster:Boldog, the Merciless:0xAC:0x8C
+monster:Orc champion:0xAC:0x8A
+monster:Easterling warrior:0xAD:0x8B
+monster:Hummerhorn:0xA8:0x82
+monster:Orc captain:0xAC:0x8B
+monster:Warg:0xA1:0x98
+monster:Grave wight:0xB4:0x82
+#monster:Dark serpent:0x80:0x80
+monster:Orcobal, Champion of the Orcs:0xAC:0x8E
+#monster:Whispering shadow:0x80:0x80
+monster:Distended spider:0xB0:0x87
+monster:Easterling archer:0xAD:0x90
+monster:Twisted bat:0xA1:0x8A
+monster:Othrod, the Orc Lord:0xAC:0x91
+monster:Snow troll:0xB1:0x84
+monster:Barrow wight:0xB4:0x83
+monster:Lurking horror:0xA5:0x98
+monster:Giant:0xAC:0x93
+monster:Uldor, the Accursed:0xAD:0x98
+monster:Aldor, the Risen King:0xB4:0x91
+monster:Easterling spy:0xAD:0x99
+#monster:Shadow bat:0x80:0x80
+monster:Sulrauko:0xA4:0x8E
+monster:Fire-drake hatchling:0xA3:0x8F
+monster:Ulfang the Black:0xAD:0x9C
+#monster:Duruin, Least of the Balrogs:0x80:0x80
+monster:Werewolf:0xA1:0x9A
+monster:Shadow spider:0xB0:0x8F
+monster:Shadow:0xA6:0x86
+#monster:Sapphire serpent:0x80:0x80
+monster:Gilim, the Giant of Eruman:0xA0:0x92
+#monster:Ruby serpent:0x80:0x80
+monster:Creeping horror:0xA2:0x85
+monster:Ringrauko:0xB4:0x84
+#monster:Deathblade:0x80:0x80
+#monster:Delthaur, Balrog of Terror:0x80:0x80
+monster:Nan, the Giant:0xA0:0x91
+monster:Cave troll:0xB1:0x85
+#monster:Emerald serpent:0x80:0x80
+monster:Oathwraith:0xB4:0x85
+#monster:Cat warrior:0x80:0x80
+#monster:The Deathblade 'Delmereth':0x80:0x80
+#monster:Amethyst serpent:0x80:0x80
+monster:Kemenrauko:0xA4:0x8F
+monster:Grotesque:0xA6:0x94
+monster:Young cold-drake:0xA3:0x97
+#monster:Umuiyan, the Doorkeeper:0x80:0x80
+#monster:Belegwath, Balrog of Shadow:0x80:0x80
+monster:Spider of Gorgoroth:0xB0:0x93
+monster:Greater werewolf:0xA1:0x9B
+#monster:Adamant serpent:0x80:0x80
+monster:Lesser vampire:0xA1:0x8D
+#monster:Cat assassin:0x80:0x80
+monster:Scatha the Worm:0xA2:0x96
+#monster:Oikeroi, Guard of Tevildo:0x80:0x80
+monster:Young fire-drake:0xA3:0x9A
+#monster:Darting horror:0x80:0x80
+monster:Unmourned:0xA6:0x82
+monster:Ururauko:0xA4:0x91
+monster:Tevildo, Prince of Cats:0xA5:0x9C
+#monster:Turkano, Balrog of the Hosts:0x80:0x80
+#monster:Ancient sapphire serpent:0x80:0x80
+monster:Troll guard:0xB1:0x8E
+monster:Vampire:0xA1:0x8F
+monster:Nameless thing:0xA2:0x87
+monster:Smaug the Golden:0xA2:0x98
+monster:Maeglin, Betrayer of Gondolin:0xA7:0x9F
+#monster:Ancient ruby serpent:0x80:0x80
+monster:Great cold-drake:0xA2:0x8E
+monster:Silent watcher:0xA6:0x99
+monster:Gwathrauko:0xB3:0x93
+monster:Draugluin, Sire of Werewolves:0xA1:0x9D
+monster:Vallach, Balrog of Sudden Flame:0xB2:0x87
+monster:Ancient spider:0xB0:0x92
+#monster:Ancient emerald serpent:0x80:0x80
+monster:Vampire lord:0xB3:0x82
+#monster:Dagorhir, the Elfbane:0x80:0x80
+#monster:Gostir, the Dread Glance:0x80:0x80
+#monster:Ancient amethyst serpent:0x80:0x80
+monster:Great fire-drake:0xA2:0x91
+monster:Hithrauko:0xA4:0x98
+monster:Shelob, Spider of Darkness:0xB0:0x94
+monster:Lungorthin, Lord of Balrogs:0xB2:0x90
+#monster:Ancient adamant serpent:0x80:0x80
+#monster:Unrelenting horror:0x80:0x80
+monster:Ancalagon the Black:0xA3:0x87
+monster:Thuringwethil, the Vampire Messenger:0xB3:0x84
+monster:Gothmog:0xB2:0x91
+monster:Ungoliant:0xB0:0x95
+monster:Glaurung:0xA3:0x82
+monster:Gorthaur:0xAE:0x90
+monster:Morgoth, Lord of Darkness:0xAC:0x9F
+monster:Carcharoth:0xA1:0x9E
+
+
+
+
+##### Hallucinatory #####
+
+#monster:Feanor, High King of the Noldor:0x80:0x80
+#monster:Luthien Tinuviel:0x80:0x80
+#monster:Thingol, the Hidden King:0x80:0x80
+#monster:Beren, Son of Barahir:0x80:0x80
+monster:Huan, Hound of Valinor:0xA1:0x9F
+monster:Eagle of Manwe:0xA1:0x84
+#monster:Thorondor, King of Eagles:0x80:0x80
+#monster:Ent:0x80:0x80
+#monster:Ent-wife:0x80:0x80
+#monster:Manwe, Lord of the Breath of Arda:0x80:0x80
+#monster:Varda, Lady of the Stars:0x80:0x80
+#monster:Ulmo, Lord of Waters:0x80:0x80
+#monster:Yavanna, the Giver of Fruits:0x80:0x80
+#monster:Mandos, Doomsman of the Valar:0x80:0x80
+#monster:Vaire, the Weaver:0x80:0x80
+#monster:Lorien, Master of Dreams:0x80:0x80
+#monster:Este, the Healer:0x80:0x80
+#monster:Nienna, Lady of Mourning:0x80:0x80
+#monster:Tulkas, the Valiant:0x80:0x80
+#monster:Nessa, the Dancer:0x80:0x80
+#monster:Orome, Lord of Forests:0x80:0x80
+#monster:Vana, the Ever Young:0x80:0x80
+#monster:Melkor, Rightful Lord of Arda:0x80:0x80
+
+
+
+
+# Load the special player pictures
+%:xtra-nmd.prf
+
+
+# Load the flavored objects
+%:flvr-nmd.prf

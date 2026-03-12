@@ -1,0 +1,110 @@
+N:*:Default
+#『腐卵』
+'Rotten Egg'
+#『通夜』
+'Overnight'
+#『棺桶釘』
+'Coffin Nail'
+#『豆鉄砲』
+'Peashooter'
+#『なまくら』
+'Dullness'
+#『リソギル』
+'Ringi1'
+#『力ルリス』
+'Galris'
+#『三日坊主』
+#『酒池肉林』
+'Debauchery'
+#『（＾＾；』
+'(^^;'
+#『アンパンチ』
+#『カムロスト』
+'Camlost'
+#『モルメギル』
+'Mormegil'
+#『ヌレイヤー』
+'Nullayer'
+#『づらぬき丸』
+'Stink'
+#『(；´Д｀)』
+#『糞臭ドリアン』
+'Stinky Durian'
+#『混ぜるな危険』
+'Danger - Do Not Mix!'
+#『オマエモナー』
+'Omaemonaa'
+#『ヽ(´ー｀)ノ』
+#『ソウノレソード』
+'Solesword'
+#『グラムドングリ』
+'Glamdgrin'
+#『クレイスワンター』
+'Crayswander'
+#『ストームプリンガー』
+'Stormbrinker'
+#『ポタージュラーメン』
+'Potage Ramen'
+#『じぬんをぐろぐろまわります』
+#不幸の
+of Misfortune
+#陰口の
+of Backbiting
+#切腹の
+of Seppuku
+#自殺の
+of Suicide
+#愚者の
+of the Fool
+#喪失の
+of Loss
+#悲痛の
+of Sadness
+#屈辱の
+of Humiliation
+#臆病の
+of Cowardice
+#偽りの
+of Falsehood
+#ゲイツの
+of Gates
+#お手玉の
+of Beanbags
+#ハラキリの
+of Harakiri
+#カミカゼの
+of Kamikaze
+#トリスタンの
+of Tristan
+#無農薬栽培の
+of Organic Farming
+#マイクロスロスの
+of Microsloth
+#今はもう大人しい
+(Already docile once more)
+#『それがこのざまである』
+'And it ended up like this'
+#『死にたい奴だけ使ってよし』
+'For Death Seekers Only'
+#『狂気山脈』
+'Mountains of Madness'
+#『いたずらに命をかけて』
+'Staking Your Life on a Prank'
+#光の三妖精の四人目の
+of the Fourth Fairy of Light
+#『さでずむ』
+'Sadezm'
+#『ないでーす』
+'No~'
+#『片葉の葦』
+'One-Leafed Reed'
+#価値がわからない
+with Unknown Price
+#『世界の終わりも恐くない』
+'Not Afraid of End of the World'
+#激こわ
+(Very Scary)
+#クレイジー
+(Crazy)
+#疫病神の
+of the Pestilence God

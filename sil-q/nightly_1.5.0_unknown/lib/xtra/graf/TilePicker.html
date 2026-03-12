@@ -1,0 +1,2570 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sil-Q Tile Picker</title>
+
+    <style>
+      :root {
+        --bg-primary: #181818;
+        --bg-secondary: #2a2018;
+        --bg-card: #302315;
+        --accent: #ffcf5b;
+        --accent-hover: #e8c547;
+        --text-primary: #e8dcc8;
+        --text-secondary: #a89878;
+        --border-color: #5a4a3a;
+        --input-bg: #2a2018;
+        --radius: 4px;
+        --shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        --success: #5fbf5f;
+        --error: #bf5f5f;
+        --loading: #a89878;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        background: var(--bg-primary);
+        color: var(--text-primary);
+        font-family: serif;
+        min-height: 100vh;
+        padding: 2rem;
+        line-height: 1.6;
+      }
+
+      .container {
+        max-width: 900px;
+      }
+
+      h1 {
+        font-size: 2.5rem;
+        font-weight: 400;
+        margin-bottom: 1.5rem;
+        color: var(--accent);
+        letter-spacing: 0.05em;
+      }
+
+      .card {
+        background: var(--bg-card);
+        border-radius: var(--radius);
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+        box-shadow: var(--shadow);
+        border: 1px solid var(--border-color);
+      }
+
+      .form-grid {
+        display: grid;
+        gap: 1.25rem;
+      }
+
+      .form-row {
+        display: grid;
+        grid-template-columns: 140px 1fr;
+        align-items: start;
+        gap: 1rem;
+      }
+
+      .form-row .form-label {
+        padding-top: 0.3rem;
+      }
+
+      .form-label {
+        font-weight: 500;
+        color: var(--text-secondary);
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+      }
+
+      input[type="text"],
+      input[type="number"] {
+        background: var(--input-bg);
+        border: 1px solid var(--border-color);
+        border-radius: var(--radius);
+        padding: 0.6rem 0.9rem;
+        color: var(--text-primary);
+        font-size: 0.95rem;
+      }
+
+      input[type="text"]:focus,
+      input[type="number"]:focus {
+        outline: none;
+        border-color: var(--accent);
+        box-shadow: 0 0 0 3px rgba(201, 162, 39, 0.2);
+      }
+
+      input[type="file"] {
+        font-size: 0.9rem;
+        color: var(--text-secondary);
+      }
+
+      input[type="file"]::file-selector-button {
+        background: var(--bg-card);
+        color: var(--accent);
+        border: 2px solid var(--accent);
+        border-radius: var(--radius);
+        padding: 0.5rem 1rem;
+        font-size: 0.85rem;
+        font-weight: 600;
+        cursor: pointer;
+        margin-right: 0.75rem;
+      }
+
+      input[type="file"]::file-selector-button:hover {
+        background: var(--accent);
+        color: var(--bg-primary);
+      }
+
+      .input-group {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        flex-wrap: wrap;
+      }
+
+      .input-group input[type="text"] {
+        width: 100px;
+      }
+
+      .input-group span {
+        color: var(--text-secondary);
+      }
+
+      .load-row {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        flex-wrap: wrap;
+      }
+
+      .load-row input[type="text"] {
+        flex: 1;
+        min-width: 150px;
+      }
+
+      .radio-group {
+        display: flex;
+        flex-direction: column;
+        gap: 0.6rem;
+      }
+
+      .radio-group-horizontal {
+        display: flex;
+        flex-direction: row;
+        gap: 1.5rem;
+        flex-wrap: wrap;
+      }
+
+      .radio-option {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        cursor: pointer;
+      }
+
+      input[type="radio"],
+      input[type="checkbox"] {
+        width: 18px;
+        height: 18px;
+        accent-color: var(--accent);
+        cursor: pointer;
+      }
+
+      .radio-option label {
+        cursor: pointer;
+        font-size: 0.95rem;
+      }
+
+      button {
+        background: var(--bg-card);
+        color: var(--accent);
+        border: 2px solid var(--accent);
+        border-radius: var(--radius);
+        padding: 0.5rem 1.5rem;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+        letter-spacing: 0.05em;
+        white-space: nowrap;
+      }
+
+      button:hover {
+        background: var(--accent);
+        color: var(--bg-primary);
+      }
+
+      button:active {
+        background: var(--accent-hover);
+      }
+
+      .info-box {
+        background: rgba(201, 162, 39, 0.1);
+        border: 1px solid rgba(201, 162, 39, 0.3);
+        border-radius: var(--radius);
+        padding: 1rem 1.25rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .info-box p {
+        margin-bottom: 0.5rem;
+        font-size: 0.9rem;
+      }
+
+      .info-box p:last-child {
+        margin-bottom: 0;
+      }
+
+      .result-row {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+
+      .result-row input {
+        font-size: 1.1rem;
+        font-weight: 600;
+        background: var(--bg-secondary);
+        text-align: center;
+      }
+
+      #txtIndex {
+        width: 120px;
+        font-family: monospace;
+      }
+
+      #txtHexCode,
+      #txtHexSearch {
+        width: 140px;
+        font-family: monospace;
+        flex: none;
+        min-width: unset;
+      }
+
+      .copyable-field {
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+      }
+
+      .copyable-field input {
+        cursor: pointer;
+        padding-right: 1.8rem;
+        pointer-events: none;
+      }
+
+      .copy-icon {
+        position: absolute;
+        right: 6px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 1rem;
+        color: var(--text-secondary);
+        pointer-events: none;
+      }
+
+      .copyable-field:hover .copy-icon {
+        color: var(--accent);
+      }
+
+      .copyable-field.copied .copy-icon {
+        color: var(--accent);
+      }
+
+      #tilePreview {
+        border: 1px solid var(--border-color);
+        background-color: var(--bg-secondary);
+        image-rendering: pixelated;
+      }
+
+      .image-container {
+        position: relative;
+        display: inline-block;
+      }
+
+      .image-container img {
+        outline: 1px solid var(--border-color);
+        display: block;
+        max-width: 100%;
+      }
+
+      #placeholder {
+        width: 512px;
+        height: 256px;
+        border: 1px solid var(--border-color);
+        background-color: var(--bg-secondary);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--text-secondary);
+        font-style: italic;
+      }
+
+      /* The square-shaped selection cursor to pick a tile. */
+      #reticule {
+        position: absolute;
+        left: 0;
+        top: 0;
+        outline: 1px solid var(--accent);
+        pointer-events: none;
+        background: rgba(201, 162, 39, 0.1);
+      }
+
+      /* Persistent marker showing the last clicked tile. */
+      #selectionMarker {
+        position: absolute;
+        left: 0;
+        top: 0;
+        outline: 2px solid #ff00ff;
+        outline-offset: -3px;
+        pointer-events: none;
+        display: none;
+      }
+
+      .hidden {
+        display: none !important;
+      }
+
+      .note {
+        color: var(--text-secondary);
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+      }
+      .note code {
+          font-size: 0.8rem;
+      }
+
+      .zoom-toggle {
+        margin-bottom: 1rem;
+      }
+
+      .status-indicator {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.3rem;
+        font-size: 0.85rem;
+        padding: 0.2rem 0.5rem;
+        border-radius: var(--radius);
+        white-space: nowrap;
+      }
+
+      .status-indicator.loading {
+        color: var(--loading);
+      }
+
+      .status-indicator.success {
+        color: var(--success);
+      }
+
+      .status-indicator.error {
+        color: var(--error);
+      }
+
+      .status-icon {
+        font-size: 1rem;
+      }
+
+      .prf-status-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin-top: 0.5rem;
+      }
+
+      .prf-status-item {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.3rem;
+        font-size: 0.8rem;
+        padding: 0.15rem 0.4rem;
+        border-radius: var(--radius);
+        background: var(--bg-secondary);
+        border: 1px solid var(--border-color);
+      }
+
+      .prf-status-item.loading {
+        border-color: var(--loading);
+      }
+
+      .prf-status-item.success {
+        border-color: var(--success);
+      }
+
+      .prf-status-item.error {
+        border-color: var(--error);
+      }
+
+      .prf-status-item .status-icon {
+        font-size: 0.85rem;
+      }
+
+      .entity-list-container {
+        margin-top: 0.75rem;
+        padding-top: 0.75rem;
+        border-top: 1px solid rgba(201, 162, 39, 0.2);
+      }
+
+      .entity-list-header {
+        font-size: 0.85rem;
+        color: var(--text-secondary);
+        margin-bottom: 0.4rem;
+      }
+
+      .entity-list {
+        max-height: 4.8rem;
+        overflow-y: auto;
+        font-size: 0.9rem;
+      }
+
+      .entity-item {
+        padding: 0.2rem 0;
+        display: flex;
+        gap: 0.5rem;
+        align-items: baseline;
+      }
+
+      .entity-name {
+        color: var(--text-primary);
+      }
+
+      .entity-type {
+        color: var(--text-secondary);
+        font-size: 0.8rem;
+      }
+
+      .entity-source {
+        color: var(--text-secondary);
+        font-size: 0.75rem;
+        opacity: 0.7;
+      }
+
+      .entity-tval {
+        color: var(--accent);
+        font-size: 0.8rem;
+        font-family: monospace;
+      }
+
+      .entity-list::-webkit-scrollbar {
+        width: 6px;
+      }
+
+      .entity-list::-webkit-scrollbar-track {
+        background: var(--bg-secondary);
+        border-radius: 3px;
+      }
+
+      .entity-list::-webkit-scrollbar-thumb {
+        background: var(--border-color);
+        border-radius: 3px;
+      }
+
+      .entity-list::-webkit-scrollbar-thumb:hover {
+        background: var(--text-secondary);
+      }
+
+      .no-entities {
+        color: var(--text-secondary);
+        font-style: italic;
+        font-size: 0.85rem;
+      }
+
+      /* Segmented button group for Remote/Local toggle */
+      .segmented-toggle {
+        display: inline-flex;
+        border: 1px solid var(--border-color);
+        border-radius: var(--radius);
+        overflow: hidden;
+        margin-bottom: 0.75rem;
+      }
+
+      .segmented-toggle button {
+        border: none;
+        border-radius: 0;
+        padding: 0.4rem 0.8rem;
+        font-size: 0.85rem;
+        background: var(--bg-secondary);
+        color: var(--text-secondary);
+        border-right: 1px solid var(--border-color);
+      }
+
+      .segmented-toggle button:last-child {
+        border-right: none;
+      }
+
+      .segmented-toggle button:hover {
+        background: var(--bg-card);
+        color: var(--text-primary);
+      }
+
+      .segmented-toggle button.active {
+        background: var(--accent);
+        color: var(--bg-primary);
+      }
+
+      /* Collapsible section */
+      .collapsible-header {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        cursor: pointer;
+        font-size: 0.85rem;
+        color: var(--text-secondary);
+        margin-top: 0.75rem;
+        user-select: none;
+      }
+
+      .collapsible-header:hover {
+        color: var(--accent);
+      }
+
+      .collapsible-arrow {
+        transition: transform 0.2s;
+      }
+
+      .collapsible-header.expanded .collapsible-arrow {
+        transform: rotate(90deg);
+      }
+
+      .collapsible-content {
+        display: none;
+        margin-top: 0.5rem;
+        padding: 0.5rem;
+        background: var(--bg-secondary);
+        border-radius: var(--radius);
+      }
+
+      .collapsible-content.expanded {
+        display: block;
+      }
+
+      .url-field-row {
+        display: flex;
+        gap: 0.5rem;
+        margin-bottom: 0.4rem;
+        align-items: center;
+      }
+
+      .url-field-row input[type="text"] {
+        flex: 1;
+        font-size: 0.8rem;
+        padding: 0.4rem 0.6rem;
+        font-family: monospace;
+      }
+
+      .url-field-label {
+        font-size: 0.75rem;
+        color: var(--text-secondary);
+        min-width: 80px;
+      }
+
+      /* Source icon in status items */
+      .source-icon {
+        font-size: 0.75rem;
+        margin-left: 0.2rem;
+      }
+
+      /* Local mode file picker styling */
+      .local-file-section {
+        margin-top: 0.5rem;
+      }
+
+      /* URL input field styling */
+      .url-input {
+        flex: 1;
+        font-family: monospace;
+        font-size: 0.85rem;
+      }
+
+      /* Small button styling */
+      .btn-small {
+        font-size: 0.85rem;
+        padding: 0.4rem 0.8rem;
+      }
+
+      /* Status list with top margin */
+      .status-list-spaced {
+        margin-top: 0.5rem;
+      }
+
+      /* Section label styling */
+      .section-label {
+        margin-top: 0.75rem;
+        font-size: 0.8rem;
+        color: var(--text-secondary);
+      }
+
+      .section-label-small {
+        margin-top: 0.5rem;
+        font-size: 0.8rem;
+        color: var(--text-secondary);
+      }
+
+      .section-label-spaced {
+        margin-bottom: 0.5rem;
+        font-size: 0.8rem;
+        color: var(--text-secondary);
+      }
+
+      .section-label-prf {
+        margin-top: 0.75rem;
+        margin-bottom: 0.5rem;
+        font-size: 0.8rem;
+        color: var(--text-secondary);
+      }
+
+      /* Helper text styling */
+      .helper-text {
+        color: var(--text-secondary);
+        font-size: 0.85rem;
+      }
+
+      /* Search row styling */
+      .search-row {
+        margin-bottom: 1.5rem;
+        margin-top: 1rem;
+      }
+
+      /* Tileset options styling */
+      #card-tileset-options {
+        margin-top: 1.5rem;
+      }
+
+      /* Notes section */
+      .notes-card {
+        margin-top: 2rem;
+        background: var(--bg-secondary);
+        border-color: var(--border-color);
+      }
+
+      .notes-heading {
+        font-size: 1.1rem;
+        font-weight: 500;
+        color: var(--text-secondary);
+        margin-bottom: 0.75rem;
+        letter-spacing: 0.05em;
+      }
+
+      .notes-list {
+        margin: 0;
+        padding-left: 1.25rem;
+        color: var(--text-secondary);
+        font-size: 0.9rem;
+        line-height: 1.6;
+      }
+
+      .notes-list li {
+        margin-bottom: 0.5rem;
+      }
+
+      .notes-list li:last-child {
+        margin-bottom: 0;
+      }
+
+      .notes-list code {
+        font-size: 0.85rem;
+        background: var(--bg-card);
+        padding: 0.1rem 0.3rem;
+        border-radius: 2px;
+      }
+
+      .notes-list strong {
+        color: var(--text-primary);
+      }
+
+      .error-banner {
+        background: rgba(191, 95, 95, 0.15);
+        border: 1px solid var(--error);
+        border-radius: var(--radius);
+        padding: 0.75rem 1rem;
+        margin-bottom: 1.5rem;
+        color: var(--error);
+        font-size: 0.9rem;
+      }
+
+      .error-banner-title {
+        font-weight: 600;
+        margin-bottom: 0.3rem;
+      }
+
+      .error-banner-list {
+        margin: 0;
+        padding-left: 1.25rem;
+        font-size: 0.85rem;
+      }
+    </style>
+
+    <script>
+      var tw, th;
+      var x, y;
+      var selectedX, selectedY; // Last clicked tile coordinates
+      var hasSelection = false;
+      var tilesetLoaded = false;
+
+      // Mode tracking: "remote" or "local"
+      var tilesetMode = "remote";
+      var definesMode = "remote";
+      var entityFilesMode = "remote";
+      var prfFilesMode = "remote";
+
+      // GitHub raw URLs for default files
+      var GITHUB_BASE =
+        "https://raw.githubusercontent.com/sil-quirk/sil-q/master/";
+      var DEFAULT_TILESET_URL =
+        GITHUB_BASE + "lib/xtra/graf/16x16_microchasm.png";
+      var DEFAULT_DEFINES_URL =
+        GITHUB_BASE + "src/defines.h";
+
+      // Entity definition files (source of truth for names)
+      var DEFAULT_EDIT_URLS = [
+        GITHUB_BASE + "lib/edit/object.txt",
+        GITHUB_BASE + "lib/edit/monster.txt",
+        GITHUB_BASE + "lib/edit/terrain.txt",
+        GITHUB_BASE + "lib/edit/flavor.txt",
+        "", // 5th slot empty
+      ];
+
+      // Tile assignment files
+      var DEFAULT_PRF_URLS = [
+        GITHUB_BASE + "lib/pref/flvr-tiles.prf",
+        GITHUB_BASE + "lib/pref/graf-tiles.prf",
+        "", // 3rd slot empty
+        "", // 4th slot empty
+        "", // 5th slot empty
+      ];
+
+      // Map file names to types for edit files
+      var EDIT_FILE_TYPES = {
+        "object.txt": "K",
+        "monster.txt": "R",
+        "terrain.txt": "F",
+        "flavor.txt": "L",
+      };
+
+      // Name lookup maps by ID (populated from edit files)
+      // Each entry can be: { name: "...", tval: 40 } or just a string for backwards compat
+      var entityNames = {
+        K: {}, // object.txt - objects
+        R: {}, // monster.txt - monsters
+        F: {}, // terrain.txt - features
+        L: {}, // flavor.txt - flavors
+      };
+
+      // tval to TV_* name mapping (populated from defines.h)
+      var tvalNames = {};
+      var definesLoaded = false;
+
+      var editFilesLoaded = 0;
+      var editFilesToLoad = 0;
+
+      // Parsed entity data from PRF files
+      var prfEntities = [];
+
+      // Track loaded file sources for tooltips
+      var loadedFileSources = {};
+
+      // Store last loaded local files for reload functionality
+      var lastLocalTilesetFile = null;
+      var lastLocalDefinesFile = null;
+      var lastLocalEditFiles = null;
+      var lastLocalPrfFiles = null;
+
+      // Track files that failed to load
+      var loadErrors = {};
+
+      function trackLoadError(fileName, category) {
+        loadErrors[fileName] = category;
+        updateErrorBanner();
+      }
+
+      function clearLoadError(fileName) {
+        delete loadErrors[fileName];
+        updateErrorBanner();
+      }
+
+      function clearLoadErrorsByCategory(category) {
+        var keys = Object.keys(loadErrors);
+        for (var i = 0; i < keys.length; i++) {
+          if (loadErrors[keys[i]] === category) {
+            delete loadErrors[keys[i]];
+          }
+        }
+        updateErrorBanner();
+      }
+
+      function updateErrorBanner() {
+        var banner = document.getElementById("errorBanner");
+        var list = document.getElementById("errorBannerList");
+        var keys = Object.keys(loadErrors);
+        if (keys.length === 0) {
+          banner.classList.add("hidden");
+          return;
+        }
+        var html = keys.map(function (name) {
+          return "<li>" + escapeHtml(name) + " (" + escapeHtml(loadErrors[name]) + ")</li>";
+        }).join("");
+        list.innerHTML = html;
+        banner.classList.remove("hidden");
+      }
+
+      function handleFileSelect(event) {
+        var file = event.target.files[0];
+        if (file) {
+          txtImage.value = file.name;
+        }
+      }
+
+      function handlePrfFileSelect(event) {
+        var files = event.target.files;
+        if (files.length > 0) {
+          loadPrfFilesFromFileList(files);
+        }
+      }
+
+      // Status indicator helpers
+      function setTilesetStatus(status, message, source) {
+        var container = document.getElementById("tilesetStatusList");
+        var fullPath = loadedFileSources["tileset"] || "";
+        var fileName = fullPath ? getFileName(fullPath) : "";
+
+        var statusIcon =
+          status === "loading" ? "⏳" : status === "success" ? "✓" : "✗";
+        var sourceIcon = source === "local" ? "📁" : "🌐";
+
+        // Show filename for success/error, show message for loading
+        var displayName = status === "loading" ? fileName || message : fileName;
+        var sourceHtml =
+          status !== "loading" && source
+            ? ' <span class="source-icon">' + sourceIcon + "</span>"
+            : "";
+        var html =
+          '<span class="status-icon">' +
+          statusIcon +
+          "</span>" +
+          displayName +
+          sourceHtml;
+
+        // Clear and create single status item
+        container.innerHTML = "";
+        var item = document.createElement("span");
+        item.className = "prf-status-item " + status;
+        item.innerHTML = html;
+        item.title = fullPath || message || "";
+        container.appendChild(item);
+      }
+
+      function updateFileStatus(
+        containerId,
+        fileName,
+        status,
+        source,
+        fullPath,
+      ) {
+        var container = document.getElementById(containerId);
+        var existingItem = container.querySelector(
+          '[data-file="' + fileName + '"]',
+        );
+
+        var statusIcon =
+          status === "loading" ? "⏳" : status === "success" ? "✓" : "✗";
+        var sourceIcon = source === "local" ? "📁" : "🌐";
+        var sourceHtml =
+          status !== "loading" && source
+            ? ' <span class="source-icon">' + sourceIcon + "</span>"
+            : "";
+        var html =
+          '<span class="status-icon">' +
+          statusIcon +
+          "</span>" +
+          fileName +
+          sourceHtml;
+
+        // Store source for tooltip
+        if (fullPath) {
+          loadedFileSources[fileName] = fullPath;
+        }
+
+        if (existingItem) {
+          existingItem.className = "prf-status-item " + status;
+          existingItem.innerHTML = html;
+          existingItem.title = fullPath || "";
+        } else {
+          var item = document.createElement("span");
+          item.className = "prf-status-item " + status;
+          item.setAttribute("data-file", fileName);
+          item.innerHTML = html;
+          item.title = fullPath || "";
+          container.appendChild(item);
+        }
+      }
+
+      function updatePrfStatus(fileName, status, source, fullPath) {
+        updateFileStatus("prfStatusList", fileName, status, source, fullPath);
+      }
+
+      function clearPrfStatus() {
+        document.getElementById("prfStatusList").innerHTML = "";
+      }
+
+      function updateEditStatus(fileName, status, source, fullPath) {
+        updateFileStatus("editStatusList", fileName, status, source, fullPath);
+      }
+
+      function clearEditStatus() {
+        document.getElementById("editStatusList").innerHTML = "";
+      }
+
+      function updateDefinesStatus(fileName, status, source, fullPath) {
+        updateFileStatus("definesStatusList", fileName, status, source, fullPath);
+      }
+
+      function clearDefinesStatus() {
+        document.getElementById("definesStatusList").innerHTML = "";
+      }
+
+      // Load defines.h to get TV_* constants
+      function loadDefinesFromUrl() {
+        var urlInput = document.getElementById("definesUrl");
+        var url = urlInput ? urlInput.value.trim() : DEFAULT_DEFINES_URL;
+        if (!url) {
+          definesLoaded = true;
+          chainToEntityFiles();
+          return;
+        }
+
+        clearLoadErrorsByCategory("type definitions");
+        clearDefinesStatus();
+        var fileName = getFileName(url);
+        updateDefinesStatus(fileName, "loading", "remote", url);
+
+        fetch(url)
+          .then(function (response) {
+            if (!response.ok) throw new Error("HTTP " + response.status);
+            return response.text();
+          })
+          .then(function (content) {
+            parseDefinesContent(content);
+            updateDefinesStatus(fileName, "success", "remote", url);
+            clearLoadError(fileName);
+            definesLoaded = true;
+            chainToEntityFiles();
+          })
+          .catch(function (err) {
+            updateDefinesStatus(fileName, "error", "remote", url);
+            trackLoadError(fileName, "type definitions");
+            console.error("Failed to load " + fileName + ":", err);
+            definesLoaded = true;
+            chainToEntityFiles();
+          });
+      }
+
+      // Chain to entity files loading (respects entityFilesMode)
+      function chainToEntityFiles() {
+        if (entityFilesMode === "remote") {
+          loadEditFilesFromUrls();
+        }
+      }
+
+      // Load defines.h from local file
+      function loadDefinesFromFile(file) {
+        clearLoadErrorsByCategory("type definitions");
+        clearDefinesStatus();
+        updateDefinesStatus(file.name, "loading", "local", file.name);
+
+        var reader = new FileReader();
+        reader.onload = function (e) {
+          parseDefinesContent(e.target.result);
+          updateDefinesStatus(file.name, "success", "local", file.name);
+          clearLoadError(file.name);
+          definesLoaded = true;
+        };
+        reader.onerror = function () {
+          updateDefinesStatus(file.name, "error", "local", file.name);
+          trackLoadError(file.name, "type definitions");
+          definesLoaded = true;
+        };
+        reader.readAsText(file);
+      }
+
+      // Parse defines.h to extract TV_* constants
+      function parseDefinesContent(content) {
+        tvalNames = {};
+        var lines = content.split("\n");
+        for (var i = 0; i < lines.length; i++) {
+          var line = lines[i].trim();
+          // Match: #define TV_AMULET 40
+          var match = line.match(/^#define\s+(TV_\w+)\s+(\d+)/);
+          if (match) {
+            var name = match[1];
+            var value = parseInt(match[2], 10);
+            tvalNames[value] = name;
+          }
+        }
+      }
+
+      // Reset defines URL to default and reload
+      function resetDefinesUrl() {
+        document.getElementById("definesUrl").value = DEFAULT_DEFINES_URL;
+        loadDefinesFromUrl();
+      }
+
+      // Toggle function for defines mode
+      function setDefinesMode(mode) {
+        definesMode = mode;
+        var remoteBtn = document.getElementById("definesRemoteBtn");
+        var localBtn = document.getElementById("definesLocalBtn");
+        var remoteSection = document.getElementById("definesRemoteSection");
+        var localSection = document.getElementById("definesLocalSection");
+
+        if (mode === "remote") {
+          remoteBtn.classList.add("active");
+          localBtn.classList.remove("active");
+          remoteSection.classList.remove("hidden");
+          localSection.classList.add("hidden");
+        } else {
+          remoteBtn.classList.remove("active");
+          localBtn.classList.add("active");
+          remoteSection.classList.add("hidden");
+          localSection.classList.remove("hidden");
+        }
+      }
+
+      // Load defines.h from local file picker
+      function loadDefinesFromLocalFile(event) {
+        var file = event.target.files[0];
+        if (!file) return;
+        lastLocalDefinesFile = file;
+        loadDefinesFromFile(file);
+      }
+
+      // Reload last local defines file
+      function reloadLocalDefines() {
+        if (lastLocalDefinesFile) {
+          loadDefinesFromFile(lastLocalDefinesFile);
+        }
+      }
+
+      // Toggle functions for segmented buttons
+      function setTilesetMode(mode) {
+        tilesetMode = mode;
+        var remoteBtn = document.getElementById("tilesetRemoteBtn");
+        var localBtn = document.getElementById("tilesetLocalBtn");
+        var remoteSection = document.getElementById("tilesetRemoteSection");
+        var localSection = document.getElementById("tilesetLocalSection");
+
+        if (mode === "remote") {
+          remoteBtn.classList.add("active");
+          localBtn.classList.remove("active");
+          remoteSection.classList.remove("hidden");
+          localSection.classList.add("hidden");
+        } else {
+          remoteBtn.classList.remove("active");
+          localBtn.classList.add("active");
+          remoteSection.classList.add("hidden");
+          localSection.classList.remove("hidden");
+        }
+      }
+
+      function setEntityFilesMode(mode) {
+        entityFilesMode = mode;
+        var remoteBtn = document.getElementById("entityRemoteBtn");
+        var localBtn = document.getElementById("entityLocalBtn");
+        var remoteSection = document.getElementById("entityRemoteSection");
+        var localSection = document.getElementById("entityLocalSection");
+
+        if (mode === "remote") {
+          remoteBtn.classList.add("active");
+          localBtn.classList.remove("active");
+          remoteSection.classList.remove("hidden");
+          localSection.classList.add("hidden");
+        } else {
+          remoteBtn.classList.remove("active");
+          localBtn.classList.add("active");
+          remoteSection.classList.add("hidden");
+          localSection.classList.remove("hidden");
+        }
+      }
+
+      function setPrfFilesMode(mode) {
+        prfFilesMode = mode;
+        var remoteBtn = document.getElementById("prfRemoteBtn");
+        var localBtn = document.getElementById("prfLocalBtn");
+        var remoteSection = document.getElementById("prfRemoteSection");
+        var localSection = document.getElementById("prfLocalSection");
+
+        if (mode === "remote") {
+          remoteBtn.classList.add("active");
+          localBtn.classList.remove("active");
+          remoteSection.classList.remove("hidden");
+          localSection.classList.add("hidden");
+        } else {
+          remoteBtn.classList.remove("active");
+          localBtn.classList.add("active");
+          remoteSection.classList.add("hidden");
+          localSection.classList.remove("hidden");
+        }
+      }
+
+      // Collapsible section toggle
+      function toggleCollapsible(headerId, contentId) {
+        var header = document.getElementById(headerId);
+        var content = document.getElementById(contentId);
+        header.classList.toggle("expanded");
+        content.classList.toggle("expanded");
+      }
+
+      // Reset tileset URL to default and reload
+      function resetTilesetUrl() {
+        document.getElementById("tilesetUrl").value = DEFAULT_TILESET_URL;
+        loadTilesetFromUrl();
+      }
+
+      // Reset entity definition URLs to defaults and reload
+      function resetEditUrls() {
+        var defaultEditUrls = [
+          GITHUB_BASE + "lib/edit/object.txt",
+          GITHUB_BASE + "lib/edit/monster.txt",
+          GITHUB_BASE + "lib/edit/terrain.txt",
+          GITHUB_BASE + "lib/edit/flavor.txt",
+          "",
+        ];
+        for (var i = 1; i <= 5; i++) {
+          var input = document.getElementById("editUrl" + i);
+          if (input) {
+            input.value = defaultEditUrls[i - 1] || "";
+          }
+        }
+        loadAllRemoteFiles();
+      }
+
+      // Reset tile assignment URLs to defaults and reload
+      function resetPrfUrls() {
+        var defaultPrfUrls = [
+          GITHUB_BASE + "lib/pref/flvr-tiles.prf",
+          GITHUB_BASE + "lib/pref/graf-tiles.prf",
+          "",
+          "",
+          "",
+        ];
+        for (var i = 1; i <= 5; i++) {
+          var input = document.getElementById("prfUrl" + i);
+          if (input) {
+            input.value = defaultPrfUrls[i - 1] || "";
+          }
+        }
+        loadPrfFilesFromUrls();
+      }
+
+      // Get file name from URL or path
+      function getFileName(path) {
+        return path.split("/").pop().split("\\").pop() || path;
+      }
+
+      // Determine file type from filename
+      function getEditFileType(fileName) {
+        for (var key in EDIT_FILE_TYPES) {
+          if (fileName.toLowerCase().indexOf(key.toLowerCase()) !== -1) {
+            return EDIT_FILE_TYPES[key];
+          }
+        }
+        return null;
+      }
+
+      // Load edit files from URL fields
+      function loadEditFilesFromUrls() {
+        clearLoadErrorsByCategory("entity definitions");
+        clearEditStatus();
+        editFilesLoaded = 0;
+        entityNames = { K: {}, R: {}, F: {}, L: {} };
+
+        // Get URLs from input fields
+        var urls = [];
+        for (var i = 1; i <= 5; i++) {
+          var input = document.getElementById("editUrl" + i);
+          if (input && input.value.trim()) {
+            urls.push(input.value.trim());
+          }
+        }
+
+        editFilesToLoad = urls.length;
+        if (editFilesToLoad === 0) {
+          if (prfFilesMode === "remote") {
+            loadPrfFilesFromUrls();
+          }
+          return;
+        }
+
+        urls.forEach(function (url) {
+          var fileName = getFileName(url);
+          updateEditStatus(fileName, "loading", "remote", url);
+
+          fetch(url)
+            .then(function (response) {
+              if (!response.ok) throw new Error("HTTP " + response.status);
+              return response.text();
+            })
+            .then(function (content) {
+              var type = getEditFileType(fileName);
+              if (type) {
+                parseEditFileContent(content, fileName, type);
+              }
+              updateEditStatus(fileName, "success", "remote", url);
+              clearLoadError(fileName);
+              editFilesLoaded++;
+              if (editFilesLoaded === editFilesToLoad) {
+                if (prfFilesMode === "remote") {
+                  loadPrfFilesFromUrls();
+                }
+              }
+            })
+            .catch(function (err) {
+              updateEditStatus(fileName, "error", "remote", url);
+              trackLoadError(fileName, "entity definitions");
+              editFilesLoaded++;
+              console.error("Failed to load " + fileName + ":", err);
+              if (editFilesLoaded === editFilesToLoad) {
+                if (prfFilesMode === "remote") {
+                  loadPrfFilesFromUrls();
+                }
+              }
+            });
+        });
+      }
+
+      // Auto-load defines.h from GitHub - initial load
+      function autoLoadDefines() {
+        if (definesMode === "remote") {
+          loadDefinesFromUrl();
+        } else {
+          // In local mode, user must pick file manually, but still chain to entity files
+          chainToEntityFiles();
+        }
+      }
+
+      // Parse edit file content to build name lookup maps
+      // Stores: { name: "...", tval: N } for objects and flavors, or just name string for others
+      function parseEditFileContent(content, fileName, type) {
+        var lines = content.split("\n");
+
+        if (type === "L") {
+          // flavor.txt format: N:id:tval:sval then D:name on following line
+          var currentId = null;
+          var currentTval = null;
+          for (var i = 0; i < lines.length; i++) {
+            var line = lines[i].trim();
+            // N:id:tval:sval - capture id and tval
+            var nMatch = line.match(/^N:(\d+):(\d+)/);
+            if (nMatch) {
+              currentId = parseInt(nMatch[1], 10);
+              currentTval = parseInt(nMatch[2], 10);
+              continue;
+            }
+            // D:name (the flavor name)
+            if (currentId !== null && line.startsWith("D:")) {
+              var name = line.substring(2).trim();
+              entityNames[type][currentId] = { name: name, tval: currentTval };
+              currentId = null;
+              currentTval = null;
+            }
+          }
+        } else if (type === "K") {
+          // object.txt format: N:id:name then I:tval:sval:pval on following line
+          var currentId = null;
+          var currentName = null;
+          for (var i = 0; i < lines.length; i++) {
+            var line = lines[i].trim();
+            // N:id:name
+            var nMatch = line.match(/^N:(\d+):(.+)$/);
+            if (nMatch) {
+              currentId = parseInt(nMatch[1], 10);
+              currentName = nMatch[2].trim();
+              // Clean up object names (remove & prefix and ~ suffix)
+              currentName = currentName.replace(/^&\s*/, "").replace(/~$/, "");
+              continue;
+            }
+            // I:tval:sval:pval - store with tval
+            if (currentId !== null && currentName !== null) {
+              var iMatch = line.match(/^I:(\d+):/);
+              if (iMatch) {
+                var tval = parseInt(iMatch[1], 10);
+                entityNames[type][currentId] = { name: currentName, tval: tval };
+                currentId = null;
+                currentName = null;
+              }
+            }
+          }
+        } else {
+          // monster.txt, terrain.txt: N:id:name (no tval)
+          for (var i = 0; i < lines.length; i++) {
+            var line = lines[i].trim();
+            // Match N:id:name pattern
+            var match = line.match(/^N:(\d+):(.+)$/);
+            if (match) {
+              var id = parseInt(match[1], 10);
+              var name = match[2].trim();
+              entityNames[type][id] = name;
+            }
+          }
+        }
+      }
+
+      // Clear tileset display when loading fails
+      function clearTilesetDisplay() {
+        tilesetLoaded = false;
+        hasSelection = false;
+        img.src =
+          "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7";
+        divImg.classList.add("hidden");
+        placeholder.classList.remove("hidden");
+        tilePreview.style.backgroundImage = "";
+        selectionMarker.style.display = "none";
+        reticule.style.display = "none";
+        txtIndex.value = "";
+        txtHexCode.value = "";
+        document.getElementById("entityListContainer").classList.add("hidden");
+      }
+
+      // Load tileset from URL field
+      function loadTilesetFromUrl() {
+        var urlInput = document.getElementById("tilesetUrl");
+        var url = urlInput ? urlInput.value.trim() : DEFAULT_TILESET_URL;
+        if (!url) {
+          setTilesetStatus("error", "No URL specified");
+          clearTilesetDisplay();
+          return;
+        }
+
+        clearLoadErrorsByCategory("tileset image");
+        setTilesetStatus("loading", "Loading...", "remote");
+        loadedFileSources["tileset"] = url;
+
+        var testImg = new Image();
+        testImg.onload = function () {
+          setTilesetStatus("success", "Loaded", "remote");
+          clearLoadError(getFileName(url));
+          document.getElementById("txtImage").value = url;
+          loadTilesetImage(url);
+        };
+        testImg.onerror = function () {
+          setTilesetStatus("error", "Failed to load", "remote");
+          trackLoadError(getFileName(url), "tileset image");
+          clearTilesetDisplay();
+        };
+        testImg.src = url;
+      }
+
+      // Load tileset from local file
+      function loadTilesetFromFile(event) {
+        var file = event.target.files[0];
+        if (!file) return;
+        lastLocalTilesetFile = file;
+        loadTilesetFromFileObject(file);
+      }
+
+      // Load tileset from file object (used by both initial load and reload)
+      function loadTilesetFromFileObject(file) {
+        clearLoadErrorsByCategory("tileset image");
+        setTilesetStatus("loading", "Loading...", "local");
+        loadedFileSources["tileset"] = file.name;
+
+        var reader = new FileReader();
+        reader.onload = function (e) {
+          setTilesetStatus("success", "Loaded", "local");
+          clearLoadError(file.name);
+          document.getElementById("txtImage").value = file.name;
+          loadTilesetImage(e.target.result);
+        };
+        reader.onerror = function () {
+          setTilesetStatus("error", "Failed to load", "local");
+          trackLoadError(file.name, "tileset image");
+          clearTilesetDisplay();
+        };
+        reader.readAsDataURL(file);
+      }
+
+      // Reload last local tileset file
+      function reloadLocalTileset() {
+        if (lastLocalTilesetFile) {
+          loadTilesetFromFileObject(lastLocalTilesetFile);
+        }
+      }
+
+      // Common tileset loading logic
+      function loadTilesetImage(src) {
+        tw = parseInt(txtTileWidth.value);
+        th = parseInt(txtTileHeight.value);
+        reticule.style.width = tw + "px";
+        reticule.style.height = th + "px";
+        tilePreview.style.width = tw * 3 + "px";
+        tilePreview.style.height = th * 3 + "px";
+        tilePreview.style.backgroundImage = "";
+        placeholder.classList.add("hidden");
+        divImg.classList.remove("hidden");
+
+        var finishLoad = function () {
+          tilesetLoaded = true;
+          applyZoom();
+        };
+
+        img.onload = finishLoad;
+        img.src = src;
+
+        if (img.complete && img.naturalWidth > 0) {
+          finishLoad();
+        }
+      }
+
+      // Auto-load tileset from GitHub
+      function autoLoadTileset() {
+        if (tilesetMode === "remote") {
+          loadTilesetFromUrl();
+        }
+      }
+
+      // Load PRF files from URL fields
+      function loadPrfFilesFromUrls() {
+        clearLoadErrorsByCategory("tile assignments");
+        clearPrfStatus();
+        prfEntities = [];
+
+        // Get URLs from input fields
+        var urls = [];
+        for (var i = 1; i <= 5; i++) {
+          var input = document.getElementById("prfUrl" + i);
+          if (input && input.value.trim()) {
+            urls.push(input.value.trim());
+          }
+        }
+
+        if (urls.length === 0) {
+          addPlayerTileEntries();
+          updateEntityList();
+          return;
+        }
+
+        urls.forEach(function (url) {
+          var fileName = getFileName(url);
+          updatePrfStatus(fileName, "loading", "remote", url);
+
+          fetch(url)
+            .then(function (response) {
+              if (!response.ok) throw new Error("HTTP " + response.status);
+              return response.text();
+            })
+            .then(function (content) {
+              parsePrfContent(content, fileName);
+              updatePrfStatus(fileName, "success", "remote", url);
+              clearLoadError(fileName);
+              addPlayerTileEntries();
+              updateEntityList();
+            })
+            .catch(function (err) {
+              updatePrfStatus(fileName, "error", "remote", url);
+              trackLoadError(fileName, "tile assignments");
+              console.error("Failed to load " + fileName + ":", err);
+            });
+        });
+      }
+
+      // Auto-load PRF files from GitHub
+      function autoLoadPrfFiles() {
+        if (prfFilesMode === "remote") {
+          loadPrfFilesFromUrls();
+        }
+      }
+
+      // Load local edit files from file picker
+      function loadLocalEditFiles(files) {
+        clearLoadErrorsByCategory("entity definitions");
+        clearEditStatus();
+        entityNames = { K: {}, R: {}, F: {}, L: {} };
+        editFilesLoaded = 0;
+        editFilesToLoad = files.length;
+
+        if (editFilesToLoad === 0) return;
+
+        Array.from(files).forEach(function (file) {
+          updateEditStatus(file.name, "loading", "local", file.name);
+
+          var reader = new FileReader();
+          reader.onload = function (e) {
+            var type = getEditFileType(file.name);
+            if (type) {
+              parseEditFileContent(e.target.result, file.name, type);
+            }
+            updateEditStatus(file.name, "success", "local", file.name);
+            clearLoadError(file.name);
+            editFilesLoaded++;
+          };
+          reader.onerror = function () {
+            updateEditStatus(file.name, "error", "local", file.name);
+            trackLoadError(file.name, "entity definitions");
+            editFilesLoaded++;
+          };
+          reader.readAsText(file);
+        });
+      }
+
+      // Load local PRF files from file picker
+      function loadLocalPrfFiles(files) {
+        clearLoadErrorsByCategory("tile assignments");
+        clearPrfStatus();
+        prfEntities = [];
+
+        Array.from(files).forEach(function (file) {
+          updatePrfStatus(file.name, "loading", "local", file.name);
+
+          var reader = new FileReader();
+          reader.onload = function (e) {
+            parsePrfContent(e.target.result, file.name);
+            updatePrfStatus(file.name, "success", "local", file.name);
+            clearLoadError(file.name);
+            addPlayerTileEntries();
+            updateEntityList();
+          };
+          reader.onerror = function () {
+            updatePrfStatus(file.name, "error", "local", file.name);
+            trackLoadError(file.name, "tile assignments");
+          };
+          reader.readAsText(file);
+        });
+      }
+
+      // Handle local file picker for entity definition files
+      function handleLocalEditFilesOnly(event) {
+        var files = event.target.files;
+        if (files.length === 0) return;
+        lastLocalEditFiles = Array.from(files);
+        loadLocalEditFiles(lastLocalEditFiles);
+      }
+
+      // Reload last local entity definition files
+      function reloadLocalEditFilesStored() {
+        if (lastLocalEditFiles && lastLocalEditFiles.length > 0) {
+          loadLocalEditFiles(lastLocalEditFiles);
+        }
+      }
+
+      // Handle local file picker for tile assignment files
+      function handleLocalPrfFilesOnly(event) {
+        var files = event.target.files;
+        if (files.length === 0) return;
+        lastLocalPrfFiles = Array.from(files);
+        loadLocalPrfFiles(lastLocalPrfFiles);
+      }
+
+      // Reload last local tile assignment files
+      function reloadLocalPrfFilesStored() {
+        if (lastLocalPrfFiles && lastLocalPrfFiles.length > 0) {
+          loadLocalPrfFiles(lastLocalPrfFiles);
+        }
+      }
+
+      // Load PRF files from file picker (legacy - used by old handler)
+      function loadPrfFilesFromFileList(files) {
+        loadLocalPrfFiles(files);
+      }
+
+      // Load all remote files button handler
+      // Chain: defines.h -> edit files -> PRF files
+      function loadAllRemoteFiles() {
+        definesLoaded = false;
+        loadDefinesFromUrl();
+      }
+
+      // Parse PRF file content
+      function parsePrfContent(content, fileName) {
+        var lines = content.split("\n");
+        var lastCondition = "";
+        var lastComment = "";
+
+        for (var i = 0; i < lines.length; i++) {
+          var line = lines[i].trim();
+
+          // Track comments (for S: entries which use comments as names)
+          if (line.startsWith("#")) {
+            // Extract comment text, removing leading # or ## and whitespace
+            lastComment = line.replace(/^##+\s*/, "").trim();
+            continue;
+          }
+
+          // Track conditional statements
+          if (line.startsWith("?:")) {
+            lastCondition = line;
+            lastComment = ""; // Reset comment after condition
+            continue;
+          }
+
+          // Parse data lines: L:id:coords, S:id:coords, F:id:coords, K:id:coords, R:id:coords
+          // Note: S: entries use hex IDs (0x34), others use decimal IDs
+          var match = line.match(
+            /^([LSFKR]):(0x[0-9A-Fa-f]+|\d+):(0x[0-9A-Fa-f]+\/0x[0-9A-Fa-f]+)/i,
+          );
+          if (match) {
+            var prefix = match[1].toUpperCase();
+            var id = parseInt(match[2], match[2].toLowerCase().startsWith("0x") ? 16 : 10);
+            var hexCoords = match[3].toUpperCase();
+            var entityName = null;
+
+            // Look up the name and tval from the entity definition files
+            var entityTval = null;
+            if (prefix === "S") {
+              // S: entries use the preceding comment as the name
+              // Don't reset - consecutive S: entries share the same comment
+              entityName = lastComment || "(special #" + id + ")";
+            } else if (entityNames[prefix] && entityNames[prefix][id]) {
+              // Look up from the parsed edit files
+              var entityData = entityNames[prefix][id];
+              if (typeof entityData === "object") {
+                entityName = entityData.name;
+                entityTval = entityData.tval;
+              } else {
+                entityName = entityData;
+              }
+            }
+
+            var type = getEntityType(prefix, fileName);
+
+            prfEntities.push({
+              name: entityName || "(unknown #" + id + ")",
+              type: type,
+              tval: entityTval,
+              hexCoords: hexCoords,
+              sourceFile: fileName,
+            });
+
+            // Reset comment after non-S: entries to prevent bleeding
+            if (prefix !== "S") {
+              lastComment = "";
+            }
+          }
+        }
+      }
+
+      function getEntityType(prefix, fileName) {
+        switch (prefix) {
+          case "L":
+            return "Flavor";
+          case "S":
+            return "Special";
+          case "F":
+            return "Feature";
+          case "K":
+            return "Object";
+          case "R":
+            return "Monster";
+          default:
+            return "Unknown";
+        }
+      }
+
+      // Player tile offset labels (from player_tile_offset() in src/cave.c)
+      var PLAYER_TILE_OFFSETS = [
+        "Unarmed/default",
+        "Small sword (dagger, short sword)",
+        "Curved sword",
+        "Big sword or shovel",
+        "Spear",
+        "Small axe/war hammer/mattock",
+        "Big axe",
+        "Quarterstaff",
+        "Shield + any weapon",
+        "Shield + big axe",
+        "Shield + small axe",
+        "Dual wielding swords",
+        "Sword + axe offhand",
+        "Axe + sword offhand",
+        "Axe + axe dual wield",
+        "Bow (archery > melee)"
+      ];
+
+      // Player race base tiles (from graf-tiles.prf R:0-R:3)
+      var PLAYER_RACE_TILES = [
+        { race: "Noldor", baseRow: 0x8D, baseCol: 0x80 },
+        { race: "Sindar", baseRow: 0x8D, baseCol: 0x90 },
+        { race: "Naugrim", baseRow: 0x8E, baseCol: 0x80 },
+        { race: "Edain", baseRow: 0x8E, baseCol: 0x90 }
+      ];
+
+      // Generate synthetic player tile entries for all 4 races x 16 equipment states
+      function generatePlayerTileEntries() {
+        var entries = [];
+        for (var r = 0; r < PLAYER_RACE_TILES.length; r++) {
+          var raceInfo = PLAYER_RACE_TILES[r];
+          for (var offset = 0; offset < 16; offset++) {
+            var col = raceInfo.baseCol + offset;
+            // Use uppercase 0X to match findMatchingEntities normalization
+            var hexCoords = "0X" + raceInfo.baseRow.toString(16).toUpperCase() +
+                            "/0X" + col.toString(16).toUpperCase();
+            entries.push({
+              name: "<player> [" + PLAYER_TILE_OFFSETS[offset] + "]",
+              type: "Monster",
+              tval: null,
+              hexCoords: hexCoords,
+              sourceFile: "graf-tiles.prf",
+              race: raceInfo.race
+            });
+          }
+        }
+        return entries;
+      }
+
+      // Check if hex coords fall within a player tile range
+      function isPlayerTileCoord(hexCoords) {
+        for (var r = 0; r < PLAYER_RACE_TILES.length; r++) {
+          var raceInfo = PLAYER_RACE_TILES[r];
+          var rowHex = "0X" + raceInfo.baseRow.toString(16).toUpperCase();
+          // Check if row matches and column is within range [baseCol, baseCol+15]
+          for (var offset = 0; offset < 16; offset++) {
+            var col = raceInfo.baseCol + offset;
+            var tileHex = rowHex + "/0X" + col.toString(16).toUpperCase();
+            if (hexCoords === tileHex) {
+              return true;
+            }
+          }
+        }
+        return false;
+      }
+
+      // Add player tile entries to prfEntities (called after PRF parsing)
+      function addPlayerTileEntries() {
+        var playerEntries = generatePlayerTileEntries();
+        // Remove all existing player tile entries to avoid duplicates
+        prfEntities = prfEntities.filter(function(entity) {
+          if (entity.sourceFile === "graf-tiles.prf" && isPlayerTileCoord(entity.hexCoords)) {
+            return false; // Remove this entry
+          }
+          return true;
+        });
+        prfEntities = prfEntities.concat(playerEntries);
+      }
+
+      // Find entities matching the selected tile's hex coordinates
+      function findMatchingEntities(hexCoords) {
+        if (!hexCoords) return [];
+        var normalized = hexCoords.toUpperCase();
+        return prfEntities.filter(function (entity) {
+          return entity.hexCoords === normalized;
+        });
+      }
+
+      // Update the entity list display
+      function updateEntityList() {
+        var container = document.getElementById("entityListContainer");
+        var list = document.getElementById("entityList");
+
+        if (!hasSelection) {
+          container.classList.add("hidden");
+          return;
+        }
+
+        var hexCoords = txtHexCode.value;
+        var matches = findMatchingEntities(hexCoords);
+
+        if (matches.length === 0) {
+          list.innerHTML =
+            '<div class="no-entities">No assigned entities found</div>';
+        } else {
+          var html = matches
+            .map(function (entity) {
+              // Build tval display: [TV_AMULET] if available
+              var tvalDisplay = "";
+              if (entity.tval !== null && entity.tval !== undefined && tvalNames[entity.tval]) {
+                tvalDisplay = ' <span class="entity-tval">[' + tvalNames[entity.tval] + ']</span>';
+              }
+              return (
+                '<div class="entity-item">' +
+                '<span class="entity-name">' +
+                escapeHtml(entity.name) +
+                "</span>" +
+                tvalDisplay +
+                '<span class="entity-type">(' +
+                entity.type +
+                ")</span>" +
+                '<span class="entity-source">— ' +
+                entity.sourceFile +
+                "</span>" +
+                "</div>"
+              );
+            })
+            .join("");
+          list.innerHTML = html;
+        }
+
+        container.classList.remove("hidden");
+      }
+
+      function escapeHtml(text) {
+        var div = document.createElement("div");
+        div.textContent = text;
+        return div.innerHTML;
+      }
+
+      // Initialize on page load
+      document.addEventListener("DOMContentLoaded", function () {
+        autoLoadTileset();
+        // Chain: defines.h -> edit files -> PRF files
+        autoLoadDefines();
+      });
+
+      // Legacy loadTileset function - redirects to appropriate loader
+      function loadTileset() {
+        if (tilesetMode === "remote") {
+          loadTilesetFromUrl();
+        } else {
+          // In local mode, trigger file picker
+          document.getElementById("tilesetLocalFile").click();
+        }
+      }
+
+      function applyZoom() {
+        if (!tilesetLoaded) return;
+        if (chkZoom.checked) {
+          img.style.width = img.naturalWidth * 2 + "px";
+          img.style.height = img.naturalHeight * 2 + "px";
+          img.style.imageRendering = "pixelated";
+        } else {
+          img.style.width = "";
+          img.style.height = "";
+          img.style.imageRendering = "";
+        }
+        // Update selection marker position after zoom change
+        setTimeout(updateSelectionMarker, 0);
+      }
+
+      function imgMoused(event, sender) {
+        tw = parseInt(txtTileWidth.value);
+        th = parseInt(txtTileHeight.value);
+        var rect = img.getBoundingClientRect();
+        // Calculate actual displayed tile size based on rendered dimensions
+        var displayedTileWidth = (rect.width * tw) / img.naturalWidth;
+        var displayedTileHeight = (rect.height * th) / img.naturalHeight;
+        x = Math.floor((event.clientX - rect.left) / displayedTileWidth);
+        y = Math.floor((event.clientY - rect.top) / displayedTileHeight);
+        reticule.style.left = x * displayedTileWidth + "px";
+        reticule.style.top = y * displayedTileHeight + "px";
+        reticule.style.width = displayedTileWidth + "px";
+        reticule.style.height = displayedTileHeight + "px";
+        reticule.style.display = "";
+      }
+
+      function reticuleMoused(event, sender) {
+        reticule.style.display = "";
+      }
+
+      function imgClicked(event, sender) {
+        // Save the selected tile coordinates
+        selectedX = x;
+        selectedY = y;
+        hasSelection = true;
+
+        updateTileIndex();
+        updateTilePreview();
+        updateHexCode();
+        updateSelectionMarker();
+        updateEntityList();
+      }
+
+      function updateSelectionMarker() {
+        if (!hasSelection) return;
+        tw = parseInt(txtTileWidth.value);
+        th = parseInt(txtTileHeight.value);
+        var rect = img.getBoundingClientRect();
+        var displayedTileWidth = (rect.width * tw) / img.naturalWidth;
+        var displayedTileHeight = (rect.height * th) / img.naturalHeight;
+        selectionMarker.style.left = selectedX * displayedTileWidth + "px";
+        selectionMarker.style.top = selectedY * displayedTileHeight + "px";
+        selectionMarker.style.width = displayedTileWidth + "px";
+        selectionMarker.style.height = displayedTileHeight + "px";
+        selectionMarker.style.display = "block";
+      }
+
+      function updateTileIndex() {
+        if (!hasSelection) return;
+        tw = parseInt(txtTileWidth.value);
+        th = parseInt(txtTileHeight.value);
+        var result;
+        if (rbLTR.checked) {
+          result = selectedY * Math.floor(img.naturalWidth / tw) + selectedX;
+          if (rbIndexOne.checked) result += 1;
+        } else if (rbTopdown.checked) {
+          result = selectedX * Math.floor(img.naturalHeight / th) + selectedY;
+          if (rbIndexOne.checked) result += 1;
+        } else if (rbXY.checked) {
+          result = selectedX + ", " + selectedY;
+        }
+        txtIndex.value = result;
+      }
+
+      function updateTilePreview() {
+        if (!hasSelection) return;
+        tw = parseInt(txtTileWidth.value);
+        th = parseInt(txtTileHeight.value);
+        tilePreview.style.width = tw * 3 + "px";
+        tilePreview.style.height = th * 3 + "px";
+        tilePreview.style.backgroundImage = "url(" + img.src + ")";
+        tilePreview.style.backgroundPosition =
+          -selectedX * tw * 3 + "px " + -selectedY * th * 3 + "px";
+        tilePreview.style.backgroundSize =
+          img.naturalWidth * 3 + "px " + img.naturalHeight * 3 + "px";
+      }
+
+      function updateHexCode() {
+        if (!hasSelection) return;
+        var firstByte = 0x80 + selectedY;
+        var secondByte = 0x80 + selectedX;
+        txtHexCode.value =
+          "0x" +
+          firstByte.toString(16).toUpperCase() +
+          "/0x" +
+          secondByte.toString(16).toUpperCase();
+      }
+
+      function copyToClipboard(text) {
+        txtIndex.value = text;
+        if (navigator.clipboard) {
+          navigator.clipboard.writeText(text);
+          return true;
+        } else if (document.execCommand) {
+          txtIndex.select();
+          document.execCommand("Copy");
+          return true;
+        } else {
+          return false;
+        }
+      }
+
+      function copyFieldToClipboard(inputElement) {
+        var text = inputElement.value;
+        if (!text) return;
+
+        var wrapper = inputElement.parentElement;
+        var icon = wrapper.querySelector(".copy-icon");
+
+        if (navigator.clipboard) {
+          navigator.clipboard.writeText(text).then(function () {
+            showCopiedFeedback(wrapper, icon);
+          });
+        } else if (document.execCommand) {
+          inputElement.disabled = false;
+          inputElement.select();
+          document.execCommand("Copy");
+          inputElement.disabled = true;
+          showCopiedFeedback(wrapper, icon);
+        }
+      }
+
+      function showCopiedFeedback(wrapper, icon) {
+        var originalIcon = icon.innerHTML;
+        icon.innerHTML = "&#x2713;";
+        wrapper.classList.add("copied");
+        setTimeout(function () {
+          icon.innerHTML = originalIcon;
+          wrapper.classList.remove("copied");
+        }, 800);
+      }
+
+      function searchByHex() {
+        if (!tilesetLoaded) {
+          alert("Please load a tileset first.");
+          return;
+        }
+
+        var input = txtHexSearch.value.trim();
+        // Match pattern like "0x85/0x9c" or "0X85/0X9C"
+        var match = input.match(/^0x([0-9a-f]+)\/0x([0-9a-f]+)$/i);
+        if (!match) {
+          alert("Invalid format. Use hex coordinates like: 0x85/0x9C");
+          return;
+        }
+
+        var firstByte = parseInt(match[1], 16);
+        var secondByte = parseInt(match[2], 16);
+
+        // Reverse the encoding: firstByte = 0x80 + y, secondByte = 0x80 + x
+        var tileY = firstByte - 0x80;
+        var tileX = secondByte - 0x80;
+
+        if (tileX < 0 || tileY < 0) {
+          alert("Invalid hex coordinates. Values must be >= 0x80.");
+          return;
+        }
+
+        // Check bounds
+        tw = parseInt(txtTileWidth.value);
+        th = parseInt(txtTileHeight.value);
+        var maxX = Math.floor(img.naturalWidth / tw) - 1;
+        var maxY = Math.floor(img.naturalHeight / th) - 1;
+
+        if (tileX > maxX || tileY > maxY) {
+          alert(
+            "Tile coordinates out of bounds. Max: x=" + maxX + ", y=" + maxY,
+          );
+          return;
+        }
+
+        // Select the tile
+        selectedX = tileX;
+        selectedY = tileY;
+        hasSelection = true;
+
+        updateTileIndex();
+        updateTilePreview();
+        updateHexCode();
+        updateSelectionMarker();
+        updateEntityList();
+
+        // Update reticule position to show the selected tile
+        var rect = img.getBoundingClientRect();
+        var displayedTileWidth = (rect.width * tw) / img.naturalWidth;
+        var displayedTileHeight = (rect.height * th) / img.naturalHeight;
+        reticule.style.left = selectedX * displayedTileWidth + "px";
+        reticule.style.top = selectedY * displayedTileHeight + "px";
+        reticule.style.width = displayedTileWidth + "px";
+        reticule.style.height = displayedTileHeight + "px";
+        reticule.style.display = "";
+      }
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Sil-Q Tile Picker</h1>
+
+      <!-- Error banner (shown when any file fails to load) -->
+      <div id="errorBanner" class="error-banner hidden">
+        <div class="error-banner-title">Some files failed to load:</div>
+        <ul id="errorBannerList" class="error-banner-list"></ul>
+      </div>
+
+      <!-- Hex coordinate search -->
+      <div class="load-row search-row">
+        <span class="form-label">Search tile by <code>attr/char</code> index:</span>
+        <input id="txtHexSearch" type="text" placeholder="0x85/0x9C">
+        <button type="button" onclick="searchByHex()">Search</button>
+      </div>
+
+      <!-- Selection Info -->
+      <div class="info-box">
+        <div class="result-row">
+          <span>Last tile selected:</span>
+          <div id="tilePreview"></div>
+          <div class="copyable-field" onclick="copyFieldToClipboard(txtIndex)">
+            <input type="text" id="txtIndex" disabled>
+            <span class="copy-icon">&#x2398;</span>
+          </div>
+          <div
+            class="copyable-field"
+            onclick="copyFieldToClipboard(txtHexCode)"
+          >
+            <input type="text" id="txtHexCode" disabled>
+            <span class="copy-icon">&#x2398;</span>
+          </div>
+          <label for="txtHexCode"
+            ><code>(attr/char)</code> tile index for <code>*.prf</code> files</label
+          >
+        </div>
+        <div id="entityListContainer" class="entity-list-container hidden">
+          <div class="entity-list-header">Assigned entities:</div>
+          <div id="entityList" class="entity-list"></div>
+        </div>
+      </div>
+
+      <!-- Zoom toggle -->
+      <div class="radio-option zoom-toggle">
+        <input id="chkZoom" type="checkbox" onchange="applyZoom()" checked>
+        <label for="chkZoom">2x zoom</label>
+      </div>
+
+      <!-- Placeholder (shown before tileset is loaded) -->
+      <div id="placeholder">Load tileset first</div>
+
+      <!-- Tileset Image (hidden until loaded) -->
+      <div id="divImg" class="hidden">
+        <div class="image-container">
+          <img
+            id="img"
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+            alt="Tileset"
+            onmousemove="imgMoused(event, this)"
+            onmouseout="reticule.style.display = 'none'"
+            onclick="imgClicked(event, this)"
+          >
+          <div
+            id="reticule"
+            onmousemove="reticuleMoused(event, this)"
+            onclick="imgClicked(event, this)"
+          ></div>
+          <div id="selectionMarker"></div>
+        </div>
+      </div>
+
+      <!-- Options Section (always visible) -->
+      <div id="card-tileset-options" class="card">
+        <div class="form-grid">
+          <div class="form-row">
+            <span class="form-label">Tile Size</span>
+            <div class="input-group">
+              <input id="txtTileWidth" type="text" value="16">
+              <span>&times;</span>
+              <input id="txtTileHeight" type="text" value="16">
+              <span>px</span>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <span class="form-label">Index Mode</span>
+            <div class="radio-group-horizontal">
+              <div class="radio-option">
+                <input
+                  id="rbLTR"
+                  type="radio"
+                  value="Left to Right"
+                  name="rblIndexMode"
+                  checked
+                  onchange="updateTileIndex()"
+                >
+                <label for="rbLTR">Left to Right</label>
+              </div>
+              <div class="radio-option">
+                <input
+                  id="rbTopdown"
+                  type="radio"
+                  name="rblIndexMode"
+                  value="Top Down"
+                  onchange="updateTileIndex()"
+                >
+                <label for="rbTopdown">Top Down</label>
+              </div>
+              <div class="radio-option">
+                <input
+                  id="rbXY"
+                  type="radio"
+                  name="rblIndexMode"
+                  value="X, Y"
+                  onchange="updateTileIndex()"
+                >
+                <label for="rbXY">X, Y</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <span class="form-label">Index starts at</span>
+            <div class="radio-group-horizontal">
+              <div class="radio-option">
+                <input
+                  id="rbIndexOne"
+                  type="radio"
+                  name="indexStart"
+                  value="1"
+                  checked
+                  onchange="updateTileIndex()"
+                >
+                <label for="rbIndexOne">1</label>
+              </div>
+              <div class="radio-option">
+                <input
+                  id="rbIndexZero"
+                  type="radio"
+                  name="indexStart"
+                  value="0"
+                  onchange="updateTileIndex()"
+                >
+                <label for="rbIndexZero">0</label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Load Tileset Section -->
+      <div id="card-tileset" class="card">
+        <p class="note">
+          Tileset image (<code>lib/xtra/graf/*.png</code>).
+          Dimensions for 16x16 tiles should be 512x256 pixels, representing
+          16 rows and 32 columns.
+        </p>
+
+        <!-- Mode toggle -->
+        <div class="segmented-toggle">
+          <button
+            type="button"
+            id="tilesetRemoteBtn"
+            class="active"
+            onclick="setTilesetMode('remote')"
+          >
+            🌐 GitHub
+          </button>
+          <button
+            type="button"
+            id="tilesetLocalBtn"
+            onclick="setTilesetMode('local')"
+          >
+            📁 Local
+          </button>
+        </div>
+
+        <!-- Remote mode section -->
+        <div id="tilesetRemoteSection">
+          <div class="load-row">
+            <input
+              id="tilesetUrl"
+              type="text"
+              class="url-input"
+              value="https://raw.githubusercontent.com/sil-quirk/sil-q/master/lib/xtra/graf/16x16_microchasm.png"
+            >
+            <button type="button" onclick="loadTilesetFromUrl()">Load</button>
+            <button
+              type="button"
+              id="remote-use-defaults-button"
+              class="btn-small"
+              onclick="resetTilesetUrl()"
+            >
+              Load default
+            </button>
+          </div>
+        </div>
+
+        <!-- Local mode section -->
+        <div id="tilesetLocalSection" class="hidden local-file-section">
+          <div class="load-row">
+            <input
+              id="tilesetLocalFile"
+              type="file"
+              accept="image/*"
+              onchange="loadTilesetFromFile(event)"
+            >
+            <button type="button" class="btn-small" onclick="reloadLocalTileset()">
+              Reload
+            </button>
+          </div>
+        </div>
+
+        <!-- Tileset status (same style as entity files) -->
+        <div
+          id="tilesetStatusList"
+          class="prf-status-list status-list-spaced"
+        ></div>
+
+        <!-- Hidden field for current image name -->
+        <input id="txtImage" type="hidden" value="16x16_microchasm.png">
+      </div>
+
+
+      <!-- Type Definitions Section (defines.h) -->
+      <div id="card-type-definitions" class="card">
+        <p class="note">Type definitions (<code>src/defines.h</code>) for <code>TV_*</code> constants.</p>
+
+        <!-- Mode toggle -->
+        <div class="segmented-toggle">
+          <button
+            type="button"
+            id="definesRemoteBtn"
+            class="active"
+            onclick="setDefinesMode('remote')"
+          >
+            🌐 GitHub
+          </button>
+          <button
+            type="button"
+            id="definesLocalBtn"
+            onclick="setDefinesMode('local')"
+          >
+            📁 Local
+          </button>
+        </div>
+
+        <!-- Remote mode section -->
+        <div id="definesRemoteSection">
+          <div class="load-row">
+            <input
+              id="definesUrl"
+              type="text"
+              class="url-input"
+              value="https://raw.githubusercontent.com/sil-quirk/sil-q/master/src/defines.h"
+            >
+            <button type="button" onclick="loadDefinesFromUrl()">Load</button>
+            <button
+              type="button"
+              class="btn-small"
+              onclick="resetDefinesUrl()"
+            >
+              Load default
+            </button>
+          </div>
+        </div>
+
+        <!-- Local mode section -->
+        <div id="definesLocalSection" class="hidden local-file-section">
+          <div class="load-row">
+            <input
+              id="definesLocalFile"
+              type="file"
+              accept=".h,.c,.txt"
+              onchange="loadDefinesFromLocalFile(event)"
+            >
+            <button type="button" class="btn-small" onclick="reloadLocalDefines()">
+              Reload
+            </button>
+          </div>
+        </div>
+
+        <!-- Status display -->
+        <div id="definesStatusList" class="prf-status-list status-list-spaced"></div>
+      </div>
+
+      <!-- Entity Definitions Section -->
+      <div class="card">
+        <p class="note">Entity definitions (<code>lib/edit/*.txt</code>).</p>
+
+        <!-- Mode toggle -->
+        <div class="segmented-toggle">
+          <button
+            type="button"
+            id="entityRemoteBtn"
+            class="active"
+            onclick="setEntityFilesMode('remote')"
+          >
+            🌐 GitHub
+          </button>
+          <button
+            type="button"
+            id="entityLocalBtn"
+            onclick="setEntityFilesMode('local')"
+          >
+            📁 Local
+          </button>
+        </div>
+
+        <!-- Remote mode section -->
+        <div id="entityRemoteSection">
+          <div class="load-row">
+            <button type="button" onclick="loadAllRemoteFiles()">
+              Load all
+            </button>
+            <button
+              type="button"
+              class="btn-small"
+              onclick="resetEditUrls()"
+            >
+              Load defaults
+            </button>
+          </div>
+
+          <!-- Collapsible URL fields -->
+          <div
+            class="collapsible-header"
+            id="editUrlFieldsHeader"
+            onclick="toggleCollapsible('editUrlFieldsHeader', 'editUrlFieldsContent')"
+          >
+            <span class="collapsible-arrow">▶</span>
+            <span>Configure URLs</span>
+          </div>
+          <div class="collapsible-content" id="editUrlFieldsContent">
+            <div class="section-label-spaced">
+              Entity definitions (object.txt, monster.txt, terrain.txt,
+              flavor.txt):
+            </div>
+            <div class="url-field-row">
+              <input
+                id="editUrl1"
+                type="text"
+                value="https://raw.githubusercontent.com/sil-quirk/sil-q/master/lib/edit/object.txt"
+              >
+            </div>
+            <div class="url-field-row">
+              <input
+                id="editUrl2"
+                type="text"
+                value="https://raw.githubusercontent.com/sil-quirk/sil-q/master/lib/edit/monster.txt"
+              >
+            </div>
+            <div class="url-field-row">
+              <input
+                id="editUrl3"
+                type="text"
+                value="https://raw.githubusercontent.com/sil-quirk/sil-q/master/lib/edit/terrain.txt"
+              >
+            </div>
+            <div class="url-field-row">
+              <input
+                id="editUrl4"
+                type="text"
+                value="https://raw.githubusercontent.com/sil-quirk/sil-q/master/lib/edit/flavor.txt"
+              >
+            </div>
+            <div class="url-field-row">
+              <input id="editUrl5" type="text" placeholder="(additional URL)">
+            </div>
+          </div>
+        </div>
+
+        <!-- Local mode section -->
+        <div id="entityLocalSection" class="hidden local-file-section">
+          <div class="load-row">
+            <input
+              id="editLocalFiles"
+              type="file"
+              accept=".txt"
+              multiple
+              onchange="handleLocalEditFilesOnly(event)"
+            >
+            <button type="button" class="btn-small" onclick="reloadLocalEditFilesStored()">
+              Reload
+            </button>
+            <span class="helper-text">
+              Select .txt definition files
+            </span>
+          </div>
+        </div>
+
+        <!-- Status display -->
+        <div id="editStatusList" class="prf-status-list status-list-spaced"></div>
+      </div>
+
+      <!-- Tile Assignments Section -->
+      <div class="card">
+        <p class="note">Tile assignments (<code>lib/pref/*.prf</code>).</p>
+
+        <!-- Mode toggle -->
+        <div class="segmented-toggle">
+          <button
+            type="button"
+            id="prfRemoteBtn"
+            class="active"
+            onclick="setPrfFilesMode('remote')"
+          >
+            🌐 GitHub
+          </button>
+          <button
+            type="button"
+            id="prfLocalBtn"
+            onclick="setPrfFilesMode('local')"
+          >
+            📁 Local
+          </button>
+        </div>
+
+        <!-- Remote mode section -->
+        <div id="prfRemoteSection">
+          <div class="load-row">
+            <button type="button" onclick="loadPrfFilesFromUrls()">
+              Load all
+            </button>
+            <button
+              type="button"
+              class="btn-small"
+              onclick="resetPrfUrls()"
+            >
+              Load defaults
+            </button>
+          </div>
+
+          <!-- Collapsible URL fields -->
+          <div
+            class="collapsible-header"
+            id="prfUrlFieldsHeader"
+            onclick="toggleCollapsible('prfUrlFieldsHeader', 'prfUrlFieldsContent')"
+          >
+            <span class="collapsible-arrow">▶</span>
+            <span>Configure URLs</span>
+          </div>
+          <div class="collapsible-content" id="prfUrlFieldsContent">
+            <div class="section-label-spaced">
+              Tile assignments (.prf files):
+            </div>
+            <div class="url-field-row">
+              <input
+                id="prfUrl1"
+                type="text"
+                value="https://raw.githubusercontent.com/sil-quirk/sil-q/master/lib/pref/flvr-tiles.prf"
+              >
+            </div>
+            <div class="url-field-row">
+              <input
+                id="prfUrl2"
+                type="text"
+                value="https://raw.githubusercontent.com/sil-quirk/sil-q/master/lib/pref/graf-tiles.prf"
+              >
+            </div>
+            <div class="url-field-row">
+              <input id="prfUrl3" type="text" placeholder="(additional URL)">
+            </div>
+            <div class="url-field-row">
+              <input id="prfUrl4" type="text" placeholder="(additional URL)">
+            </div>
+            <div class="url-field-row">
+              <input id="prfUrl5" type="text" placeholder="(additional URL)">
+            </div>
+          </div>
+        </div>
+
+        <!-- Local mode section -->
+        <div id="prfLocalSection" class="hidden local-file-section">
+          <div class="load-row">
+            <input
+              id="prfLocalFiles"
+              type="file"
+              accept=".prf"
+              multiple
+              onchange="handleLocalPrfFilesOnly(event)"
+            >
+            <button type="button" class="btn-small" onclick="reloadLocalPrfFilesStored()">
+              Reload
+            </button>
+            <span class="helper-text">
+              Select .prf assignment files
+            </span>
+          </div>
+        </div>
+
+        <!-- Status display -->
+        <div id="prfStatusList" class="prf-status-list status-list-spaced"></div>
+      </div>
+
+      <!-- Notes Section -->
+      <div class="card notes-card">
+        <h2 class="notes-heading">Notes</h2>
+        <ul class="notes-list">
+          <li>
+            <strong>S: (Special) entries</strong> — Names are parsed from
+            comments in <code>.prf</code> files. Their actual behavior is
+            hardcoded in <code>src/spells1.c</code> and
+            <code>src/files.c</code>, using indices into the
+            <code>misc_to_attr[]</code> and <code>misc_to_char[]</code> arrays.
+          </li>
+          <li>
+            <strong>TV_* constants</strong> — Parsed from
+            <code>src/defines.h</code>. Only shown for entities that have a
+            <code>tval</code> (objects and flavors).
+          </li>
+          <li>
+            <strong>(attr/char) tile indices</strong> — The char(acter) is the
+            column=x, attr(ibute) is the row=y in the tileset when the game runs
+            in tiles graphics mode. Bit flag <code>0x80</code> tells the
+            rendering engine to draw a graphical tile rather than an ASCII
+            char(acter) with a color attr(ibute).
+          </li>
+          <li>
+            <strong>Player tiles</strong> — Each of the 4 playable races
+            (Noldor, Sindar, Naugrim, Edain) has 16 tiles representing
+            different equipment states. Only the base tile (offset 0) is
+            defined in <code>graf-tiles.prf</code> as <code>R:0</code> through
+            <code>R:3</code>. The remaining 15 tiles per race are computed
+            dynamically by adding an offset based on equipped weapons, as
+            defined in <code>src/cave.c</code>, function
+            <code>player_tile_offset()</code>. This tool hardcodes these offsets
+            to display all player tiles.
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </body>
+</html>

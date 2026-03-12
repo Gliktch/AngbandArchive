@@ -1,0 +1,19 @@
+# File: misc.txt
+
+# Maximum number of monsters in r_info.txt
+R:1200
+
+# Maximum number of body types in b_info.txt
+B:150
+
+# Maximum number of items in k_info.txt
+K:750
+
+# Maximum number of terrain features in f_info.txt
+F:255
+
+# Maximum number of artifacts in a_info.txt
+A:329
+
+# Maximum number of ego-items in e_info.txt
+E:500

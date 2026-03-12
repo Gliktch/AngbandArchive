@@ -1,0 +1,605 @@
+[[[[G|=== Auto-picker/Destroyer Online Help ===
+
+Keine - 'Auto-picker/Destroyer is a system
+that lets you automatically pick up, destroy, and/or inscribe items you find.
+Everything from now on is mostly copied from original Hengband help file.
+Beginners don't really have to read this; once you've gotten used to
+adventuring, I recommend checking this section out to raise your exploration
+effectiveness.
+
+Starting from v1.1.03, you can use following settings.'
+
+　　?:[EQU $EXTRA_MODE ON]　(Applies when playing on Extra difficulty)
+　　?:[EQU $EXTRA_MODE OFF]　(Applies when not playing on Extra difficulty)
+　　?:[EQU $BERSERKER ON] (Applies for Berserk personality)
+　　?:[EQU $BERSERKER OFF] (Applies for non-Berserk personality)
+
+
+--- Mostly copied from original Hengband ---
+
+[[[[o|=== Auto-Picker/Destroyer Editor ===
+
+Please choose one of the following online help files:
+
+    (a) The Basics of Auto-picker Editor      (#Editor)            
+    (b) Cut and Paste                         (#CutAndPaste)       
+    (c) Register to Auto-picker               (#RegisterName)      
+    (d) Insert Name from your Inventory       (#InsertObjectName)  
+    (e) Insert Fixed Keyword                  (#InsertKeyword)     
+    (f) Change Multiple Lines at Once         (#MultiLines)        
+    (g) Conditionals                          (#Conditionals)      
+    (h) Auto Register an Item without Editor  (#AutoRegister)      
+
+    (i) Format of Auto-picker/destroyer       (#AutopickFormat)      
+    (j) Format of Conditionals                (#ConditionFormat)     
+    (k) Sample Preference File                (lib/pref/pickpref.prf)
+
+***** [a] editor.txt#Editor
+***** [b] editor.txt#CutAndPaste
+***** [c] editor.txt#RegisterName
+***** [d] editor.txt#InsertObjectName
+***** [e] editor.txt#InsertKeyword
+***** [f] editor.txt#MultiLines
+***** [g] editor.txt#Conditionals
+***** [h] editor.txt#AutoRegister
+***** [i] editor.txt#AutopickFormat
+***** [j] editor.txt#ConditionFormat
+***** [k] ../pref/pickpref.prf
+
+***** <Editor>
+[[[[G|--- The Basics of Auto-picker Editor ---
+
+The "auto-picker editor" is a special text editor to write preferences
+for auto-picker/destroyer.
+
+To open the editor, you can press the _ key in the game or choose
+"(P) Auto-picker/destroyer editor" in the options panel (=).
+
+Like normal text editor, you can move the cursor by Left, Right, Up,
+Down arrow keys, and Home, End, PageUp, and PageDown keys.  And any
+letter keys pressed are written as a text.
+
+Press ^W to finish the edito.  All changes will be saved automatically.
+Or press ^Q to quit and discard all changes.
+
+Press ESC to open a command menu.
++---------------------------+
+| a) Help                   |
+| b) Quit without save   ^Q |
+| c) Save & Quit         ^W |
+| d) Revert all changes  ^Z |
+| e) Edit                 > |
+| f) Search               > |
+| g) Move cursor          > |
+| h) Insert...            > |
+| i) Adjective (general)  > |
+| j) Adjective (special)  > |
+| k) Keywords (noun)      > |
+| l) Command letter       > |
++---------------------------+
+Press a-l to choose a command or open a sub-menu.  Also you can press
+^Q, ^Z, etc. to use commands without opening this menu.
+
+
+***** <CutAndPaste>
+[[[[G|--- Cut and Paste
+
+Cut and Paste are useful when you want to write many similer lines, or
+want to swap lines.
+Open submenu "e) Edit >",
++-------------------------+
+| a) Cut               ^X |
+| b) Copy              ^C |
+| c) Paste             ^V |
+| d) Select block      ^G |
+| e) Kill rest of line ^K |
+| f) Delete character  ^D |
+| g) Backspace         ^H |
+| h) Return            ^J |
+| i) Return            ^M |
++-------------------------+
+
+You can select a segment of the text using shift key + arrow keys.
+Selected text will be displayed in yellow.  You can press ^X to cut
+the selected text, or press ^C to copy the selected text to the
+clipboard.  Contents of the clipboard will be pasted on pressing ^V.
+
+Note that it's possible that Hengband cannot recognize shift+arrow
+keys on a minor environment.  In that case, you can press ^G and then
+move cursor to select text.
+
+
+***** <RegisterName>
+[[[[G|--- Register to Auto-picker ---
+
+You can set up automatic item pickup by writing that item's name on 
+a single line.
+
+For example, if you wish to collect Potions of Speed and Rations of Food,
+you write down:
+
+potion of speed
+ration of food
+
+Since the auto-picker editor is a text editor, pressing a letter key types
+that letter. You can add a new line by pressing Enter. If you point the cursor
+at the line where you wrote down 'potion of speed', following description will
+be shown at bottom of the screen:
+
+[[[[D|--------------------------------------------------------------------------------
+Pickup all items which have "potion of speed" as part of its name.
+Display these items when you press the M key in the full 'M'ap.
+[[[[D|--------------------------------------------------------------------------------
+
+If, for example, you have means of magically satisfying hunger and no longer
+need rations of food, write down '!' at the start of the line to make items
+get automatically destroyed.
+
+potion of speed
+!ration of food
+
+The description at the bottom of screen will be the following:
+
+[[[[D|--------------------------------------------------------------------------------
+Destroy all items which have "ration of food" as part of its name.
+Display these items when you press the K key in the full 'M'ap.
+[[[[D|--------------------------------------------------------------------------------
+
+Pressing '^W' (that is, pressing 'W' while holding down Ctrl key) closes the
+editor.
+
+If you made a mistake during editing, press '^Q' to leave without saving any
+changes.
+
+
+***** <InsertObjectName>
+[[[[G|--- Insert Name from your Inventory ---
+
+Suppose you've returned to town with items to identify, and have found
+plenty of junk you don't need: apple juice, Wands of Haste Monster,
+Potions of Slow Poison, Scrolls of Rumour...
+
+Since you're not interested in any of these, you want to mark them for
+auto-destruction. You can write all of their names down one by one,
+but that can get pretty annoying.
+
+In a case like this, open the menu with ESC key, and pick h) Insert...
++---------------------------------------+
+| a) Insert name of choosen object   ^I |
+| b) Insert name of destroyed object    |
+| c) Insert conditional block           |
+| d) Insert a macro definition          |
+| e) Insert a keymap definition         |
++---------------------------------------+
+You want to pick 'a) Insert name of choosen object   ^I'.
+You also can use this command by pressing '^I' without opening the menu.
+
+It will open up a menu to pick an item from your inventory. By pressing
+a letter corresponding to one of your inventory slots, you can write down
+that item in the editor:
+
+soft drinks:^apple juice                
+^potion of slow poison                  
+magical devices:^scroll of rumour       
+magical devices:^wand of haste monster  
+
+By appending those lines with '!', you can mark those items for
+auto-destruction.
+
+By the way, scrolls/wands get appended with the 'magical devices' keyword.
+The description at the bottom of the screen reads the following:
+
+[[[[D|--------------------------------------------------------------------------------
+Pickup all scrolls, wands, staves or rods whose name is beginning with "scroll
+of rumour".  Display these items when you press the M key in the full 'M'ap. 
+[[[[D|--------------------------------------------------------------------------------
+
+There are other various helpful keywords as well.
+
+
+***** <InsertKeyword>
+[[[[G|--- Insert Fixed Keyword ---
+
+Suppose you want to automatically pick up all unidentified boots with a query
+confirming you want to pick it up. '!' marks an item for auto-destruction, 
+'~' leaves it on the floor, simply writing down an item's name auto-pickups it
+without a query, but how do you auto-pickup with an added confirmation prompt?
+
+It works if you append ';':
+
+;unidentified boots
+
+You don't have to remember all of those keywords while using the editor - you
+can use the menu:
+
+ 'k) Keywords (noun)      >' -> 'r) boots'
+ 'i) Adjective (general)  >' -> 'b) unidentified'
+ 'l) Command letter       >' -> 'd) ';' (Query to pick up)'
+
+The description at the bottom of the screen will be the following:
+ 
+[[[[D|--------------------------------------------------------------------------------
+Ask to pick up unidentified boots.  Display these items when you press the M key
+in the full 'M'ap.                                                              
+[[[[D|--------------------------------------------------------------------------------
+
+There are many other keywords available, so feel free to experiment with them.
+Detailed description of rules you're defining will be shown at the bottom of 
+the screen. Once you're done, remove keywords you don't need with [[[[o|Delete key| or
+[[[[o|Backspace key|.
+
+By the way, you can write down any numbers in rules like 'more than 0 dice'.
+
+
+***** <MultiLines>
+[[[[G|---  Change Multiple Lines at Once  ---
+By selecting multiple lines at the same time with Shift+arrow keys, you can
+apply a keyword to all of them by using the menu. For example, if you
+select those 4 lines you added like this:
+
+[[[[y|soft drinks:^apple juice               
+[[[[y|^potion of slow poison                 
+[[[[y|magical devices:^scroll of rumour      
+[[[[y|magical devices:^wand of haste monster 
+
+and then open the menu and use
+'l) Command letter       >' -> 'b) '!' (Auto destroy)',
+those lines will be changed to:
+
+[[[[y|!soft drinks:^apple juice               
+[[[[y|!^potion of slow poison                 
+[[[[y|!magical devices:^scroll of rumour      
+[[[[y|!magical devices:^wand of haste monster 
+
+Same applies to other keywords.
+
+
+***** <Conditionals>
+[[[[G|---  Conditionals  ---
+
+You can set a condition based on player race/class/level for the 
+auto-picker/destroyer rules.
+
+Open the editor menu, then pick
+'h) Insert...            >' -> 'c) Insert conditional block'
+to insert a [[[[o|conditional expression block|.
+
+?:[AND [EQU $RACE Human] [EQU $CLASS Warrior] [GEQ $LEVEL 05]]
+?:1
+
+A line starting with '?:' is a conditional expression. The first line in this
+example describes a condition of 'Human Warrior of level 5 or higher',
+the second line '?:1' closes the conditional, returning to default state
+(default value of a conditional expressional is 1 - always true).
+
+Anything written between those two lines will be applied only to a character
+satisfying the described condition. For a Human Mage, it will be displayed
+like this:
+
+[[[[s|?:[AND [EQU $RACE Human] [EQU $CLASS Warrior] [GEQ $LEVEL 05]]
+[[[[s|!soft drinks:^apple juice               
+[[[[s|!^potion of slow poison                 
+[[[[s|!magical devices:^scroll of rumour      
+[[[[s|!magical devices:^wand of haste monster 
+?:1
+
+The rules are [[[[s|grayed out|, which means they're not being applied.
+
+You can freely edit the expression; if you want to make it less restrictive,
+applying to all Warriors in general, delete the rest of the conditions:
+
+?:[EQU $CLASS Warrior]
+
+[[[[o|Using cut and paste makes editing far easier. (See #CutAndPaste [b])
+
+
+***** <AutoRegister>
+[[[[G|---  Auto Register an Item without Editor  ---
+
+There's an even easier way to mark an item for auto-destruction.
+If you use the 'destroy item' command ('[[[[o|k|' or '[[[[o|^D|'),
+it will show the following prompt:
+
+Really destroy Wand of Haste Monster (5 charges)? [y/n/Auto]
+
+Pressing [[[[o|'A' while holding Shift key| destroys the item and adds
+the following rule to the end of auto-picker pref file:
+
+[[[[R|(!magical devices:^wand of haste monster
+
+Rules added in this manner are effective [[[[o|until your current character's|
+[[[[o|death|. This might be useful for items that are interesting only at the
+start of the game and become obsolete as you make progress; for example, once
+you find a Rod of Trap Detection, you don't need Scrolls of Trap Detection.
+
+This also can be used for equipment. The rule added depends on whether the
+piece of equipment you're destroying is
+[[[[o|(1) unidentified
+[[[[o|(2) identified and nameless (average or good)
+[[[[o|(3) identified and is an ego-item
+
+Here's a table to illustrate this:
+
+Chosen item                       Rule added
+[[[[D|--------------------------        ---------------------------
+Dagger (1d4) [[[[o|(unidentified)|     ->   [[[[R|(!unidentified weapons:^dagger|
+Dagger (1d4) {average}          ->   [[[[R|(!nameless weapons:^dagger|
+Dagger (1d4) (+0,+0)            ->   [[[[R|(!nameless weapons:^dagger|
+Dagger (1d4) {good}             ->   [[[[R|(!nameless weapons:^dagger|
+Dagger (1d4) (+3,+2)            ->   [[[[R|(!nameless weapons:^dagger|
+Dagger (1d4) {excellent}        ->   [[[[R|(!ego weapons:dagger|
+Dagger of Foxfire (1d4) (+2,+5) ->   [[[[R|(!common ego weapons:of foxfire|
+
+自動登録された設定を取り消したり編集する場合は、自動拾いエディタを使い
+ます。一番最後に追加されているので、[[[[o|End|キーで移動すると便利でしょう。
+自動登録の内容は自動拾いエディタの中では[[[[R|赤い文字|で表示されます。
+
+例えばこのようになります。
+[[[[D|--------------------------------------------------------------------------------
+[[[[R|?:$AUTOREGISTER
+[[[[R|# *警告!!* 以降の行は自動登録されたものです。
+[[[[R|# 後で自動的に削除されますので、必要な行は上の方へ移動しておいてください。
+[[[[R|(!無銘の武器:^ダガー
+[[[[R|(!魔法アイテム:^トラップ感知の巻物
+[[[[R|(!^スライムモルド
+[[[[D|--------------------------------------------------------------------------------
+この赤い文字表示は自動登録された内容が有効期限付きである事を示す警告で
+す。つまり、現在プレイ中のキャラクターが死亡して次のキャラクターを始め
+た時にはこの赤い文字の部分だけが全て削除されます。
+
+
+もし有効期限をキャンセルして、次以降のキャラクターでも永久に(再びあな
+たが編集するまで)同じ設定を使いたい時は、必要な設定行を
+「[[[[R|?:$AUTOREGISTER|」という行より上に移動してください。
+
+例えば、「[[[[R|(!^スライムモルド|」の行にカーソルを移動して、[[[[o|カット(^X)|を実行
+し、次に「[[[[R|?:$AUTOREGISTER|」の行より上にカーソルを移動して[[[[o|ペースト(^V)|
+を実行すれば、以下のように行の順番が入れ換わり、「(!^スライムモルド」が
+白い文字に変わります。
+[[[[D|--------------------------------------------------------------------------------
+(!^スライムモルド
+[[[[R|?:$AUTOREGISTER
+[[[[R|# *警告!!* 以降の行は自動登録されたものです。
+[[[[R|# 後で自動的に削除されますので、必要な行は上の方へ移動しておいてください
+[[[[R|(!無銘の武器:^ダガー
+[[[[R|(!魔法アイテム:^トラップ感知の巻物
+[[[[D|--------------------------------------------------------------------------------
+これで、スライムモルドの自動破壊のみ次以降のキャラクターでも登録された
+ままになります。有効期限が定められているのは赤い文字で表示された行だけ
+なのです。
+
+
+
+***** <AutopickFormat>
+[[[[G|====  Format of Auto-picker/destroyer  ====
+
+ユーザーディレクトリに"picktype.prf"又は "picktype-<名前>.prf" という
+ファイルを作って各行にアイテムの名前を書くと、変愚蛮怒にそのアイテムを
+自動的に拾ったり破壊するように指示する事ができます。
+
+この設定ファイルは以下のタイミングで読み込まれます。
+●ゲームを始める時。
+●自動拾いエディタを終了した時。
+●レベル/魔法領域/種族のどれかが変わった時。
+●「$」コマンドを使った時。(外部のエディタで設定を書き変えた時に使用)
+
+設定ファイルの具体例は (lib/pref/picktype.prf [k]) を参照してください。
+
+
+--- 自動拾い/破壊の基本書式 ---
+
+基本的に、名前の一部にファイルに書いた文字列が含まれていれば、そのアイ
+テムを自動的に拾います。ただし行の先頭に…、
+
+「!」がついている場合はそのアイテムを[[[[o|自動的に破壊|します。
+「~」がついている場合は拾いも破壊もせずに[[[[o|床に残します|。
+「;」がついている場合は[[[[o|拾う前に確認|メッセージが出ます。
+「(」がついている場合は全体図「M」コマンド中での[[[[o|表示を抑止|します。
+
+picktype.prf の先頭から順番に優先的に評価するので、不要なものの破壊の
+設定の下にその他のアイテムを拾う設定を書いたり、比較的高級なアイテムを
+放置する設定の下にその他の低質なアイテムを破壊する設定を書くのが便利な
+方法です。
+
+自動拾いや破壊や放置として設定されたアイテムは、「(」で抑止されない限
+り[[[[o|ダンジョンの全体図「M」コマンド|の中でその位置と名前を表示する事がで
+きます。設定コマンドの説明(jcommdesc.txt#Looking [z])のダンジョンの全
+体図を表示を参照してください。
+
+***** [z] jcommdesc.txt#Looking
+
+--- 特別なキーワード ---
+
+各行の以下のようなキーワードで始まるものは特別扱いになります。
+
+・すべての～        : すべてのアイテムが対象になります。
+・収集中の～        : 既に同じ種類の物を持っているアイテム
+・未判明の～        : 効果の分からないアイテム
+・鑑定済みの～      : 鑑定されているアイテム
+・*鑑定*済みの～    : *鑑定*されているアイテム
+・ダイス目の違う～  : 殺戮の武器等でダイスの目が通常と異なるアイテム
+・ダイス目n以上の～ : ダイス数×面数が n 以上のアイテム
+・修正値n以上の～   : 能力修正値が(+n)以上のアイテム
+                      能力修正が無い場合は他の数値が+n以上なら対象になります。
+・無価値の～        : 価値のない(売却できない)アイテム
+・アーティファクト～: 判明しているアーティファクト
+・エゴ～            : 判明しているエゴ装備
+・上質の～          : {上質}の装備
+・無銘の～          : 非エゴ, 非アーティファクトの装備
+・並の～            : {並}の装備
+・レアな～          : ドラゴン防具等の珍しいベースアイテムの装備
+・ありふれた～      : ドラゴン防具等以外の普通のベースアイテムの装備
+・読めない～        : 専門としない魔法領域の魔法書
+・第一領域の～      : 第一領域の魔法書
+・第二領域の～      : 第二領域の魔法書
+・n冊目の～         : nが1から4のとき、n冊目の魔法書
+
+～の部分では、アイテムの種類を表す以下のようなキーワードが特別扱いになります
+
+・アイテム          : すべてのアイテムが対象になります。
+・武器              : 武器が対象になります。
+・防具              : 防具が対象になります。
+・矢                : 矢、クロスボウの矢、石、弾
+・魔法アイテム      : 巻物・杖・魔法棒・ロッド
+・魔法書            : 魔法書、武芸の書、歌集
+・リボン            : リボン枠の装備品
+・酒                : 酒カテゴリのアイテム
+・珍品              : 珍品カテゴリのアイテム
+・カード            : 難易度EXTRAで手に入るアイテムカード
+
+他に部位別の装備品を対象とするキーワード:
+ 盾、弓、指輪、アミュレット、光源、鎧、クローク、兜、籠手、靴
+が使用できます。
+
+この後に区切り記号のコロン「:」を挟んでさらに文字列が続く場合は、その
+文字列が名前の一部に含まれているアイテムが対象になります。ここで、アイ
+テムの種類を表すキーワード(アイテム、武器、防具等) を使用しない場合は
+区切り記号は省略できます。また、文字列の頭に記号「^」を入れるとそれは
+アイテム名の先頭部分に一致します。具体的には以下のように解釈されます。
+
+光源:石          // 名前に"石"を含む光源を拾う。「光源石」 は使用不可。
+籠手:腕力の      // 腕力のガントレットを拾うが、腕力の指輪は拾わない。
+!ローブ          // 名前に"ローブ"を含むもの(ローブ、グローブ等)を破壊。
+!^ローブ         // グローブは破壊しない。
+!防具:^耐        // 耐火、耐冷、耐電、耐酸の防具を破壊。全耐性は破壊しない。
+
+また、行の最後に # で始まる文字列を書くと、鑑定したりアイテムの
+上に立った瞬間に自動的にその文字列がアイテムに刻まれます。
+
+
+--- 厳密な書式 ---
+
+各行の厳密な書式は以下のような順番です。未鑑定の や ダイス目の違う 等
+のキーワードは一行に並べて書く事で両方の制限を適用させる事が出来ます。
+現在のバージョンではキーワードの順番も自由です。
+
+ [! ~ ; (]
+ [[すべての] [収集中の]
+  [未判明の] [未鑑定の] [鑑定済みの] [*鑑定*済みの]
+  [アーティファクト] [エゴ] [上質の] [無銘の] [並の] 
+  [無価値の] [レアな] [ありふれた]
+  [ダイス目の違う] [ダイス目n以上の] [修正値n以上の]
+  [賞金首の] [ユニーク・モンスターの] [人間の]
+  [読めない] [第一領域の] [第二領域の] [n冊目の]
+  [アイテム|アーティファクト|武器|得意武器|防具|矢|魔法アイテム|
+   がらくた|死体や骨|魔法書|鈍器|盾|弓|指輪|アミュレット|光源|鎧|
+   クローク|兜|籠手|靴] :]
+ [[^]その他の文字列] [#自動刻み文字列]
+
+
+***** <ConditionFormat>
+[[[[G|===  条件式の書式仕様  ===
+
+全てのユーザー設定ファイルは、種族や職業、レベル等に条件を付けて設定す
+ることが出来ます。特に自動拾いやマクロの設定に利用すると便利です。
+
+
+---  条件分岐の書式  ---
+
+?:引数
+
+   引数が"0"なら以降の自動拾い／破壊の登録をスキップする。
+   引数が"1"なら以降の登録を行う。 引数が"0"以外は全て"1"と見なす。
+
+ (注意!)条件分岐を入れ子にすることは出来ません。
+
+
+---  使用可能な演算子  ---
+
+特別な文字列といくつかの引数のリストを'['と']'で囲むと演算子として
+の働きをして、結果が真 "1" であるか、 偽 "0" であるかを返します。
+
+[EQU 引数１ 引数２ ...]
+   引数１と他のどれかの引数が等しいと"1"、どれも等しくないと"0"を返す。
+
+[IOR 引数１ 引数２ ...]
+[AND 引数１ 引数２ ...]
+   IORは引数の論理和、ANDは引数の論理積をとって真なら"1"、偽なら"0"を
+   返す。
+
+[NOT 引数]
+   引数が"1"なら"0"、"0"なら"1"を返す。
+
+[LEQ 引数１ 引数２ ...]
+[GEQ 引数１ 引数２ ...]
+
+   LEQは引数の大きさを数値として比較して引数１≦引数２≦...のとき"1"を
+   返す。GEQは引数１≧引数２≧...のとき"1"を返す。
+
+
+---  変数説明  ---
+
+条件判定文の中で、'$'で始まるいくつかの文字列は自動的にキャラクターの
+状態を表わす文字列に置き変えられます。
+
+$RACE
+   種族を英語名で返す。
+   Human, Half-Elf, Elf, Hobbit, Gnome, Dwarf, Half-Orc, Half-Troll,
+   Amberite, High-Elf, Barbarian, Half-Ogre, Half-Giant, Half-Titan,
+   Cyclops, Yeek, Klackon, Kobold, Nibelung, Dark-Elf, Draconian,
+   Mindflayer, Imp, Golem, Skeleton, Zombie, Vampire, Spectre, Sprite,
+   Beastman, Ent, Archon, Balrog, Dunadan, Shadow-Fairy, Kutar,
+   Android
+   のどれか
+   
+   勝手版では 「~」コマンド →「a」で「自分に関する情報」を見ることで種族と職業の英語表記を知ることができます。
+   また自動拾いのメニューから「色々挿入」→「条件分岐ブロックの例を挿入」を入力することによっても確認ができます。
+
+$CLASS
+   職業を英語名で返す。
+   Warrior, Mage, Priest, Rogue, Ranger, Paladin, Warrior-Mage,
+   Chaos-Warrior, Monk, Mindcrafter, High-Mage, Tourist, Imitator,
+   BeastMaster, Sorcerer, Archer, Magic-Eater, Bard, Red-Mage,
+   Samurai, ForceTrainer, Blue-Mage, Cavalry, Berserker, Weaponsmith,
+   Mirror-Master, Ninja, Sniper
+   のどれか
+
+$PLAYER
+   プレイヤーの名前を返す。ただし、' '(スペース)、'['、']'は
+   prefの制約でそのまま使えないため、'_'に置き換えて返す。
+   例: 名前が"[ Temp ]"ならば、$PLAYERは"__Temp__"を返す。
+
+$REALM1
+   魔法領域を英語名で返す。
+   Life, Sorcery, Nature, Chaos, Death, Trump Arcane, Craft, Daemon,
+   Crusade, Music, Kendo, Hex
+   のどれか
+   
+   勝手版での魔法領域英語名は以下のようになっています。
+   元素:Element
+   予見:Foreseeing
+   付与:Enchant
+   召喚:Summon
+   神秘:Mystic
+   生命:Life
+   破邪:Punish
+   自然:Nature
+   変容:Transform
+   暗黒:Darkness
+   死霊:Necromancy
+   混沌:Chaos
+   武芸:Sword
+   調剤:Makedrug
+   秘術:Occult
+ 
+$REALM2
+   第２魔法領域を英語名で返す。
+
+$LEVEL
+   プレイヤーのレベルを２桁の文字列で返す。
+   "01","09","10","50" 等
+
+$MONEY
+   プレイヤーの所持金を９桁の文字列で返す。
+   "000012345" 等
+
+---  ファイルの挿入の書式  ---
+
+%:ファイル名
+   「lib\user\ファイル名」 か 「~/.angband/Hengband/ファイル名」 を自
+   動拾いの登録ファイルとして読み込みます。
+
+
+
+--
+Updated    : Hengband 1.7.0

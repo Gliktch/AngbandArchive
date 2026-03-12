@@ -1,0 +1,22 @@
+Welcome to the changelog for FAangband. This file tracks the changes made since
+1.4.4.
+
+FAangband 2.0.1
+===============
+
+This version mainly fixes bugs and corrects balance from version 2.0.1.
+
+FAangband 2.0.0
+===============
+
+This version is an attempt to rebuild FAangband 1.4.4 (FA) on top of latest Angband (V).
+
+There are a great many changes both from V and from FA, so I'm not going to list all of them.  Some obvious points:
+
+ - V's 4.2 classes are used, so the same as old FA classes except that Assassins have been replaced with Blackguards, and the spell lists are very different.
+
+ - The monster list is a fusion of the V and FA lists.
+
+ - Combat is closely based on FA.
+
+ - Ego items (including jewellery) and artifacts are straight from FA, but other objects are mostly as in V.

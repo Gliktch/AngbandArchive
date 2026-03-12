@@ -1,0 +1,52 @@
+# File: brand.txt
+
+# This file encodes the brands that can appear on objects.
+
+# desc can generally be edited without bad effects.  Brands for the same
+# element should use the same name and that should match the name used for
+# that element in projection.txt.  Changes to the code will require changes to
+# the other data files (artefact.txt, object_base.txt, object_property.txt,
+# and special.txt) that may have used the code.  Changes to dice, vuln-dice,
+# resist-flag, and vuln-flag can affect balance.
+
+# Fields:
+# code: code for brand to use in other data files (artefact.txt,
+#     object_base.txt, object_property.txt, and special.txt)
+# name: name of element of the brand
+# dice: number of bonus dice given by the brand
+# vuln-dice: number of bonus dice given by the brand if the monster is
+#     especially vulnerable
+# desc: description used when a susceptible monster is hit
+# resist-flag: monster race flag for resistance to the brand element; has
+#     to match the first argument to one of the RF() macros in
+#     list-mon-race-flags.h
+# vuln-flag: monster race flag for special vulnerability to the brand element;
+#     has to match the first argument to one of the RF() macros in
+#     list-mon-race-flags.h
+
+code:ELEC_1
+name:lightning
+dice:1
+desc:shocks {name} with the force of lightning
+
+code:FIRE_1
+name:fire
+dice:1
+vuln-dice:1
+desc:burns {name} with an inner fire
+resist-flag:RES_FIRE
+vuln-flag:HURT_FIRE
+
+code:COLD_1
+name:cold
+dice:1
+vuln-dice:1
+desc:freezes {name}
+resist-flag:RES_COLD
+vuln-flag:HURT_COLD
+
+code:POIS_1
+name:poison
+dice:1
+desc:poisons {name}
+resist-flag:RES_POIS

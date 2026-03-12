@@ -1,0 +1,21 @@
+# File: xtra-dvg.prf
+
+#
+# This file defines special attr/char mappings for use in "graphics" mode
+#
+# Edited for use with David Gervais's 32x32 tiles.
+#
+# See "docs/customize.rst" and "src/ui-prefs.c" for more information.
+#
+
+
+##### Remap the player icon #####
+
+?:[EQU $RACE Noldor]
+monster:<player>:0x83:0xCF
+?:[EQU $RACE Sindar]
+monster:<player>:0x83:0x97
+?:[EQU $RACE Naugrim]
+monster:<player>:0x83:0xAF
+?:[EQU $RACE Edain]
+monster:<player>:0x83:0x87

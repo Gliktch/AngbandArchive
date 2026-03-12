@@ -1,0 +1,307 @@
+### Rings ###
+
+# Serpentine ring
+flavor:1:0x84:0x91
+
+# Amethyst ring
+flavor:2:0x84:0x89
+
+# Beryl ring
+flavor:3:0x84:0x8C
+
+# Bloodstone ring
+flavor:4:0x84:0x83
+
+# Adamant ring
+flavor:5:0x84:0x8C
+
+# Emerald ring
+flavor:6:0x84:0x84
+
+# Garnet ring
+flavor:7:0x84:0x83
+
+# Jade ring
+flavor:8:0x84:0x8C
+
+# Marble ring
+flavor:9:0x84:0x80
+
+# Moonstone ring
+flavor:10:0x84:0x81
+
+# Onyx ring
+flavor:11:0x84:0x8B
+
+# Chalcedony ring
+flavor:12:0x84:0x80
+
+# Ruby ring
+flavor:13:0x84:0x8F
+
+# Sapphire ring
+flavor:14:0x80:0x8D
+
+# Topaz ring
+flavor:15:0x84:0x8A
+
+# Turquoise ring
+flavor:16:0x84:0x8D
+
+# Bronze ring
+flavor:17:0x84:0x8E
+
+# Golden ring
+flavor:18:0x84:0x8A
+
+# Silver ring
+flavor:19:0x84:0x81
+
+# Jet ring
+flavor:20:0x84:0x81
+
+# Pearl ring
+flavor:21:0x84:0x80
+
+
+### Amulets ###
+
+# Pearl amulet
+flavor:41:0x87:0x87
+
+# Emerald amulet
+flavor:42:0x87:0x8C
+
+# Jewelled amulet
+flavor:43:0x87:0x89
+
+# Amber amulet
+flavor:44:0x87:0x82
+
+# Driftwood amulet
+flavor:45:0x87:0x8E
+
+# Coral amulet
+flavor:46:0x87:0x8B
+
+# Ivory amulet
+flavor:47:0x87:0x80
+
+# Obsidian amulet
+flavor:48:0x87:0x81
+
+# Bronze amulet
+flavor:49:0x87:0x84
+
+# Golden amulet
+flavor:50:0x87:0x8A
+
+# Crystal amulet
+flavor:51:0x87:0x80
+
+# Silver amulet
+flavor:52:0x87:0x81
+
+# Dragon Tooth amulet
+flavor:53:0x87:0x81
+
+# Ruby amulet
+flavor:54:0x87:0x83
+
+# Sea Shell amulet
+flavor:55:0x87:0x8D
+
+
+### Staves ###
+
+# Aspen staff
+flavor:68:0x87:0x90
+
+# Birch staff
+flavor:69:0x87:0x90
+
+# Ebony staff
+flavor:70:0x87:0x91
+
+# Elm staff
+flavor:71:0x87:0x90
+
+# Mahogany staff
+flavor:72:0x87:0x90
+
+# Maple staff
+flavor:73:0x87:0x90
+
+# Oak staff
+flavor:74:0x87:0x90
+
+# Rosewood staff
+flavor:75:0x87:0x92
+
+# Walnut staff
+flavor:76:0x87:0x90
+
+# Silver staff
+flavor:77:0x87:0x95
+
+# Runed staff
+flavor:78:0x87:0x94
+
+# Golden staff
+flavor:79:0x87:0x93
+
+# Ashen staff
+flavor:80:0x87:0x96
+
+# Gnarled staff
+flavor:81:0x87:0x90
+
+# Ivory staff
+flavor:82:0x87:0x95
+
+# Willow staff
+flavor:83:0x87:0x90
+
+# Yew staff
+flavor:84:0x87:0x91
+
+# Beech staff
+flavor:85:0x87:0x90
+
+# Twisted staff
+flavor:86:0x87:0x95
+
+
+### Horns ###
+
+# Silver horn
+#flavor:101:0x80:0x80
+
+# Brazen horn
+#flavor:102:0x80:0x80
+
+# Ivory horn
+#flavor:103:0x80:0x80
+
+# Tapered horn
+#flavor:104:0x80:0x80
+
+# Engraved horn
+#flavor:105:0x80:0x80
+
+
+### Herbs ###
+
+# Black herb
+#flavor:121:0x80:0x80
+
+# Dark Green herb
+#flavor:122:0x80:0x80
+
+# Yellow herb
+#flavor:123:0x80:0x80
+
+# Grey herb
+#flavor:124:0x80:0x80
+
+# Pale Green herb
+#flavor:125:0x80:0x80
+
+# Russet herb
+#flavor:126:0x80:0x80
+
+# Thorny herb
+#flavor:127:0x80:0x80
+
+# Mottled herb
+#flavor:128:0x80:0x80
+
+# Wrinkled herb
+#flavor:129:0x80:0x80
+
+# Pale herb
+#flavor:130:0x80:0x80
+
+
+### Potions ###
+
+# Clear potion
+flavor:193:0x85:0x80
+
+# Murky Brown potion
+flavor:195:0x85:0x86
+
+# Azure potion
+flavor:196:0x85:0x8D
+
+# Dark Blue potion
+flavor:197:0x85:0x85
+
+# Brilliant Blue potion
+flavor:198:0x85:0x85
+
+# Black potion
+flavor:199:0x85:0x87
+
+# Brown potion
+flavor:200:0x85:0x86
+
+# Sparkling potion
+flavor:201:0x85:0x88
+
+# Milky White potion
+flavor:202:0x85:0x80
+
+# Copper Speckled potion
+flavor:203:0x85:0x8E
+
+# Crimson potion
+flavor:204:0x85:0x83
+
+# Green potion
+flavor:205:0x85:0x84
+
+# Dark Green potion
+flavor:206:0x85:0x84
+
+# Grey potion
+flavor:207:0x85:0x88
+
+# Emerald potion
+flavor:208:0x85:0x8C
+
+# Bright Orange potion
+flavor:209:0x85:0x82
+
+# Pale Green potion
+flavor:210:0x85:0x8C
+
+# Smoky potion
+flavor:211:0x85:0x81
+
+# Dark potion
+flavor:212:0x85:0x81
+
+# Violet potion
+flavor:213:0x85:0x89
+
+# Vermillion potion
+flavor:214:0x85:0x8B
+
+# Yellow potion
+flavor:215:0x85:0x8A
+
+# Sky Blue potion
+flavor:216:0x85:0x8D
+
+# Shimmering potion
+flavor:217:0x85:0x89
+
+# Cloudy potion
+flavor:218:0x85:0x80
+
+# Golden potion
+flavor:219:0x85:0x82
+
+# Sparkling Blue potion
+flavor:220:0x85:0x85

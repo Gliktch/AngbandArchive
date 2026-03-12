@@ -1,0 +1,185 @@
+=== Beginner's Guide ===
+
+Keine - 'What? You're starting off with Gensouband without having played
+Hengband? Very well, I understand, calm down. I'll teach you.
+
+This file is /lib/help/instruction_en.txt.
+It might be a good idea to open it in Notepad and place it to the side of the
+game window as you play the game.
+
+You can change the game window size by dragging the border with mouse.
+If you want to view more of the map, feel free to make it larger.
+You can use the menu bar to open one or several subwindows; I recommend
+display visible monster list and message history.
+
+Anyway, let's start with the Warrior class.
+In early game, warriors fight essentialy by holding down arrow keys, so
+you'll be able to learn the basic game controls.
+
+Oni, WhiteWolf-Tengu, Celestials, Shinigami, Great-Youkai and Haniwa are good
+races that are easy to use. If you want to play as a Touhou character, then
+Yuuka, Kasen, Yorihime, Mayumi, Saki and Momoyo are easy for beginners
+to handle.
+
+You can get 20 bonus points by turning the corresponding option on at
+character creation. It's a good idea to assign points to strength, dexterity
+and consitution to make yourself good at melee combat.
+If you turn the fixed bonus points option off, you can reroll the amount
+of bonus points as many times as you want.
+
+Now, that the game has started, do you see those colorful symbols that make up
+the 'town'? This is the game screen. Old computer games before NES era looked
+like this. This is the Human Village of Gensoukyou. The '@' symbol close to
+the entrance is you.
+
+All commands in this game are performed with keyboard.
+There's around a hundred of different commands in total, but at first, let's
+learn the basic list of commands required to progressing to around dungeon
+level 20. You can look for other commands through a window you open by
+pressing Enter. You'll be using them often, so try and remember them.
+
+--------------------------------------------------------------------------------
+  
+  Enter         Lets you pick a command from a command window
+
+  Arrow keys    Move the '@'. If there's an enemy in the way, attack it.
+  Shift + arrow keys    Makes you run in that direction until you hit an
+                        obstacle. Doesn't work if Numlock is on.
+  Ctrl + arrow keys     Attacks in that direction without trying to move.
+  5     Stand still and do nothing.
+        You can use it for resting while you wait for nearby monsters to
+        come closer
+  s     Search your surroundings. Detects hidden doors, traps on the floor and
+        traps on nearby chests on the floor. If your Searching skill is too
+        low, you might fail to find anything even after searching for a while.
+  <     Go up a staircase. If used on surface, switches to global map mode.
+  >     Go down a staircase. If used in global map mode, moves to normal map.
+        Also can be used to deliberately activate a trap.
+
+  g (get)       Pick up an item beneath your feet.
+  d (drop)      Drop an item on floor.
+  e (equip)     Display your current equipment.
+  i (inventory) Display your inventory.
+  w (wield)     Wield/wear an item.
+  t (takeoff)   Take off a piece of equipment.
+
+  E (eat)       Eat some food. If you don't have food, buy some from the '1'
+                shop in Human Village.
+  q (quaff)     Quaff a potion. Don't carelessly drink unknown potions.
+  r (read)      Read a scroll. You can't read if you're confused, blind, or
+                in a non-illuminated area.
+  F (fuel)      Refuels your lantern with oil.
+                If your lantern runs out of fuel during your dungeon trip,
+                you won't be able to see anything; this is very dangerous.
+  a,z,u         Uses a wand/rod/staff. You might fail to use the device.
+  (aim,zap,use) I can't recommend carelessly using unknown items.
+
+  o (open)      Open a door or a chest. If it's locked, you automatically
+                attempt to unlock it.
+  c (close)     Closes a door.
+  D (disarm)    Disarm a trap on floor/chest. If your disarming skill is low,
+                you might fail and trigger the trap instead.
+
+  J (Job skill) Uses special abilities of your class. Some classes don't have
+                special abilities.
+  U (Use Special Skill)     Uses racial/mutation special abilities.
+                For example, Tewi and Momiji can use their keen hearing to
+                detect nearby monsters.
+  
+  l (look)      Look around.
+                If you press '*' or arrow keys after using this command, you
+                can move the cursor around. If you point it at a monster and
+                press 'r', it will display information you know about that
+                monster at this point.
+  C (Character) Browse player info.
+                You can switch to other information screens by pressing 'h'
+                after using this command.
+
+--------------------------------------------------------------------------------
+
+This is the minimum list of commands you'll need.
+
+  After the game has started, let's set up some options first.
+Open the options menu with '=' command, then press 'H' and 5.
+This will give you a warning once your HP falls below 50%.
+Go back with ESC, then press 'D' and 1 or 2.
+This will display the trajectory of spells cast by enemies.
+
+  Next, let's prepare your equipment with money you currently have.
+-Buy a lantern and flasks of oil at the '1' store.
+-Buy body armor/cap/shoes/cloak at '2' store (you probably won't 
+ need a shield)
+-Buy Scrolls of Teleportiation at '5' store;
+ If they're selling Scrolls of Monster Confusion, buy some, and if you have
+ spare money, buy Scroll of Word of Recall
+-If a Ring of Warning is being sold at '6' store, buy one
+-Buy some Potions of Cure Serious Wounds at '4' store with your 
+ remaining money
+If the stores aren't selling items you want, spend some time so that they'll
+restock. You can spend it by resting at the inn.
+
+  Once you've done shopping, let's go to a dungeon.
+Press '<' to switch to global map view; there's Myouren Temple slightly to
+the right and bottom of '@'. You can get ambushed by monsters while you walk
+around on global map, returning you to normal map view, but the character
+you've made shouldn't have problems with this. If your HP gets low, drink a
+healing potion or escape with a teleportation scroll. If you reach the edge of
+the map, you can go to the neighbouring map area; once you return, all the
+enemies will be gone.
+
+  Once you arrive at Myouren Temple, press '>' to return to normal map.
+See this purple '>' in top-right area of the map? This is the entrance to
+Hall of Dreams' Great Mausoleum. It's a beginner dungeon where strong enemies
+hardly appear. It's a good idea to go here to learn basics of combat and
+exploration. The symbols in the dungeon are mainly terrain and items, the
+alphabet characters are mainly monsters. Use 'l' command and move the cursor
+to examine them.
+
+If you find a white worm mass (white 'w'), that's your chance to grind some
+experience. Stand at the room entrance and keep swinging your sword with
+Ctrl + arrow key; you'll keep defeating the multiplying worm masses. You
+probably can reach around level 6 with this method.
+
+  You'll probably find a lot of items with unkown effects like 'Red Potion' 
+or 'Scroll labeled '******''. Also, if you attempt to equip weapon/armor you
+find, they might end up being cursed. 
+You can learn more about items with 'identification'.
+You can identify items at Hieda House in Human Village (center-top area).
+It costs $25.
+You also might find items with a slightly odd name like 'Pair of Leather Boots
+of Fairy'. Those are ego-items. Use them well.
+You can perform detailed identification at Scarlet Devil Mansion or Kourindou
+to learn everything about their special effects.
+
+  Well, now that's you're around level 6, let's take on a quest.
+Pick 'q) Quest' at the Hieda House in Human Village; you'll be asked to drive
+out some bandits. If you go to the top-left area of Human Village, you'll
+discover a new staircase there; if you enter it, you'll start the fight with
+the group of bandits.
+You shouldn't lose this fight at your current level.
+If you get in trouble, try reading a Scroll of Monster Confusion. It will make
+your next melee attack confuse the enemy. It's a simple way of dealing with
+most of early game enemies.
+
+Once you've defeated them all, a message will appear reporting the quest being
+completed. Go back to Hieda House and report, finishing the quest and turning
+that building into your exploration base where you can place your items.
+(The entrance is where you put up items to decorate your house. If you put an
+item here, you won't be able to get it back, so be careful)
+
+Basically, that's the early game pattern.
+After that, explore deeper into Hall of Dreams' Great Mausoleum, travel to
+distant locations like Angband or Genbu Lake, clear other quests, raise your
+level, prepare your equipment and remember how to use different items.
+If you want to go deeper below dungeon level 20, you'll want free action,
+fire resistance, and the ability to see invisible. Check the other help files
+for more details.
+
+If you read a Scroll of Word of Recall in a dungeon, it will return you to
+the surface after a slight delay. If you pick 'Recall to dungeon' at the
+Divine Shrine Mausoleum Branch Office in the Human Village, it'll send you to
+the deepest dungeon level you've reached up to this point.
+
+If the game is hard for you, feel free to pick the 'Munchkin' personality
+or play on Easy difficulty.
+Good luck.'

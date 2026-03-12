@@ -1,0 +1,318 @@
+# File: constants.txt
+
+
+# This file is used to initialize game constants for Angband.
+
+#---------------------------------------------------------------------
+# Level Maxima
+#---------------------------------------------------------------------
+
+# Maximum number of monsters on the level
+level-max:monsters:1024
+
+#---------------------------------------------------------------------
+# Monster Generation
+#---------------------------------------------------------------------
+
+# 1/per-turn-chance of new monster generation
+mon-gen:chance:500
+
+# Minimum number of monsters generated on a level
+mon-gen:level-min:14
+
+# Number of townsfolk generated in the day */
+mon-gen:town-day:4
+
+# Number of townsfolk generated in the night */
+mon-gen:town-night:8
+
+# Maximum number of breeding monsters allowed on a level
+mon-gen:repro-max:100
+
+# Chance of a generated monster's level being inflated is one-in-this
+mon-gen:ood-chance:25
+
+# Maximum out-of-depth amount for monster generation
+mon-gen:ood-amount:10
+
+# Maximum number of monsters in a group
+mon-gen:group-max:25
+
+# Maximum distance of a group of monsters from a related group
+mon-gen:group-dist:5
+
+#---------------------------------------------------------------------
+# Monster Gameplay
+#---------------------------------------------------------------------
+
+# Rune of protection resistance to monster breaking
+mon-play:break-glyph:550
+
+# High value slows multiplication
+mon-play:mult-rate:8
+
+# Percent of player exp drained per hit
+mon-play:life-drain:2
+
+# Monsters will run up to this many grids out of sight
+mon-play:flee-range:5
+
+# Terrified monsters will turn to fight if they are slower than the character,
+# and closer than this distance.
+mon-play:turn-range:5
+
+#---------------------------------------------------------------------
+# Dungeon Generation
+#---------------------------------------------------------------------
+
+# Number of possible room centres (and hence rooms) on a normal level
+dun-gen:cent-max:100
+
+# Number of possible door locations
+dun-gen:door-max:200
+
+# Number of possible places to pierce room walls with tunnels
+dun-gen:wall-max:500
+
+# Number of tunnel grids
+dun-gen:tunn-max:900
+
+# Average number of objects to place in rooms
+dun-gen:amt-room:9
+
+# Average number of objects to place in rooms/corridors
+dun-gen:amt-item:3
+
+# Average amount of treasure to place in rooms/corridors
+dun-gen:amt-gold:3
+
+# Maximum number of pits or nests allowed per level
+dun-gen:pit-max:2
+
+#---------------------------------------------------------------------
+# Game World
+#---------------------------------------------------------------------
+
+# Maximum dungeon level; must be at least 100.
+# Setting it below 128 may prevent the creation of some objects.
+world:max-depth:128
+
+# Number of turns from dawn to dawn
+world:day-length:2000
+
+# Max number of grids in each dungeon level (vertically)
+world:dungeon-hgt:66
+
+# Max number of grids in each dungeon level (horizontally)
+world:dungeon-wid:198
+
+# Max number of grids in each town level (vertically)
+world:town-hgt:22
+
+# Max number of grids in each town level (horizontally)
+world:town-wid:66
+
+# Total number of feeling squares per level
+world:feeling-total:100
+
+# Squares needed to see to get first feeling
+world:feeling-need:10
+
+# Number of levels for each stair - currently does nothing
+world:stair-skip:1
+
+# Energy needed by player or monsters to move
+world:move-energy:100
+
+# 1/Chance of a themed level in the dungeon
+world:themed-dun:180
+
+# 1/Chance of a themed level in the wilderness
+world:themed-wild:70
+
+#---------------------------------------------------------------------
+# Carrying Capacity
+#---------------------------------------------------------------------
+
+# Max number of pack slots for carrying inventory
+carry-cap:pack-size:23
+
+# Max number of quiver slots for carrying missiles
+carry-cap:quiver-size:10
+
+# Max number of missiles per quiver slot
+carry-cap:quiver-slot-size:40
+
+# For computing quiver capacity, is the multiplier for non-ammo thrown items
+carry-cap:thrown-quiver-mult:5
+
+# Maximum number of objects allowed in a single dungeon grid.
+#
+# The main screen originally had a minimum size of 24 rows, so it could always
+# display 23 objects + 1 header line.
+carry-cap:floor-size:23
+
+
+#---------------------------------------------------------------------
+# Store Parameters
+#---------------------------------------------------------------------
+
+# Maximum number of discrete objects in store inventory
+store:inven-max:24
+
+# Number of turns between turnovers
+store:turns:1000
+
+# 1/Chance (per day) of an owner changing
+store:shuffle:25
+
+# Dungeon level to apply magic to objects for normal stores
+store:magic-level:5
+
+
+#---------------------------------------------------------------------
+# Object generation
+#---------------------------------------------------------------------
+
+# Maximum depth used in object allocation
+obj-make:max-depth:100
+
+# 1/chance of inflating the requested object level
+obj-make:great-obj:20
+
+# 1/chance of inflating the requested ego item level
+obj-make:great-ego:20
+
+# Maximum amount of fuel in a torch
+obj-make:fuel-torch:5000
+
+# Maximum amount of fuel in a lantern
+obj-make:fuel-lamp:15000
+
+# Default amount of fuel in a lantern
+obj-make:default-lamp:7500
+
+
+#---------------------------------------------------------------------
+# Player constants
+#---------------------------------------------------------------------
+
+# Maximum visual range
+player:max-sight:20
+
+# Maximum missile and spell range
+player:max-range:20
+
+# Amount of gold (or value of equipment) the player starts with
+player:start-gold:600
+
+# Number of turns that 1% of player food capacity feeds them for
+player:food-value:100
+
+#---------------------------------------------------------------------
+# Constants for critical calculations
+# In general, those calculations compute a "power" of the critical
+# by scaling the chance of a hit.  The "power" is then converted to
+# a chance of a critical (neglecting the armsman and marksman
+# abilities) using (a * power) / (b * power + c) as the chance where
+# a, b, and c are constants specified here.  For more details, see
+# critical_melee() and critical_shot() in player-attack.c.
+#---------------------------------------------------------------------
+
+# The numerator for the scale factor applied to the combined to-hit value to
+# get the power of the critical
+melee-critical:power-toh-scale-numerator:1
+
+# The denominator for the scale factor applied to the combined to-hit value to
+# get the power of the critical
+melee-critical:power-toh-scale-denominator:1
+
+# The scale factor for the critical's power in the numerator for the chance
+# of the critical
+melee-critical:chance-power-scale-numerator:1
+
+# The scale factor for the critical's power in the denominator for the chance
+# of the critical
+melee-critical:chance-power-scale-denominator:1
+
+# Value of an added term in the denominator for the chance of a critical
+melee-critical:chance-add-denominator:240
+
+# Players with the armsman ability have a chance, 1 / armsman-chance,
+# of inflicting a critical on any melee hit against an obvious opponent.
+# If they do not get a critical from that they still can get a critical
+# the standard way.  armsman-chance must be positive.
+melee-critical:armsman-chance:6
+
+# Define each of the levels for melee criticals.  They are considered in the
+# order they appear so it's convenient to put the least likely first.  If no
+# critical levels are defined, then there's no extra damage due to critical
+# hits.
+# Except for the last level, one over the first value is the probability that
+# this level occurs when none of the prior levels have been selected; the last
+# level will always be used if none of the prior levels have been selected.
+# The first value must be positive.
+# The second value is the number of dice to add for the critical.  It must be
+# non-negative.
+# The third value is the name of the message, from list-messages.h, to use
+# when a critical happens for that power level.
+melee-critical-level:40:5:HIT_HI_GREAT
+melee-critical-level:12:4:HIT_SUPERB
+melee-critical-level:3:3:HIT_GREAT
+melee-critical-level:1:2:HIT_GOOD
+
+# Players with the mana burn ability inflict mana-burn-dice additional
+# dice of damage when a melee critical causes extra damage against a target
+# with non-innate spells.  That critical also impairs the target's spell
+# casting.  mana-burn-dice must be non-negative.
+melee-critical:mana-burn-dice:1
+
+# The numerator for the scale factor applied to the combined to-hit value to
+# get the power of the critical with a launched missile
+ranged-critical:power-launched-toh-scale-numerator:1
+
+# The denominator for the scale factor applied to the combined to-hit value to
+# get the power of the critical whith a launched missile
+ranged-critical:power-launched-toh-scale-denominator:1
+
+# The numerator for the scale factor applied to the combined to-hit value to
+# get the power of the critical with a thrown missile; this and the
+# denominator are currently set so thrown missiles get more criticals
+ranged-critical:power-thrown-toh-scale-numerator:3
+
+# The denominator for the scale factor applied to the combined to-hit value to
+# get the power of the critical whith a thrown missile
+ranged-critical:power-thrown-toh-scale-denominator:2
+
+# The scale factor for the critical's power in the numerator for the chance
+# of the critical
+ranged-critical:chance-power-scale-numerator:1
+
+# The scale factor for the critical's power in the denominator for the chance
+# of the critical
+ranged-critical:chance-power-scale-denominator:1
+
+# Value of an added term in the denominator for the chance of a critical
+ranged-critical:chance-add-denominator:360
+
+# Players with the marksman ability have a chance, 1 / marksman-chance,
+# of inflicting a critical on any ranged hit against a visible opponent.
+# If they do not get a critical from that they still can get a critical
+# the standard way.  marksman-chance must be positive.
+ranged-critical:marksman-chance:6
+
+# Define each of the levels for ranged criticals.  They are considered in the
+# order they appear so it's convenient to put the least likely first.  If no
+# critical levels are defined, then there's no extra damage due to critical
+# hits.
+# Except for the last level, one over the first value is the probability that
+# this level occurs when none of the prior levels have been selected; the last
+# level will always be used if none of the prior levels have been selected.
+# The first value must be positive.
+# The second value is the number of dice to add for the critical.  It must be
+# non-negative.
+# The third value is the name of the message, from list-messages.h, to use
+# when a critical happens for that power level.
+ranged-critical-level:50:3:HIT_SUPERB
+ranged-critical-level:10:2:HIT_GREAT
+ranged-critical-level:1:1:HIT_GOOD

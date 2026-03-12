@@ -1,0 +1,93 @@
+
+Original Keyset Command Summary
+===============================
+
+  7  8  9   Use the numbers (if from a numeric keypad, you may need
+   \ | /    numlock) or arrow keys to move attack, or open doors.
+  4- 5 -6
+   / | \    Use 5 or z to wait a turn (and search).
+  1  2  3
+
+Use shift or . followed by a direction to move continuously.  If the
+direction is 5 or z, rests until healed.
+
+Use control simultaneously with a direction key or / followed by a
+key direction to interact with a square (tunnel through rubble or
+walls, closes open doors, bashes closed doors, disarms floor traps,
+disarms/opens chests, attacks monsters without moving).  If the
+direction is your own square, it will pick up an item or use a
+staircase or forge.
+
+  y  k  u   There is an option (in game, use O followed by selecting the
+   \ | /    "User interface options" to see it), to allow the use of
+  h- z -l   h, j, k, l, ... for motion.  If that option is selected and
+   / | \    one of those keys or its corresponding capital letter is
+  b  j  n   listed below for another action, then that action is accessible
+
+from another key, usually control and the key pressed simultaneously.
+Those alternatives are flagged with "('hjkl' option)" or "('hjkl')"
+in the list below.  With the 'hjkl' motion keys enabled, , is used for
+running rather than ..
+
+Other keys are (^ followed by a letter is an abbreviation for pressing and
+releasing the letter key with the control key also depressed; you may also
+press and release ^ and then press and release the letter key to activate
+the same command in case you system intercepts the control plus key
+combination and does not pass it on):
+
+  a    Use a staff                     A    -
+  b    Bash a door                     B    -
+  c    Close a door                    C    Center map
+  d    Drop an item                    D    Disarm a trap
+  e    List equipped items             E    Eat some food
+  f    Fire from first quiver          F    Fire from second quiver
+  g    Get objects on floor            G    Ignore an item
+  h    -                               H    -
+  i    List contents of pack           I    -
+  j    -                               J    -
+  k    Destroy an item                 K    -
+  l    Look around                     L    Locate player on map
+  m    Fire at nearest target          M    Display map of entire level
+  n    Repeat previous command         N    -
+  o    Open a door or chest            O    Set options
+  p    Blow a horn                     P    Toggle ignoring/unignoring
+  q    Quaff a potion                  Q    Kill character & quit
+  r    Remove equipment                R    Enter a command count
+  s    Change song                     S    Toggle stealth mode
+  t    Throw an item                   T    Dig a tunnel
+  u    Use an item                     U    -
+  v    -                               V    Display version info
+  w    Wear/wield equipment            W    (hjkl - locate player on map)
+  x    Examine an item                 X    Exchange places
+  y    -                               Y    -
+  z    Stay still                      Z    Rest for a period
+  !    -                               ^a   (special - debug command)
+  @    Character description           ^b   (hjkl - bash a door)
+  #    -                               ^c   (special - break)
+  $    -                               ^d   -
+  %    -                               ^e   Toggle inven/equip window
+  ^    (special - control key)         ^f   Fuel your light source
+  &    -                               ^g   Do autopickup
+  *    Target monster or location      ^h   -
+  (    -                               ^i   (special - tab)
+  )    Dump screen to a file           ^j   (special - linefeed)
+  {    Inscribe an object              ^k   (hjkl - destroy an item)
+  }    Uninscribe an object            ^l   (hjkl - look around)
+  [    Display visible monster list    ^m   (special - return)
+  ]    Display visible object list     ^n   (hjkl - repeat previous command)
+  -    -                               ^o   Show previous message
+  _    Walk into a trap                ^p   Show previous messages
+  /    Alter grid                      ^q   -
+  =    -                               ^r   Redraw the screen
+  ;    Walk                            ^s   Save and don't quit
+  :    Take notes                      ^t   Throw automatically
+  '    Target closest monster          ^u   (hjkl - use an item)
+  "    Enter a user pref command       ^v   -
+  ,    -                               ^w   (special - wizard mode)
+  <    Go up staircase                 ^x   Save and quit
+  .    Run                             ^y   -
+  >    Go down staircase               ^z   -
+  \    (special - bypass keymap)        ~   Check knowledge
+  `    (special - escape)               ?   Display help
+  |    Identify symbol                  Tab  Display ability menu
+  0    Forge an item

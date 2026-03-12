@@ -1,0 +1,389 @@
+
+***** <Mutation>
+=== Mutations ===
+
+Keine - 'You might gain mutations during your exploration.
+This is a phenomenon that alters your body and/or mind.
+Some of them are harmless, like growing cat ears; some of them are useful
+mutations that raise your parameters; some of them can lead to a game over
+unless you cure them quickly enough.
+
+Mutations are mainly caused by following reasons:
+- Getting hit by chaos element attack without chaos resistance can give a
+  random mutation
+- Drinking a Potion of Mutation has a high chance of giving you several
+  mutations
+- Some spells like Alter Self can give you mutations
+- Getting hit by an insanity-inducing attack has a low chance of giving
+  you a harmful mutation
+
+Here's the main ways of curing mutations:
+- Curing mutations at Eientei removes a random mutation ($3000)
+- Drinking a Potion of Mutation has a low chance of curing all of your
+  mutations
+- Some potions and spells like 'New Life' or racial transformation cure
+  all of your mutations
+
+You should remember that the more mutations you have, the slower your HP/MP
+regeneration will be. There are some techniques involving deliberately
+getting hit by chaos element attacks in order to obtain beneficial mutations;
+but if you overdo it, you'll have harder time exploring.
+
+Several races essentially start out with mutations - Oni have horns, Merfolk
+have tails.
+Those innate racial characteristics cannot be removed and do not affect
+regeneration rate.'
+
+--- Changing your Race ---
+Keine - 'There are extremely powerful spells and curses that can change your
+race. You're not likely to run into them too often, but here's a list of
+most common reasons:
+
+- If you attract attention of a Chaos Patron, they might decide to change
+  your race
+- Spells like Alter Self have low chance of changing your race
+- The spells 'Rebirth' (Transformation realm) and 'Demon God of Netherworld'
+  (Necromancy realm) change your race
+- Equipping some special artifacts changes your race (It will give you a
+  warning)
+
+After transformation, your current level will be recalculated according to
+your new race's experience modifier. Your score will be calculated using the
+lowest score modifier among the races you've been. If you win the game with
+a strong race and then transform into a weaker one, your score won't go up.
+
+Several races like Youkai-Dolls or Stray-Gods can't be affected by this.
+Also, if you're playing as an unique class, you can't change your races by
+means other than spells and special artifacts.'
+
+***** <Extra_mode>
+=== Extra Mode ===
+
+Keine - '"Extra" difficulty level was added in v 1.0.99.
+It makes your adventure completely different compared to other difficulty
+levels. Here's the detailed list of differences:
+
+- You start from level 1 of Angband and can only go down
+  You start at a random position on level 1 of Angband insted of the Human
+  Village. Staircases lead only downward, and using Teleport Level always
+  teleports you to the lower level.
+  You cannot use spells/devices of Recall to leave the dungeon, and spells
+  that recreate current level like Alter Reality or Shadowshift won't work
+  either.
+  Shafts that make you go down 2 levels at once don't appear.
+  You have to clear 100 levels without going back.
+
+- You level up fast
+  In Extra mode, amount of experience required to gain next level is halved.
+  Unless you have a severe experience penalty, you probably won't be concerned
+  about being underleveled.
+  Youkai-Dolls still require the same level of equipment power to level up,
+  but you'll probably still level up faster since good equipment is easier to
+  find.
+
+- Good items generated more often, some consumables are generated in stacks
+  In Extra mode, out-of-depth items get generated more often.
+  You'll get more ego-items and artifacts, and items like potions/scrolls
+  or wands can be generated several at a time.
+  Unique monsters that can drop their special artifact are twice as likely
+  to drop it.
+
+- Item Cards
+  There are mysterious cards with objects like Ying-Yang Ball or Hakkero
+  drawn on them. Nothing happens if you carry them with you in your inventory,
+  but by using 'U' command, you can set up to 8 different kinds of them in
+  special slots and activate them later on.
+  Activating them uses various special abilities like Fantasy Seal or Master
+  Spark. It doesn't consume MP and never fails, but they're consumables -
+  each activation uses up one card.
+  Aside from offensive cards, there are defense and support-oriented as well.
+  By reading the cards with 'r' command you can learn what effect they have.
+
+  You have medium chance of getting those cards by defeating unique monsters.
+  If you defeat a well-known resident of Gensoukyou, you have a high chance
+  to obtain something connected to her.
+  There also are cards lying around on the floor.
+  Having high Searching skill makes them easier to find.
+
+  You'll be lacking in various areas in Extra mode.
+  Use the item cards to counteract that.
+
+- Extra Quests
+  In Extra mode, Angband's random quests aren't generated.
+  Instead, there are 9 special quests on level 10, 20, 30, ..., 90.
+  When you enter one of them, the map layout will be exactly the same as that
+  of some quest dungeon; complete the quest by defeating all enemies, which
+  will also drop several rewards close to the staircase.
+
+  If you go down the stairs before completing the quest, it counts as
+  abndoning the quest. If you use Teleport Level, you abandon the quest and
+  move down to the next level.
+  Just like in normal quest dungeons, you can't use *Destruction* or Massacre.
+  You'll want to deal with summoning enemies as quick as you can.
+
+- Special Buildings
+  There's a small building somewhere on levels without a quest.
+  This might be a shop like Weapon Store, or a special building that can
+  remove curses, identify items, recharge devices, etc.
+  Some of them are vital for completing your adventure, so find as many as you
+  can. Sometimes you may get attacked by enemies as you explore a building, so
+  don't search suspicious places if you're low on health.
+
+- Level layout might be slightly different
+  Sometimes, levels will resemble levels in Forest of Magic or Muenzuka,
+  or have some other specific layout.
+  Especially small levels don't get generated.
+  Pits/nests are rarely generated, and dungeon towns can be found more often.
+
+- Score is 4x compared to Normal, and 2x compared to Hard
+  Since there aren't as many quests, bonus for competing quests and reaching
+  new dungeon levels is higher compared to other difficulties.
+  Also, some classes that aren't suited for Extra mode, or, the other way
+  around, classes that aren't restricted too much by Extra mode, have their
+  score modifier altered.
+  Several birth options apply different score modifier compared to other
+  difficulties.
+
+- Other
+  Stores in dungeon don't have much in stock, and will never restock no matter
+  how long you wait.
+
+  Several unique monsters that appear only in specific quests on other
+  difficulties can be normally encountered in the dungeon.
+  Be especially careful around the youkai tanuki boss.
+
+  New non-unique monsters that get summoned or generated due to passage of
+  time don't give too much items and experience.
+  It's going to be slightly more difficult to clean up explored levels if
+  summoners call for support.
+
+That's the main differences.
+Winning in Extra mode requires not only character skills and your own
+experience, but a certain amount of luck as well.
+I wish you good luck.'
+
+--- How to use your Exploration Base in Extra mode ---
+
+Keine - 'In Extra mode, you can't just return to town and visit you
+exploration base. That's one of its severe restrictions. However, you might
+find some means of temporarily accessing it in the dungeon.
+The success of your quest greatly depends on whether you'll be able to find
+and properly utilize them.
+Here's a list of those methods:
+
+- Using Item Cards
+  You can access your exploration base with item 'Twisted Parasol' and
+  'Magic Vial'.
+
+  Parasol is a powerful card that creates an entrance to exploration base
+  at your current location, but you can't use it on quest levels.
+  You also can't use it on the lowest level before you've defeated the boss,
+  so make preparations for the final battle before you enter the lowest level.
+  You can't use it on the Extra Quest levels even after you've completed the
+  quest.
+
+  Vial can be used at any time, but the effect ends once you leave the base.
+  Unlike Parasol, you can't use it to store various items scattered around on
+  the floor. Also, while you're accessing the exploration base, you can't
+  interact with your item card slots.
+  Carefully think about what you want to store and what you want to take out
+  before using the Vial.
+
+  You can get item cards by defeating unique monsters or raising your
+  Searching skill and looking for them in the dungeon.
+  Those two cards are rare and hard to obtain, but you have a comparatively
+  high chance of getting them by defeating Yukari Yakumo or a post-midgame 
+  Marisa Kirisame. If they get generated in early game, the level feeling
+  will significantly change, so you shouldn't miss them.
+
+- Send items to Exploration Base with spells/devices.
+  Some artifacts and spells can send items to your exploration base.
+  Summoning, Nature and Chaos realms have those spells.
+  However, it's a one-way transport to the base, you can't use it to take
+  items out of there. There might be a weight limit on transported items,
+  or a low chance of making the item disappear.
+
+- Use special facilities
+  In Extra mode, small buildings appear or non-quest levels, and some of
+  them offer services to access your exploration base.
+
+  'Divine Spirit Mausoleum Branch Office' can send items to your house.
+
+  At an 'Open area' with the youkai Rin Kaenbyou, you can have her either
+  carry items to your house or deliver one item from your house to you.
+
+  At a 'Strange place' with a crack in the barrier, you can access your
+  exploration base one item. However, if you fail, you will get sucked in,
+  obtaining a mutation. Having high manual dexterity makes it easier to use.
+
+  If you encounter a building with zashiki-warashi, they can let you access
+  your base one time. You'll want to use this service if you find this
+  building, but it's fairly rare.'
+
+***** <Gun>
+=== Gun Class Weapons ===
+
+Keine - 'Gun class weapons underwent big changes in version 1.1.04.
+They're more or less rods that you can equip.
+Let's look over the new gun mechanics.
+Commands are for standard keyboard layout.
+
+- How to Use
+  Equip it in your right or left hand, and fire with 'f' command (not 'A').
+  After you enter the command, you will go to target selection; once you pick
+  the target, a success check will be made.
+  If you succeed, you will shoot at the target.
+  No matter if you succeed or fail, you will use spend energy, and once you
+  use up all of your bullets, you can't fire until you replenish at least
+  one shot.
+
+- Bullet Count
+  Each gun has its own bullet count.
+  The Evolving Gun "Crimson" (0d0) (+20, +20) (+4 speed) (6/6)
+  The (6/6) at the end is bullet count. Each time you shoot, it will go down:
+  (5/6), (4/6), ...
+
+- Dual-wielding Guns
+  You can hold different guns in both of your hands.
+  In this case, after picking the target, separate success checks are made for
+  both of them. You still consume the same amount of energy, but your shooting
+  success rate is significantly decreased.
+  Wearing gloves with dual wielding bonus reduces that penalty.
+  Also, if you're holding a too heavy gun, you won't be able to fire either
+  of them.
+
+- Shooting Success Rate
+  Shooting success rate depends on power of the gun you're using, your
+  Shooting or Magic Device skill (whichever one is higher), dexterity,
+  accuracy modifiers from your equipment and accuracy modifier on the gun.
+  Shooting a gun while holding it in both hands increases success rate.
+  Being terrified, confused or dual-wielding guns significantly reduces
+  success rate. Classes with low aptitude for guns/shooting won't be able to
+  properly shoot even if they find a powerful gun.
+
+- Reducing Reloading Time
+  Once you've used up all of your bullets, the gun starts reloading; the
+  time depends on the kind of the gun;
+  However, you can reduce it under some special conditions:
+  * Your gun proficiency is high enough (4th stage)
+  * The gun has the ability to shoot faster than usual
+  * You're wearing a Ring of Extra Shots on the hand you're holding the
+    gun with
+  * Your personality is Trigger-Happy
+  With those conditions being met, you can reload your guns up to 4-5 times
+  as fast as usual.
+
+- Gun Power
+  Gun power completely depends on gun characteristics.
+  Several special fixed artifacts aside, it's calculated as a simple dice roll
+  plus damage bonus.
+  Some guns use elements like fire or holy; in this case, damage can increase
+  if it hits an enemy's weakness.
+
+- Checking Shooting Attack Details
+  You can confirm shooting success rate and reloading time for the gun you're
+  holding at status screen through 'C' command. Once a gun is *identified*,
+  you can check its element and other specifics with 'I' command.
+
+- Martial Arts with Guns
+  If you're holding a gun without any other melee weapon, you can use the gun
+  to attack in melee. It is treated as a martial art attack, and depends on
+  your Martial Art proficiency, strength, and dexterity.
+  You sometimes will be able to fire at point blank range even if your gun is
+  reloading, but don't think too much about it.
+  Infantry guns have a bayonet attached to them, making their attack power
+  higher.
+
+- Reflection
+  When you inspect your gun with 'I' command, if its shooting attack effect
+  is described as 'bolt', some enemies might reflect it.
+  If it is described as a plain 'shooting attack', it won't be reflected.
+
+- Ego-items and Random Artifacts
+  Ego-item and randart guns can be generated.
+  Their shooting element and type might be changed.
+  Guns that receive significant dice boost often shoot using some element,
+  so pay attention to enemy resistance when using them.
+
+- 'No guns are generated' option
+  If you set 'No guns are generated option' to 'on', gun type weapons won't
+  be generated. You always can switch it between 'on' and 'off', and there's
+  no penalty or bonus of any kind.
+  If you think gunpowder smell doesn't suit Gensoukyou, feel free to switch it
+  to 'on'.
+
+***** <Mana_shield>
+=== About Barrier Guard ===
+
+Keine - 'Starting from version 1.1.27, spellcaster classes can use 'Barrier
+Guard' with Ctrl-'g' command.
+While in this state, half of the damage you receive is taken from your MP
+instead of HP. It makes late-midgame dungeon exploration easier for mages
+with low HP.
+
+However, if you receive too much damage at once or your MP reaches 0, you will
+suffer a 'Guard Break', stunning you.
+Also, the barrier will vanish if you wear anti-magic equipment or become 
+paralyzed, confused, knocked out or heavily stunned.
+
+Starting from version 1.1.96:
+If you have equipment that reduces spell difficulty, you're 1.5 times more
+resistant to guard breaks.
+If you have equipment that decreases mana consumption, amount of MP you spend
+is reduced by 25%.'
+
+***** <AbilityCard>
+=== Ability Cards ===
+
+Keine - 'Ability Cards are magic items added in version 1.1.86.
+There are two kinds of them: Some can be activated, others have passive
+effects that apply when you're carrying them.
+Keep in mind they're completely unrelated to the Item Cards that appear in
+Extra difficulty level.'
+
+--- Obtaining Ability Cards ---
+Keine - 'Aside from some classes, there's very few opportunities to obtain
+ability cards. In version 1.1.86, you can get two from quests at the location
+'False Heaven Shelf'.
+However, if you visit Lunar Marketplace at Moriya Shrine at night, you can
+trade those ability cards for other ones of around the same rank.
+
+Each card has its own rank, ranging from 1 to 4; cards with rank 1 are easy
+to obtain, cards with rank 4 are rare.
+Obtaining even one rank 4 card can significantly affect your adventure, but
+it requires getting lucky enough for normal classes.
+
+Some classes like 'Card-Trader' can obtain a lot of cards at facilities in
+Moriya Shrine and False Heaven Shelf. Also, you can carry up to 9 ability
+cards of the same kind in a single inventory slot.'
+
+--- Activated Ability Cards ---
+Keine - 'You can activate ability cards through 'u' command (in original
+keyboard layout). You can fail to activate it, making you waste an action.
+Success rate depends on Magic Device skill; it never will be 100%, no matter
+how high your skill is. An activated card starts recharging and will be
+available for use once again after several turns.
+In other words, the work more or less like rods.
+
+However, you cannot speed up recharging with something like Scroll of
+Recharging; you have to wait for it to charge on its own.
+Some passive ability cards speed up recharging for other cards.'
+
+--- Passive Ability Cards ---
+Keine - 'Passive ability cards apply their effect if you're carrying them in
+your inventory. If you're a class with a separate inventory like Secondhand
+Dealer, those cards still work even if they're located there.
+Cards you leave at home or lying on the floor don't apply their effects.
+
+If you're carrying 2 or more passive cards of the same kind, their effect
+power will increase depending on their amount. As I said before, normal
+classes can't get a lot of ability cards, but if a Card-Trader collects
+enough powerful cards, their effect will be tremendous.'
+
+--- Inspecting Ability Cards ---
+Keine - 'You can learn about an *identified* ability card's effect with
+'I' command. If you inspect a stack of passive cards, you will learn the total
+effect of that stack.
+Using 'r' command also lets you know that information about cards, but unlike
+'I' command, it consumes energy, so be careful if there are enemies nearby.'
+

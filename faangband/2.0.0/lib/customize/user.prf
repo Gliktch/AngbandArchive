@@ -1,0 +1,80 @@
+# File: user.prf
+
+#
+# This file defines "override" actions of various kinds
+#
+# This file includes, if appropriate, various "sub-files"
+#
+# See "lib/help/command.txt" and "src/files.c" for more information.
+#
+# If the race name is longer then 8 characters, include an abbreviated name too
+
+##### Race Specific Subfiles #####
+
+?:[EQU $RACE Easterling]
+%:Easterling.prf
+%:Easter.prf
+
+?:[EQU $RACE Green-Elf]
+%:Green-Elf.prf
+%:GreenElf.prf
+
+?:[EQU $RACE Grey-Elf]
+%:Grey-Elf.prf
+
+?:[EQU $RACE Hobbit]
+%:Hobbit.prf
+
+?:[EQU $RACE Petty-Dwarf]
+%:Petty-Dwarf.prf
+%:P-Dwarf.prf
+
+?:[EQU $RACE Dwarf]
+%:Dwarf.prf
+
+?:[EQU $RACE Drúadan]
+%:Druadan.prf
+
+?:[EQU $RACE Longbeard]
+%:Longbeard.prf
+%:Longbrd.prf
+
+?:[EQU $RACE Adan]
+%:Adan.prf
+
+?:[EQU $RACE High-Elf]
+%:High-Elf.prf
+
+?:[EQU $RACE Dark-Elf]
+%:Dark-Elf.prf
+
+?:[EQU $RACE Ent]
+%:Ent.prf
+
+?:[EQU $RACE Beorning]
+%:Beorning.prf
+
+
+##### Class Specific Subfiles #####
+
+?:[EQU $CLASS Warrior]
+%:Warrior.prf
+
+?:[EQU $CLASS Mage]
+%:Mage.prf
+
+?:[EQU $CLASS Priest]
+%:Priest.prf
+
+?:[EQU $CLASS Rogue]
+%:Rogue.prf
+
+?:[EQU $CLASS Ranger]
+%:Ranger.prf
+
+?:[EQU $CLASS Paladin]
+%:Paladin.prf
+
+
+?:1
+

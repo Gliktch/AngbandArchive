@@ -1,0 +1,36 @@
+# Makefile for tests - builds unit-test binaries
+
+CFLAGS+=-I../ -I. -g
+LDFLAGS+=-lm
+-include config
+
+all : run
+
+SUITES := $(shell find . -maxdepth 1 -mindepth 1 -type d)
+SUITES := $(filter-out ./bin,$(SUITES))
+include $(patsubst %,%/suite.mk,$(SUITES))
+
+TESTOBJS  := $(patsubst %,%.o,$(TESTPROGS))
+TESTPROGS := $(patsubst %,bin/%,$(TESTPROGS))
+
+TESTOBJS += test-utils.o unit-test.o
+
+build : $(TESTPROGS)
+
+run : build
+	@./run-tests
+
+%.o : %.c
+	@$(CC) $(CFLAGS) $(CPPFLAGS) -c -o $@ $^
+
+bin/% : %.o ../faangband.o test-utils.o unit-test.o
+	@mkdir -p $(shell echo "$$(dirname $@)")
+	@$(CC) $(CFLAGS) $(CPPFLAGS) -o $@ $^ $(LDFLAGS) $(LDADD) $(LIBS)
+	@echo "  CC $@"
+
+clean :
+	$(RM) $(TESTOBJS)
+	$(RM) -rf bin
+
+.PHONY : all clean
+.PRECIOUS : %.o

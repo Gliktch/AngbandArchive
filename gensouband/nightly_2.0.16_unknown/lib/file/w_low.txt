@@ -1,0 +1,490 @@
+N: 1:BIAS_ELEC
+#電撃
+of Electroshock
+#稲妻の宿る
+#エレクトリック
+(Electric)
+#『雷鳴』
+'Thunder'
+#『火花』
+'Spark'
+#『避雷針』
+'Lightning Conductor'
+#『静電気』
+'Static Eletricity'
+#『いかづち丸』
+'Ikazuchimaru'
+#『ヒカリマル』
+'Hikarimaru'
+#『エレキテル』
+'Elekiter'
+#『電気ウナギ』
+'Electric Eel'
+#『青いブリンク』
+'Blue Blink'
+#『スタン・ガン』
+'Stungun'
+#『ぐりっど・ばぐ』
+'Grid Bug'
+#『びっくりサンダーマウンテン』
+'Surprise Thunder Mountain'
+#『マジカルストーム』
+'Magical Storm'
+#驚愕！
+'Astonishing!'
+#『雪起こし』
+'Snow Thunder'
+
+N: 2:BIAS_POIS
+#『蝮』
+'Viper'
+#『毒虫』
+'Poisonous Maggot'
+#『蟲毒』
+'Insect's Poison'
+#『山棟蛇』
+'Mountain Snake'
+#『青大将』
+'Rat Snake'
+#『九十九針』
+'Ninety-Nine Needles'
+#『ヘビ使い』
+'Snake Master'
+#『ツチノコ』
+'Tsuchinoko'
+#『ニガヨモギ』
+'Wormwood'
+#『ナムサンク』
+'Namthanc'
+#『ハリセンボン』
+'Harisenbon'
+#『ガラスヒヴァ』
+'Ryukyu Keelback'
+#『ダイオキシン』
+'Dioxin'
+#『クシロコパの毒針』
+'Xylocopa's Sting'
+#『シリー=カーゲル』
+'Sillyca Gel'
+#『スギズ=スリッパー』
+'Old Slipper'
+#劣化ウランの
+of Depleted Uranium
+#『スイートポイズン』
+'Sweet Poison'
+#『馬酔木』
+'Pieris Japonica'
+
+N: 3:BIAS_FIRE
+#『爆竹』
+'Firecracker'
+#『火蟻』
+'Fire Ant'
+#『火車』
+'Kasha'
+#『焼の剣』
+'Burning Blade'
+#『火炎瓶』
+'Molotov Cocktail'
+#『豆板醤』
+'Doubanjiang'
+#『炎の戦士』
+'Blazing Warrior'
+#『熱血先生』
+'Hot Blood'
+#『ダイナマイト』
+'Dynamite'
+#『トムヤンクン』
+'Tom Yum Kang'
+#『食らい尽くすもの』
+'Devourer'
+#『ワンショット・ライター』
+'One-shot Lighter'
+#激辛の地シセンの
+of the incredibly spicy land of Sichuan
+#蛍妖怪の
+of the Firefly Youkai
+#夏しちゃってる
+'It's Summer Now'
+
+N: 4:BIAS_COLD
+#『氷結』
+'Freezing'
+#『雪崩』
+'Snow Avalanche'
+#『白熊君』
+'Polar Bear'
+#『製氷剣』
+'Freezing Blade'
+#『ニムロス』
+'Nimloth'
+#『殺人豆腐』
+'Killer Tofu'
+#『可打釘芭蕉』
+#『ウルトラ水流』
+'Ultra Water Flow'
+#『アイスバーン』
+'Ice Burn'
+#『ビッグフット』
+'Bigfoot'
+#北風小僧の
+'North Wind Brat'
+#おてんば
+'Tomboy'
+
+N: 5:BIAS_ACID
+#『白蟻』
+'Termite'
+#『酸性雨』
+'Acid Rain'
+#『ペプツ』
+'Blade of Pepsi'
+#『アデニン』
+'Adenine'
+#『グアニン』
+'Guanine'
+#『シトシン』
+'Cytosine'
+#『ウラシル』
+'Uracil'
+#『ロイシン』
+'Leucine'
+#『アルギニン』
+'Arginine'
+#『メルトダウン』
+'Melt Down'
+#『トリプトファン』
+'Tryptophan'
+#『不憫な不法投棄物』
+'Piteous Illegal Dumping'
+『融々自適』
+'Dissolving Free and Easy'
+『ミ=ツカン』
+'Mi-zkan'
+『サン=ポール』
+'Sun Polle'
+
+N:12:BIAS_CHAOS
+#『コッホ』
+'Koch'
+#『万華鏡』
+'Kaleidoscope'
+#『歪曲刀』
+'Distortion Blade'
+#『ジュリア』
+'Julia'
+#『変幻自在』
+'Phantasmagoria'
+#『シロシーベ』
+'Psilocybe'
+#『ランダマイザー』
+'Randomizer'
+#『マンデルブロー』
+'Mandelbrot'
+#『シュレティンガー』
+'Schroedinger'
+#『ワンダースワンダー』
+'Wonder, Wonder'
+#『シェイプチェンジャー』
+'Shapechanger'
+#『ストームブリンガー・ジュニア』
+'Stormbringer Jr.'
+#変幻の
+of Change
+#ログルスの
+of Logrus
+#遊星からの
+from Another World
+#宵闇の
+of Dusk
+#怪奇！
+'Mysterious!'
+
+N:14:BIAS_NECROMANTIC
+#人々を窒息させてきた切断された
+'Strangulation and Dismemberment'
+#『墓石』
+'Tombstone'
+#『卒塔婆』
+'Stupa'
+#『邪戦士』
+'Evil Soldlier'
+#『屍好刃』
+'Necrophiliac'
+#『ブラッド』
+'Blood'
+#『腐敗神話』
+'Corruption Myth'
+#『悪魔の爪』
+'Satan's Claw'
+#『腐乱天狗』
+'Rotten Tengu'
+#『夜の戦慄』
+'Dread of Night'
+#『地下牢の影』
+'Dungeon Shade'
+#『エルフリスト』
+'Elfrist'
+#不幸の
+of Misery
+#ブードゥーの
+of Boodoo
+#『緑目のジェラシー』
+'Green-Eyed Jealousy'
+#『ファントムノイズ』
+'Phantom Noise'
+#本怖！
+'Horrifying!'
+#『血針草』
+'Blood Needle Grass'
+
+N:15:BIAS_LAW
+N:13:BIAS_PRIESTLY
+N: 8:BIAS_WIS
+#『盲信者』
+'Fanatic'
+#『免罪符』
+'Indulgence'
+#『チルミル』
+'Chirumiru'
+#『自己啓発』
+'Self-Improvement'
+#『サティアン』
+'Satian'
+#『汚れ無き悪戯』
+'Pure Mischief'
+#『マインドソード』
+'Mind Sword'
+#『神の威を借る狐』
+'Fox Borrowing Power of God'
+#『禁じられた遊び』
+'Forbidden Games'
+#『天使のラブソング』
+'Angel's Love Song'
+#『天使の祝福』
+'Angelic Blessing'
+#『平和への道』
+'Path of Peace'
+#『スターライト・エンジェル』
+'Starlit Angel'
+#『天使の下僕』
+'Angelic Page'
+#『法の信奉者』
+'Disciple of Law'
+#『崇拝』
+'Worship'
+#祝福された
+(Blessed)
+#紅葉の
+of Autumn Leaves
+
+N: 9:BIAS_DEX
+N:16:BIAS_ROGUE
+#『襲』
+'Assault'
+#『猫爪』
+'Cat's Claw'
+#『タキオン』
+'Tachyon'
+#『スクイズ』
+'Squeeze'
+#『神出鬼没』
+'Supernatural Elusiveness'
+#『カマイタチ』
+'Kamaitachi'
+#『カクレマル』
+'Kakuremaru'
+#『スピード・キング』
+'Speed King'
+#『カメレオンの舌』
+'Chameleon's Tongue'
+#鼠小僧佐吉の
+of Nezumi Kozou
+#ダウザーの
+of the Dowser
+#極速！
+'Superspeed!'
+
+N:17:BIAS_MAGE
+N: 7:BIAS_INT
+#『一夜漬』
+'Cramming'
+#『ク=モン』
+'Kumon'
+#『カンニング』
+'Cunning'
+#『ユーレイカ』
+'Eureka'
+#『ハンドパワー』
+'Force of Hand'
+#『即席魔法使い』
+'Instant Mage Maker'
+#『マス=マジック』
+'Math Magic'
+#朶思大王の
+of King Duosi
+#神童コラショの
+of Korasho
+#見習い魔術師の
+of Novice Mage
+#ジョンイルの息子ジョンナムの
+of Jongnamk, Son of Jongil
+#ヤマビコの
+of the Yamabiko
+#妖怪寺の
+of the Youkai Temple
+#掃除ができる！魔女の
+
+N:18:BIAS_WARRIOR
+N: 6:BIAS_STR
+N:10:BIAS_CON
+#『熱血漢』
+'Hot Blooded'
+#『豪力王』
+'Muscle King'
+#『超兄貴』
+'Cho Aniki'
+#『鋼鉄丸』
+'Koutetsumaru'
+#『草薙之剛』
+'Kusanagi-no-Tsuyoshi'
+#『ウェポンα』
+'Weapon Alphas
+#『オジサンク』
+'Ojithanc'
+#『ピースメーカー』
+'Peace Maker'
+#『エクスプロイダー』
+'Exploder'
+#『オーガスマッシャー』
+'Ogresmasher'
+#『戦士の抵抗』
+'Warrior's Stand'
+#『戦利品』
+'Spoils of Victory'
+#『週末戦士』
+'Weekend Warrior'
+#怪力アドンの
+of Adon
+#ドンキホーテの
+of Don Quixote
+#究極無敵銀河最強の
+of Ultimate Galaxy Peerlessness
+#『柳の下のデュラハン』
+'Dullahan Under the Willows'
+#戦慄せよ！
+'Tremble!'
+
+N:19:BIAS_RANGER
+#『時蔭』
+#『星獣剣』
+'Star Beast Sword'
+#『熊殺し』
+of *Slay Bear*
+#『カ=ルカン』
+'Ka'lkan'
+#『カタパルト』
+'Catapult'
+#『モスキート』
+'Mosquito'
+#『ブルライアット』
+'Bull Riot'
+#『キャットキラー』
+of *Slay Cat*
+#『ムーマクベーン』
+'Mumakbane'
+#『レーザースコープ』
+'Laser Scope'
+#超自然の
+(Supernatural)
+#ドルイドの
+of the Druid
+#伝説の料理人味吉陽一の
+of Youichi Ajiyoshi
+#哨戒天狗の
+of the Patrol Tengu
+#脅威！
+'Threatening!'
+
+N:11:BIAS_CHR
+#『素薔薇』
+'Unripe Rose'
+#『ロリータ』
+'Lolita'
+#『友好の証』
+'Proof of Friendship'
+#『きらめき丸』
+'Kiramekimaru'
+#『夢見る少女』
+'Dreaming Girl'
+#『笑いを招く者』
+'Laughcaller'
+#サディストの
+of the Sadist
+#少女アリスの
+of Alice
+#白馬の王子様の
+of Prince Charming
+#春告精の
+of the Spring-Announcing Fairy
+#『セイヨウタンポポ』
+'Dandelion'
+
+N:*:Default
+#魁！
+'Leading!'
+#『紫雨』
+'Purple Rain'
+#『腐卵』
+'Rotten Egg'
+#『黒鷹』
+'Black Hawk'
+#『豚目』
+'Pig's Eye'
+#『蟲殺し』
+'Insectslayer'
+#『豆鉄砲』
+'Peashooter'
+#『怒首領蜂』
+'DoDonPachi'
+#『魑魅魍魎』
+'Chimimouryou'
+#『光子魚雷』
+'Photon Torpedo'
+#『千鳥ヶ淵』
+'Chidorigafuchi'
+#『ウィルス』
+'Virus'
+#『バンジー』
+'Bungee'
+#『フェイザー』
+'Phaser'
+#『面断平三色』
+#『鮫！鮫！鮫！』
+'Shark! Shark! Shark!'
+#『プルトニウム』
+'Plutonium'
+#『シュリーカー』
+'Shrieker'
+#『インベーダー』
+'Invader'
+#『パトリオット』
+'Patriot'
+#『バグスレイヤー』
+'Bugslayer'
+#『Ｘウィンブロウ』
+'X-Winblow'
+#『クラックダウン』
+'Crackdown'
+#『クリプトナイト』
+'Kryptonite'
+#『ブレークアウト』
+'Breakout'
+#『背水の陣』
+'Last Stand'
+#『リトルバタリオン』
+'Little Battalion'
+#番町！
+'Guards!'
+#索道土産の
+of Ropeway Souvenirs

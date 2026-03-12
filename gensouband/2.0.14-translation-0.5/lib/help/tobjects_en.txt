@@ -1,0 +1,1075 @@
+=== Items ===
+Keine - 'Collecting and using items is extremely important in roguelikes.
+You won't be able to fight your way through the dungeon without obtaining
+powerful equipment, collecting a lot of scrolls and healing potions, along
+with various magic devices.
+Let's look over various mechanics related to items.'
+
+***** <EquipInvent>
+=== Inventory and Equipment ===
+
+Keine - 'You're carrying an adventurer's backpack which can contain up to
+23 different kinds of items. A single food ration and 99 suits plate mail both
+count as a single 'kind'. Many items will stack in a single slot if there's
+multiple of them; however, staves with different amount of charges left,
+equipment with different abilities and some other special items can't stack.
+
+Aside from your inventory, you have 'equipment'.
+It goes without saying that weapons and armor will have no effect unless you
+wield/wear them. There are 12 equipment slots:
+Right hand, left hand, ribbon, right hand finger, left hand finger, neck,
+light source, body, cloak, head, hands, feet.
+
+You can hold weapons/shields in your hands.
+If you wield a weapon other than a short blade and your other hand is free,
+you will automatically hold it with both hands, increasing attack power.
+You also can hold a bow or wield a single weapon in each hand.
+There are some special items like demon books that you have to hold in your
+hand in order to use them.
+
+You'll probably understand in which slot a piece of equipment goes by
+looking at it. You don't have to remove your gloves to put on or remove rings,
+and if you wear a full plate mail, your head/feet slots are still free.
+
+When you remove a piece of equipment, it automatically goes into your
+inventory. If your inventory is full, it is dropped beneath your feet.
+
+Several classes have their own item container separate both from equipment
+and inventory - Secondhand-Dealer's toolbox, Engineer's backpack, Rin's cart.
+You should understand if you try using it.
+
+If you're carrying too much weight, your speed will be reduced. In early game,
+it will significantly decrease you combat power, so be careful.
+And as I said before, using heavy equipment might make spells more difficult
+to cast. To be more specific, MP cost increases according to how much you go
+over the limit. Spellcasters in particular should watch out for this.
+You strength determines how much you can carry without trouble.'
+
+***** <UseItem>
+=== Using Items ===
+
+Keine - 'Several items causes some effects upon being used. I'll explain how
+to use them. The following commands are for default key settings, if you're
+using a different layout, look for explanation in Commands section.
+
+You can use items both from your inventory and beneath your feet. When asked
+to choose an item, press '_' to switch to items on the floor.
+
+- Staves '_'
+  Can be used with 'u'se command. Can affect either yourself or your nearby
+  area. Staves have a limited amount of charges, and can't be used if it drops
+  to zero. Staves with different amount of charges don't stack.
+  You can recharge them at Divine Spirit Mausoleum Branch Office or with
+  Recharging spells. However, if you fail to recharge with a spell/scroll, the
+  item might break.
+
+- Wands '-'
+  Can be used with 'a'im command. Most of the make you target something, and
+  then shoot in that direction.
+  Magic wands will stack in a single slot regardless of amount of charges
+  left. A stack of wands displays the total amount of charges.
+  You can recharge them at Divine Spirit Mausoleum Branch Office or with
+  Recharging spells. However, if you fail to recharge with a spell/scroll, the
+  item might break.
+
+- Rods '-'
+  Can be used with 'z'ap command. Some of them require aiming at something,
+  some of them simply cause an effect upon being used.
+  Rods don't have charges, but they start recharging once you use them, and
+  cannot be used during that period.
+  Various rods have different recharge time. Rods will stack regardless of
+  whether they're recharging or not.
+  You can immediately finish recharging at Divine Spirit Mausoleum Branch
+  Office or with Recharging spells. However, if you fail to recharge with a
+  spell/scroll, the item might break.
+
+- Ability Cards '#'
+  Some ability cards are used with 'u' commands, some have a passive effect
+  applied if you're carrying them. You can get a few as rewards for certain
+  quests, and you can exchange them at Moriya Shrine.
+  Some classes have to increase their power by buying those cards.
+
+  Using staves, wands, rods and ability cards is linked to Magic Device skill.
+  If your skill is level, you're very likely to fail to properly use high
+  level magic devices. They're also hard to use if you're confused or berserk.
+
+- Scrolls '?'
+  Can be used with 'r'ead command. They disappear when you read them.
+  You can't read if you're confused, blind, or in a non-illuminated area.
+  You can't fail to read scrolls, except in the case you get a severe asthma
+  attack.
+
+- Food/mushrooms/sweets ','
+  Can be eaten with 'E'at command. Naturally, they disappear once eaten.
+  Normal races raise satiation level by eating food. Tsukumogami and Youkai
+  Dolls consume charges from staves/wand, Golems can eat stones/ores.
+
+- Potions/liquor/other drinks '!'
+  Potions and liquor can be drunk with 'q' command. Naturally, they disappear
+  when you drink them. Some of the potions are dangerous, so I advise against
+  carelessly drinking them without knowing their effect.
+  Drinking alcohol makes you heroic and removes fear, but various weird things
+  start to happen if you drink too much, and you might get knocked out if you
+  keep on drinking even more.
+  Some alcohol is strong enough to knock you out on the spot, so be careful.
+
+- Flasks of Oil '!'
+  Your lantern will go out unless you refill it with oil.
+  Can be used to refill lanterns with 'F' command.
+  Magic lanterns and other high quality light sources don't require fuel.
+
+That's about it.
+Again, don't forget that you won't be able to use some items if you're
+confused or blind.
+
+***** <Activate>
+=== Activating Items ===
+
+Keine - 'Several pieces of equipment have spell-like effects that you can use
+by activating them. Use 'A'ctivate command to use them; it can be done only
+with items among your equipment, and you're more likely to fail if your Magic
+Device skill is low. You can't activate items if you're confused.
+
+For example, if you activate a Ring of Flames, you will shoot a fireball and
+temporarily become more resistant to fire attacks.
+Just like rods, the item will start recharging after you activate it.
+You'll be able to activate it again after waiting a bit. However, items won't
+recharge if you remove them from your equipment.'
+
+***** <Ident>
+=== Identifying Items ===
+
+Keine - 'Identifying items you've picked up before using them is a basic
+concept. You won't be able to tell the effect of items like staves/scrolls
+you find for the first time before identifying them, and pieces of equipment
+might have powerful curses on them.
+Here's several methods of identification:
+
+- Pseudo-identification
+  If you pick up a piece of equipment and wait for a bit, you will get a
+  feeling like 'You feel ## is good...'. It's a vague identification method
+  that only works for equipment items, but you'll be able to discern what
+  items you don't need.
+  Pseudo-identification ability varies for different classes:
+  Warriors are good at identifying weapons/armor, spellcasters are good at
+  identifying rings. If you're not good at pseudo-id, it will happen slower
+  and you will get an even more vague message.
+  For example, a Warrior can tell if a weapon/armor is 'average', 'good',
+  'excellent', or 'special'. A Mage will only be able if it's 'cursed' or
+  'uncursed', and it will take more time to realise this.
+
+- Identification
+  The standard method of identifying items.
+  If you use it on an item, for example, you'll be able to tell what kind of
+  potion or staff it actually is.
+  Once you've identified a specific item, you'll automatically recognize it
+  once you find another one of them.
+  If you identify a piece of equipment, you'll be able to tell its quality and
+  stats, and if it's an ego-item or an artifact, you'll know what kind it is.
+  However, you won't learn all special abilities of ego-items or artifacts at
+  this point.
+
+  There's plenty of methods of identification.
+  There are staves and scrolls being sold at stores, and Hieda House can
+  identify your items. Also, many adventurers can use identification abilities
+  or spells.
+
+  If you lose your memories due to an enemy spell or a special effect, you
+  will forgot about some items you've identified.
+
+- *Identification*
+  The strongest method of identification.
+  How do you read it? Feel free to shout 'Identify!'
+  Once you use it, you'll learn everything about the item. You'll be able to
+  check detailed information with 'I' command, and you'll know all abilites
+  of ego-items and artifacts. And even if you lose your memories, you still
+  won't forget this information.
+
+  If you require *identification*, visit Scarlet Devil Mansion Library or
+  Kourindou. Also, there are some powerful scrolls and spells with this
+  effect. Items you buy from stores and items you start your adventure with
+  are already *identified*.'
+
+***** <CursedItem>
+=== Cursed Items===
+Keine - 'Some of items you pick up might be cursed.
+You won't be able to remove them once you wield/wear them, and they might
+have other negative effects.
+
+There are three stages of curses.
+- Normal curse
+  Can be removed with Remove Curse. Might have some slightly nasty effects
+  as well.
+- Heavy curse
+  Cannot be removed with ordinary Remove Curse; requires Scroll of *Remove
+  Curse* or visiting a shrine.
+  Might have some very nasty effects as well.
+- Permanent curse
+  Cannot be removed at all.
+  You'll have to break the item itself with special spells or scrolls.
+
+Now, let's take a look at various effects cursed items might have.
+- HP/MP damage time from time
+  You're unlikely to get taken down directly by this effect, but it still
+  would be better to get rid of it.
+- Increased hunger rate
+  Might be dangerous depending on situation. You might want to return as soon
+  as possible to remove it.
+- Attracts dragons
+  Occasionally activates, summoning a hostile dragon. Very dangerous.
+- Aggravation
+  Makes nearby enemies angry. Gameplay-wise, any sleeping enemies you approach
+  will immediately wake up, and friendly beings will turn hostile.
+  Be careful, it might cause a lot of trouble for summoners and in quest
+  dungeons.
+- Random teleportation
+  Causes you to teleport at random. Particularly dangerous on lower levels.
+  If the item isn't cursed, you can prevent random teleportation from being
+  activated.
+- Ancient Foul Curse
+  Also called 'Topi Ylinen's Curse'.
+  When it goes off, horrible things happen - like 'you get paralyzed ignoring
+  free action', 'random teleportation', 'powerful monsters being summoned'.
+  Several of those effects might happen in a row.
+  There are some extremely powerful pieces of equipment with Ancient Foul
+  Curse, but using them is a very risky gamble.
+
+Tsukumogami and Tsukumo-Masters can remove cursed items without uncursing
+them.
+
+Usually, only equipment items can be cursed, but the 'Figurine of ##' items
+might be cursed as well. If you throw a cursed figurine, it will turn into
+a hostile monster and attack you.'
+
+***** <EgoObjects>
+=== Ego-items and Artifacts ===
+
+Keine - 'Some pieces of equipment are clearly stronger than ordinary items.
+Those are ego-items and artifacts.'
+
+--- Ego-items ---
+
+Keine - 'Ego-items are powerful pieces of equipment with spells cast on them.
+If you're good at pseudo-id, they will show up as 'excellent'.
+Once you identify them, their name will change to something like 'Long Sword
+(Heroic)'. If you wield/wear them, they might give you various benefits, like
+increasing your stats or giving resistances.
+However, cursed ego-items exist as well. If you accidentally equip one of
+them, you'll be in trouble.
+You can view detailed information with 'I' command after *identifying* the
+item.
+
+--- Artifacts ---
+
+Keine - 'Artifacts are legendary, one-of-a-kind items.
+If you're good at pseudo-id, they will show up as 'special'.
+Many artifacts are stronger than ego-items and have various effects.
+The ones that have mostly strictly predefined are called 'fixed artifacts'.
+Some of them are so rare you're extremely unlikely to find them.
+
+There also are 'random artifacts', with random abilities you won't know
+until you *identify* them. By the way, you might find a random artifact that's
+more powerful than the strongest fixed artifacts.
+
+Artifacts cannot be destroyed by enemy attacks, but if you sell them to a
+store or leave them on the floor and move to another level, you won't see that
+artifact again.
+
+Also, cursed artifacts exist as well.
+Accidentally wielding/wearing one might lead to really horrible results.'
+
+***** <DestroyItem>
+=== Item Destruction ===
+
+Keine - 'Items lying on the floor can be destroyed if they get hit by spells
+or breath attacks. For example, scrolls and staves can burn if exposed to fire
+or melt if exposed to acid.
+Swords and armors melt in acid.
+Rings and wands get broken by lightning attacks.
+Potions shatter upon getting hit by cold/shockwaves/shards/etc.
+Chaos, disenchantmnet, mana, and disintegration attacks can destroy any items.
+Spatial distortion and pollution attacks might destroy any items.
+
+Items in your inventory also might get destroyed by enemy attacks.
+In contrast to items lying on floor, there's only a chance of them getting
+destroyed. If you're carrying dozens of scrolls, only some of them might get
+burned up by a fire attack.
+Having double resistance or immunity to basic elements (acid, lightning, fire,
+cold) protects your items from being destroyed by those attacks.
+Immunity is a special ability that completely protects you from that element,
+double resistance is a state where you have innate/equipment resistance to
+that element along with temporary resistance from a spell or similar source.
+You can protect your items from being destroyed by higher elements if you
+resist that element.
+You cannot resist disintegration and mana, but those elements won't destroy
+items in your inventory, so don't worry about that.
+
+Some items cannot be harmed by basic elements, preventing them from being
+destroyed in that manner. Artifacts cannot be destroyed at all.
+For example, if there's a set of clothes lying around that is unharmed by an
+acid attack, this item is either an artifact or some ego-item.
+
+Items among your equipment cannot be destroyed by enemy attacks. However,
+acid and disenchantment attacks can lower their stats.
+Having disenchantment resistance prevents your equipment from being
+disenchanted, having acid immunity prevents those items from being corroded.
+Artifacts cannot be harmed by acid.
+
+Also, some enemies can pick up or destroy items as they walk on them.
+If an enemy has picked up an item, you can get it if you defeat them.
+Monsters can't pick up or destroy artifacts.'
+
+***** <DestroyItem2>
+=== Item Vanishing ===
+
+Keine - 'Items sometimes can disappear without being destroyed.
+I've told earlier that artifacts can't be destroyed, but they still might end
+up vanishing, so be careful.
+Items can disappear in those cases:
+
+- You go to another dungeon leaving the item on the floor
+  If you recall or move to another dungeon, move to an adjacent map screen
+  while on surface, or switch to global map mode, all items on the floor will
+  disappear. Avoid mistakes like accidentally dropping an item in front of
+  your house entrance (instead of storing it in your house) and then leaving
+  the map.
+
+- Item gets caught in an earthquake
+  If an earthquake occurs in the dungeon, any items lying on open areas that
+  end up turning into walls will be destroyed. However, terrain with artifacts
+  lying on it won't be turned into a wall by an earthquake.
+
+- Item gets *destroyed*
+  *Destruction* is a powerful spell that breaks down the dungeon. If you use
+  it, all items in its area will disappear - artifacts aren't an exception.
+
+- Item gets dropped without free space nearby
+  Items cannot be placed on terrain like walls, deep water/lava, closed doors,
+  traps, runes, etc. If an item gets dropped on an area like this, it will
+  move to a nearby available space instead. However, if there's no suitable
+  areas nearby, the item will disappear.
+  Same applies for weapons you throw and items dropped by defeated enemies.
+  Keep that mind when fighting aquatic enemies or enemies with trap creation
+  spells.
+
+There are some special causes of item disappearance that are more related to
+inner game workings than gameplay mechanics.
+They're probably hard to understand, but remember them if possible.
+
+- Map being generated again in quest processing
+  When you receive a new quest or report a finished one, the map will get 
+  generated again. All items lying on the floor at this point will disappear.
+  Don't accept the next quest while leaving the reward for the previous one
+  lying on the ground - it will disappear.
+
+- Moving to another level with identified fixed artifact lying on the floor
+  When you go to another dungeon, all items on the floor will disappear, but
+  if you just go to another dungeon level using a staircase, the level will be
+  preserved.
+  However, identified fixed artifacts are an exception.
+  If you leave a fixed artifact lying on floor, go down a staircase and then
+  come back, for some reason, the artifact will disappear.
+  This is an unnatural feature related to inner game workings. Be careful.
+  (Should not happen past v1.0.75 (probably))
+
+- Information about items on floor gets compressed
+  If you defeat a lot of enemies and the floor starts to get filled with
+  items, they will start disappearing, starting from the most worthless ones.'
+
+***** <Object_param>
+=== Equipment Notation (Basics) ===
+
+Keine - 'Now, let's say you found a piece of equipment and identified it.
+But you probably won't quite understand what's written there if you look at
+it for the first time.
+I'll explain how to read it.
+
+First of all, melee weapons.
+
+        Claymore (2d8) (+4, +3)
+
+Claymore is the weapon's name. The (2d8) after it is the weapon base power;
+it means 'roll 2 8-sided dice'. If you're wondering why it's suddenly using
+dice rolls, that's because it uses mechanics of old tabletop RPGs.
+
+The average value of the dice roll is calculated using following formula:
+
+(dice sides + 1) * dice amount / 2
+
+For 2d8, the average value is 9.
+The (+4, +3) after that is (accuracy modifier, damage modifier).
+If you attack with this sword, you get +4 to accuracy and deal 12 damage on
+average if you land a hit.
+Also, that doesn't mean your accuracy is increased by 4%. Accuracy
+calculations are very complicated and we won't be examining them.
+
+Next up is ranged weapons.
+
+        Long Bow (x3) (+4, +5)
+        Steel Arrow (3d4) (+6, +4) (49/98)
+
+The (x3) is the bow's strength - the multiplier applied to arrow damage. The
+higher it is, the more powerful the bow is.
+(49/98) doesn't show unless you're holding an appropriate ranged weapon.
+49 on the left side is damage for one shot. Expected value for (3d4) is 7.5;
+with damage modifiers applied, it's 16.5, and with the x3 multiplier, it's 49.
+98 on the right side is the expected damage per turn. You can shoot several
+times per turn. Amount of shots for ranged weapons will be covered in more
+details in Combat Mechanics section.
+
+Next up is armor.
+
+        Partial Plate Armor (-3) [21, +7]
+
+(-3) is short for (-3, 0) - it applies a -3 accuracy modifier to your attacks.
+Heavy armor obstructs your movements.
+[21, +7] is armor class. 21 is the base value, +7 is armor modifier value.
+The higher your armor class is, the more easily you can avoid monster melee
+attacks, and it can reduce damage you receive if you get hit.
+However, damage from special melee attacks (like 'burn' or 'poison') is not
+reduced by armor class.
+
+Next up is ego-item armor.
+	
+	O-yoroi of Oni (-3) [36, +18] (+3) {+St;rAcElFiCoWa(St}
+
+Do you see the (+3) after the armor class value?
+This isn't an accuracy or damage modifier, this is a stat modifier.
+In this armor's case, wearing it gives you +3 to strength. Also, wearing it
+gives you resistance to several elements.
+It's all mentioned in the {} brackets; we'll cover reading this description
+a bit later.'
+
+***** <Magic_weapon>
+=== Weapon Special Effects ===
+
+Keine - 'If you're a complete newcomer, feel free to skip this section and
+return to it later, once you've gotten used to adventuring.
+
+Let's go over special effects on your equipment.
+The text in () brackets is automatically written down in {} brackets once
+you've *identified* the item.
+Let's start with weapon special effects.
+
+- Elemental brands (|Ac, |El, |Fi, |Co, |Po)
+  There are five kinds of elemental weapon brands - acid, lightning, fire,
+  cold, and poison. When you attack with a branded weapon, you deal large
+  damage if the enemy doesn't resist that element.
+
+  To be more specific, it multiplies the dice part by 2.5.
+  For example, if you attack with a (3d5) (0, +10) {|Fi} weapon, the 
+  expected damage against a fire resistant enemy is 19, but against an enemy
+  lacking that resistance it's 32.5.
+
+- Slays (/Ch, /Lw, /An, /Hm, /Un, /Dr, /Dt, /Dm, /Yk; might be /X)
+  Essentially means 'Weapon of Slay ###'.
+  If you attack an enemy of corresponding kind with this weapon, you deal
+  large damage.
+
+  /Ch deals 2x damage to chaotically aligned beings,
+  /Lw deals 2x damage to lawfully aligned beings,
+  /An deals 2.5x damage to animals,
+  /Hm deals 2.5x damage to humans and 2x to humanoids,
+  /Ud deals 3x damage to undead,
+  /Dr deals 3x damage to dragons,
+  /Dt deals 3x damage to deities,
+  /Dm deals 3x damage to demons,
+  /Yk deals 3x damage to youkai.
+
+  Those multipliers apply to the weapon's dice value.
+  There are also effects like /XHm that deal even more damage to those
+  enemies.
+
+  If your weapon has several brands/slays that are effective against the
+  enemy you're attacking, only the highest multiplier will be applied.
+
+- Sharpness (|Shp, or |XShp)
+  Sharp-edged weapons. Can only be applied to edged weapons.
+  If you attack with this weapon, you might cut deeply into your opponent,
+  dealing more damage. Detailed calculations are somewhat complex, but on
+  average, it multiplies the dice value by 1.22.
+  There also very rare, extremely sharp weapons denoted with |XShp.
+  They multiply dice value by 1.67 on average.
+  Sharpness dice multiplier stacks with brand/slay dice multipliers.
+
+- Force (|Mn)
+  A weapon that can deliver powerful strikes using the wielder's spiritual
+  power. If you attack with this weapon, dice value will be multiplied by
+  (brand/slay multiplier * 1.5 + 2).
+  This effect stacks with brand/slay and sharpness modifiers.
+  However, your MP decreases when you attack with force weapons.
+  If your MP runs out, this effect no longer applies.
+  
+  Effectively, dice value ends up being modified by [highest applicable
+  brand/slay multiplier] * [force multiplier] * [sharpness multiplier].
+  Here's an example:
+  |Mn alone multiplies by 3.5,
+  /Yk|Mn multiplies by 6.5 when attacking a youkai,
+  /XDr|Mn|XShp multiplies by an astounding 16 when attacking a dragon!
+
+- Earthquakes (|Qk)
+  A weapon that causes earthquakes when you attack with it. Can only be
+  applied to non-edged weapons.
+  When an earthquake happens, the dungeon breaks down, altering the terrain,
+  and falling rocks might deal damage to enemies. However, if holes open up in
+  walls, new enemies might enter the fight, and you might not be able to
+  obtain items from the enemies you've defeated.
+  To be honest, it's not an useful ability.
+
+- Chaotic (|Ch)
+  An ominous weapon with powers of chaos residing in it. Don't confuse it 
+  with /Ch, which deals more damage to chaotically aligned beings.
+  When you attack with this weapon, some weird things may occur. You might
+  drain HP from the enemy, confuse them, teleport them, polymorph them, or
+  cause an earthquake.
+  The first two effects are fine, the last three aren't that pleasant.
+
+- Vampiric (|Vmp)
+  A bloodthirsty weapon.
+  When you attack a living being with this weapon, you drain a slight amount
+  of HP from them. It's a very useful weapon that boosts your long-term combat
+  capability. However, it's harder to use from midgame, where many nonliving
+  demons and undead start to appear.
+
+- Suitable for throwing (Th)
+  It's either in a shape that makes it easier to throw, or is enchanted with
+  some spell. If you throw this weapon, you deal more damage compared to
+  throwing a usual weapon.
+  Artifacts suited for throwing deal even more damage.
+
+- Comes back when thrown (Bm)
+  There are weapon that return to your hand after being thrown. Thor's hammer
+  is well known for that ability. However, it might not come back, or you
+  might fail to catch it, and it'll drop at your feet. Having high dexterity
+  makes you less likely to feel.
+
+Now, let's look over ranged weapons:
+
+- Powerful shots (Xm)
+  Ammo shot from this bow/crossbow hits harder than usual.
+  The weapon's multiplier (like x3) gets raised by 1.
+
+- Extra shots (Xs)
+  You can shoot faster using this bow/crossbow.
+  It's useful, since it both increases your damage and makes you able to fight
+  in a more safe way.
+
+That's about it for special effects on weapons.'
+
+***** <Resist>
+=== Elemental Resistances ===
+
+Keine - 'Next, I'll explain resistances to various elements.
+Several races and classes can have some innate resistances, but they're
+mainly obtained through equipment.
+
+- Acid resistance (rAc)      Acid immunity (*Ac)
+- Lightning resistance (rEl) Lightning immunity (*El)
+- Fire resistance (rFi)      Fire immunity (*Fi)
+- Cold resistance (rCo)      Cold immunity (*Co)
+
+  Acid, lightning, fire and cold are called basic elements.
+  Having a resistance to one of them reduces damage you receive from 
+  it to 1/3.
+
+  If you have immunity to an element, you take zero damage from it,
+  and your items are completely protected from damage.
+
+  Basic element attacks can deal massive damage in a single attack.
+  For example, Great Lava Wyrms deal 1600 damage with their fire breath if you
+  don't resist it. You want at least rFire by dungeon level 20, and the rest
+  of basic element resistances by dungeon level 35.
+
+  Now, here's an important detail, so remember it well. If you already
+  resist a basic element or poison and then gain temporary resistance on top
+  of it (for example, from a potion), you will take only 1/9 damage from that
+  element.
+  This is called double resistance.
+  Wearing several pieces of equipment with the same resistance does nothing -
+  it will still count as only one layer of damage reduction.
+
+The elements below are also called 'higher elements'; there's a lot of them.
+You should avoid fighting enemies that use elemental attack you don't resist.
+You can use probing to determine what kind of special abilities your enemies
+have; if you haven't gotten used to adventuring yet, I suggest carrying a
+Staff or Rod of Probing with you.
+White Wolf Tengu, Maids/Butlers, Rangers and other races/classes have special
+abilities with similar effect.
+
+- Poison resistance (rPo)
+  Reduces poison damage to 1/3. Also prevents you from being poisoned.
+  Hard to cover compared to basic element resistances, but you want to have it
+  by dungeon level 40.
+  I've already said it, but just like with basic elements, poison element
+  damage gets reduces to 1/9 if you double resist it.
+
+- Light resistance (rLi)
+  Reduces light element damage to 4/(7+1d4). Also prevents you from being
+  blinded by light element attacks.
+  Gensouband has several new enemies using light element attacks; if you don't
+  have it covered by midgame, watch out for shrine maidens and spellcasters.
+
+- Darkness resistance (rDk)
+  Reducess darkness damage to 4/(7+1d4). Also prevents you from being blinded
+  by darkness attacks, and reduces damage from some curse attacks.
+  There's not a lot of enemies that use darkness attacks, but those who do
+  tend to be comparatively dangerous.
+
+- Shards resistance (rSh)
+  Reduces shards damage to 6/(7+1d4), and halves damage from rocket attacks.
+  Also prevents you from being wounded by shards attacks.
+  Does pretty much nothing in early game, but you absolutely want to have it
+  covered on lower levels.
+
+- Sound resistance (rSo)
+  Reduces sound damage to 5/(7+1d4). Also prevents you from being stunned by
+  sound attacks and other elements like rockets/ice/etc.
+  It's good to have it, but it's not that high priority.
+
+- Nether resistance (rNt)
+  Reduces nether damage to 6/(7+1d4), and reduces damage from some curse
+  attacks as well. Also reduces experience drained by draining attacks.
+  Demon and undead enemies frequently use nether element attacks, so you want
+  to have it covered by midgame.
+
+- Chaos resistance (rCa)
+  Reduces chaos damage to 6/(7+1d4). Also prevents you from gaining mutations
+  from chaos attacks, and from hallucinating.
+  It's a resistance you want to constantly have covered by midgame.
+
+- Water resistance (rWa)
+  Halves damage from water attacks. Also prevents you from being stunned by
+  water attacks, and prevents your items from being destroyed.
+  If you enter water terrain while carrying too much, you won't drown.
+  Useful in early game, but you'll probably do fine without it in endgame.
+
+- Disenchantment resistance (rDi)
+  Reduces disenchantment damage to 6/(7+1d4). Also prevents your equipment
+  from being disenchanted.
+  I wouldn't say it's necessary, but you have to be very careful past midgame
+  if you don't have it.
+
+- Holy resistance (rHo)
+  Halves damage from holy element attacks. Enemies using this element
+  frequently appear all the way from early game to endgame, so if you're
+  vulnerable to it (for example, you're a youkai or you study Necromancy),
+  you want to cover it as soon as possible.
+  However, it's hard to find items that grant this resistance.
+
+- Space-time resistance (rTi)
+  Has a chance to protect you from enemies teleporting you away.
+  Reduces gravity damage to 4/(7+1d4) and prevents teleportation and item
+  destruction.
+  Reduces time damage to 4/(7+1d4) and prevents stat/experience drain.
+  Reduces spacial distortion damage to 4/(7+1d4) and prevents stat drain
+  and teleportation.
+  Reduces nexus damage to 6/(7+1d4) and prevent various additional effects.
+  It's a useful resistance that protects you from various attacks.
+  However, items that grant this resistance are very rare.
+  Fortunately, even without this resistance, all those attacks aside from
+  nexus don't deal that much damage.
+
+The following effects protect you from status abnormalities:
+
+- Free action (Fa)
+  Protects from paralysis/sleep.
+  If you become paralysed, you generally will keep getting attacked for a
+  several turns. That effectively means a game over.
+  Make absolutely sure to have it covered beyond dungeon level 20, and never
+  take it off.
+
+- Fear resistance (Fe)
+  Protects you from being terrified.
+  While terrified, you cannot attack enemies in melee, and your ranged
+  accuracy and spell success rate go down.
+  If you don't have this resistance, you can use alcohol, spells or potions
+  to make yourself heroic, protecting you from this condition.
+
+- Blindness resistance (Bl)
+  Protects you from being blinded.
+  While blind, you cannot see terrain or enemies, and cannot use scrolls or
+  spellbooks. You can cure it with Potions of Cure Serious Wounds, but
+  depending on the situation, taking that extra action might be too risky.
+
+- Confusion resistance (Co)
+  Protects you from being confused.
+  While confused, you move in random directions and cannot use spells or
+  scrolls. Magic devices also have a high chance to fail.
+  You can cure it with Potions of Cure Serious Wounds, but there are many
+  enemies that can confuse with melee attacks.
+  Getting close to them without this resistance is extremely dangerous.
+  You want to get it covered before midgame.
+
+- Insanity resistance (In)
+  Protects you from being terrified by cosmic horrors.
+  Without this resistance, you'll frequently get mentally shocked on lower
+  levels. Some enemies can use a very powerful mental attack that you can't
+  protect yourself against without having this resistance.
+  If you receive brain trauma, you can cure it at Eientei.
+  Unfortunately, items that grant this resistance are fairly rare.
+
+That's about it.
+I've already said this, but avoid fighting enemies that can use elemental
+attack you don't resist.'
+
+***** <Pval>
+=== Parameter Raising Effects ===
+
+Keine - 'Now we'll cover effects that raise your parameters.
+Let's remember the parameters explained at the point of character creation.
+
+- Strength (+St)
+- Intelligence (+In)
+- Wisdom (+Wi)
+- Dexterity (+Dx)
+- Constitution (+Cn)
+- Charisma (+Ch)
+  Effects that raise your primary stats. Constitution in particular is very
+  important.
+
+- Stealth (+Sl)
+  Raises your stealth skill.
+  If you're around 'Heroic', you should be able to comfortably infiltrate
+  vaults.
+
+- Speed (+Sp)
+  Raises your action speed.
+  You probably won't be able to find it in early game; on lower levels, you
+  want around +20 in total.
+
+- Magic Device Mastery (+Md)
+  Raises your magic device skill.
+  Pure warrior classes won't be able to properly use powerful magic devices
+  without using this equipment.
+
+- Digging (+Dg)
+  Has little meaning aside from when you're using a pick in early game.
+  Can only be applied to weapons.
+
+- Infravision (+If)
+  Ability to detect warm-blooded creatures.
+  Has some use in early game, but you'll have to use proper means of detection
+  starting from midgame.
+
+- Searching (+Sr)
+  Raises your searching skill. Helps you detect traps and hidden doors and 
+  sense level feelings. In Gensouband, it also affects generation rate for 
+  materials; it can be very important depending on your class.
+
+- Extra Attacks (+At)
+  Increases amount of melee attacks per round.
+  Mostly appears on weapons and rings.
+
+- Protection from Magic (+PrMg)
+  Increases protection from magic, making it easier to resist attacks like
+  curses and mind blasts.
+
+- Disarming (+Dsrm)
+  Increases your trap disarming skill.
+
+That's about it for parameters.'
+
+***** <Misc>
+=== Other Effects ===
+
+Keine - 'Well, now that we've covered weapon effects, resistances and
+parameters, let's take a look at remaining effects that don't belong in any
+of those categories.
+
+- Telepathy (~Tele)
+  Useful means of detection that lets you constantly sense nearby enemies.
+  However, it can't detect nonliving or mindless beings.
+
+- ESP (~Chs, ~Law, ~An, ~Hm, ~Un, ~Dr, ~Dt, ~Dm, ~Yk, ~Nolv, ~Uniq)
+  Lets you constantly sense beings of a specific kind.
+  'Nolv' stands for non-living beings.
+
+- Stat sustaining ( (St, (In, (Wi, (Dx, (Cn, (Ch )
+  Prevents your stats from being drained by various means, like enemy attacks.
+  Each of them protects a specific stat.
+
+- Easy spellcasting (Es)
+- Decreased mana cost (Dm)
+  Slightly reduces spell failure rate/MP cost. Either of those is great for
+  spellcasters.
+
+- Reflection (Rf)
+  Reflection bolt spells from enemies, sending them back.
+  Might occasionally fail to reflect, so don't get overconfident.
+  It's a very useful ability in this mod, since there are many enemies that
+  fire danmaku. Very hard to obtain in early game.
+
+- Levitation (Lv)
+  Makes you able to fly, sort of.
+  Allows you to cross water terrain, pit, mountains and trapdoors, and reduces
+  damage received from tornado and gravity attacks.
+  You want to have it when going to Tengu Village or Former Hell.
+
+- See invisible (Si)
+  Lets you see invisible enemies.
+  You want to have it by around dungeon level 20 if possible.
+
+- Regeneration (Rg)
+  Doubles your natural HP/MP regeneration rate.
+  Convenient, but it also increases your hunger rate as well, so be careful
+  on long journeys.
+
+- Slow digestion (Sd)
+  Reduces your hunger rate.
+  If you are in trouble without it, you should plan your journey more
+  carefully.
+
+- Light source (Lu)
+  This item glows brightly, increasing your light radius by 1.
+
+- Warning (Wr)
+  If you have this, when you try moving into a trap or moving into a
+  situation where you might receive large damage, it will vibrate, warning
+  you of danger.
+  Convenient, because it reduces the need for trap detection.
+  If you cancel your action due to warning, you still consume a slight amount
+  of energy.
+
+- Blessed (Bs)
+  This piece of equipment can't be cursed.
+  If you're a Shrine Maiden/Oracle, you might have some equipment restrictions
+  related to this effect.
+  If you're a Defender, it gives you an attack power bonus.
+
+- Teleportation (Te)
+  If you're using this piece of equipment, you will be able to pursue nearby
+  enemies that teleport away. However, it's not very reliable.
+  Also, if this item becomes cursed, you will start teleporting at random.
+
+- Dual-wielding (To)
+  Can only be applied to handwear. If you're wearing it, your accuracy penalty
+  for dual-wield is reduced.
+
+- Swift movement (Sw)
+  Raises your movement speed by a factor of up to 2 (depending on your level).
+  Useful, but hard to obtain.
+
+- Auras ( [F, [C, [E )
+  If you're using this equipment, when an enemy hits you in melee, they will
+  receive slight damage of corresponding element.
+  It doesn't do much to powerful enemies, though.
+  Also, fire aura increases your light radius by 1.
+
+- Anti-magic ([M)
+  Drastically increases your protection from magic, but makes you unable to
+  use magic. It doesn't apply just to spellbooks - it includes special
+  abilities that are close enough to magic.
+  Usually, it's used by pure warriors only, but the raised protection from
+  magic can protect you from being paralysed by Ancient Foul Curse - keep
+  that in mind.
+
+- Anti-teleportation ([T)
+  Makes you unable to teleport.
+  While it prevents you from being teleported away by enemy spells, the
+  demerit is very severe.
+
+That's about it.
+Searching for a set of equipment that provides both necessary resistances and
+parameter bonuses is one of key points of this game. It's frequently called
+'Resistance puzzle'.'
+
+***** <Inscriptions>
+=== Item Inscriptions ===
+
+Keine - 'You can inscribe items with '{' command.
+You can enter whatever you want, to make a note of sorts.
+However, you're not limited to taking notes.
+If you inscribe various special formula, it can make various actions in your
+adventure far more effective.
+
+In this regard, not much has changed from original Hengband, so I'm using
+the original help file. If you don't understand it, feel free to skip it.
+Come back to it once you've gotten used to adventuring and want to raise your
+efficiency.'
+
+---------------------------------Quoted below---------------------------------
+
+You may "inscribe" any object with a textual inscription of your
+choice. These inscriptions are not limited in length, though you may
+not be able to see the whole inscription on the item. The game applies
+special meaning to inscriptions containing any text of the form "@#" or
+"@x#" or "!x" or "!*".
+
+The game provides some "fake" inscriptions to help you keep track of
+your possessions. Wands and staves which are known to be empty will be
+inscribed with "empty". Objects which have been tried at least once but
+haven't been identified yet will be inscribed with "tried". Cursed
+objects are inscribed with "cursed". Broken objects may be inscribed
+with "broken". Also, any item which was purchased at a discount,
+implying that it is slightly "sub-standard", will be inscribed with the
+appropriate "discount", such as "25% off". Note that these inscriptions
+are fake, and cannot be removed, though they can be covered up by a
+real inscription if you so desire. Try "_" as a nice short one. 
+
+--- Making use of Inscriptions ---
+
+Some players use the inscription feature to record useful and/or
+interesting facts about an object such as where and how it was
+acquired or what its abilities and powers are. Hengband have a feature
+to automatically inscribe abilities of items for you.
+
+In addition to this, inscriptions can be used in far more powerful
+ways. Many commands in Hengband require you to specify an object from
+your inventory such as which potion you wish to 'q'uaff or which staff
+you wish to 'u'se.  Inscriptions offer a powerful way of managing this
+and provide a useful labor saving tool.
+
+
+Auto Inscription of Resistances and Powers
+------------------------------------------
+
+When you inscribe {%all} on an *identified* object, the '%all' will
+automatically transforms and changes into a string which describe its
+resistances and powers.  For example, when you inscribe {%all} on a
+robe of Resistance which has resistance to four elements and an extra
+resistance to Nether, the inscription will change into {AcElFiClNt}.
+The 'Ac' is abbreviation of resistance to ACid, while El, Fi, Cl and
+Nt are resistances to ELectricity, FIre, CoLd and NeTher.
+
+On the other hand, when you inscribe {%} on an *identified* object,
+the {%} will transform to a string which describes only its extra
+resistances. In the example above, the inscription will become {Nt},
+meaning the extra resistance of Nether.
+
+
+The {@x#} Inscription
+---------------------
+
+The {@x#} inscription (where 'x' is the key to activate a specific
+command and '#' is an object tag (number or alphabet)) is, perhaps the
+most commonly used inscription. When you select command 'x', followed
+by the tag '#', the game searches for an object with the inscription
+{@x#} and performs that command upon it. Thus if the player inscribes
+a Potion of Healing as {@q1}, then pressing 'q1' will quaff it
+automatically. This feature is useful because as items are added or
+removed from your inventory, the actual slot that they are in
+changes. However, the inscription will work regardless of the
+position.
+
+Note that you can inscribe multiple different objects with the same
+inscription {@x#}. If you do so, the command 'x#' will act on the first
+appropriately inscribed object in your inventory list and not on each
+of them.
+
+Also note that you can place multiple such inscriptions on a single
+object. So that a spell book might be inscribed {@ma@ba@Ga} since the
+cast spell, browse book, and gain spell commands each require a spell
+book reference as an argument. You can also inscribe the same command
+more than one so that food item might be inscribed {@E1@E2}
+
+Example 1:
+    You have a primary weapon and a shovel. You normally use the
+    weapon but want to use the shovel for mining treasure. Inscribe
+    your primary weapon with {@w0} and your shovel with {@w1}. Then,
+    when you want to wield your shovel, you can press 'w1' and to
+    re-wield your sword you can press 'w0' regardless of where in the
+    inventory they are located at the time.
+
+    Note: you can also inscribe both weapons with {@w0} and just press
+    'w0' whenever you want to exchange weapon and shovel.
+
+Example 2:
+
+    To cast the first spell from your first spell book, you would
+    normally type 'maa' and to cast the first spell from the second
+    book, you would type 'mba'.  However, if your first book is stolen
+    or destroyed, pressing 'mba' would no longer cast the spell you
+    wanted. People often cast the wrong spells in such situation.  To
+    prevent such mistake, you can inscribe your first spellbook with
+    {@ma}, second spellbook with {@mb}, etc.  Cast spells by typing
+    'maa', 'mba', etc.  Even if your other spell books are lost, you
+    will never need to worry about casting the wrong spell.
+
+Example 3:
+    You are carrying some Rations of Food and some Elvish Waybread.
+    You wish to use up the Rations first before eating the Waybread,
+    but also want to be able to use the healing/curing properties of
+    the Waybread in an emergency. You would inscribe the Rations with
+    {@E1} and the Waybread with {@E1@E2}. Since the Rations appear
+    before the Waybread on the inventory listing, typing 'E1' will
+    ensure you eat all the Rations first before touching the Waybread
+    but that you only ever have to press E1 to eat. But, pressing 'E2'
+    will bypass the Rations and jump to the Waybread. Some players also
+    do similar things with cure and healing potions. 
+
+
+The {@#} Inscription
+---------------------
+
+The {@#} inscription (where '#' is a number from 0 to 9) is similar to
+the {@x#} inscription, but it works for any command, and any alphabet
+letters cannot be used as a tag.
+
+
+The {!x} Inscription
+--------------------
+The {!x} inscription (where 'x' is the key to activate a specific
+command) will induce "verification" whenever that object is "selected".
+Thus, inscribing {!v!k!d} on an object will greatly reduce the odds of
+you "losing" it by accident. This is because any attempt to throw it
+('f'), destroy it ('k') or drop it ('d') will prompt Hengband to verify
+whether or not you really wish to take that action.  
+
+Note that inscribing {!*} on an object will prompt Hengband to verify
+any action thus you allowing you to be very paranoid about the object.
+Also note that "selling" and "dropping" both use the "d" command so
+that inscribing an item with {!d} will also prevent you from selling it
+by accident.
+
+
+The {^x} Inscription
+--------------------
+The {^x} inscription (where 'x' is the key to activate a specific
+command) will induce verification before taking that action. One
+common example of its usage is to inscribe boots with {^<^>} which will
+verify the user's command to leave the level via the staircases before
+actually doing so.
+
+
+The {=g} Inscription
+--------------------
+The {=g} inscription on an object prompts Hengband to automatically
+pick it up. This instruction overrides any auto-pickup options chosen
+chosen by the player (if necessary). The primary purpose is to allow
+easy retrieval of missiles such as arrows and bolts once they have been
+fired at a target. 
+
+
+The {#anystring} Inscription
+--------------------
+
+The {#anystring} inscription is used to make an item look like an
+artifact. For example, a Long Sword (2d5) (+10,+10) which is inscribed
+as {#of Hoge} is displayed as 'a Long Sword of Hoge (2d5) (+10,+10)'.
+
+
+The {!!} Inscription
+--------------------
+
+The {!!} Inscription on a rod or artifact tells the game to report you
+when the object is recharged and became activatable again.
+
+
+The {.} Inscription
+--------------------
+
+The {.} Inscription on a equipment which has ability of random
+teleportaion prevents the game from asking you whether you want to
+teleport or not on random chance, and the game automatically decide
+not to teleport.  But the ability of random teleportation has another
+function which allows you to follow a teleporting monster; this
+function will not be disabled.
+
+
+The {$} Inscription
+--------------------
+
+The {$} Inscription on a equipment which has ability of warning
+completely disables the warning ability.
+
+

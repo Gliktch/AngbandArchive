@@ -1,0 +1,2868 @@
+
+***** <TheRaces>
+=== Races ===
+
+Keine - 'Let's look over special characteristics of each race.
+Feel free to skip parts that look too bothersome.
+You might have fun looking at detailed information to create a powerful
+character, or you might just create a character you like regardless
+of their compatibility.
+
+Hit Dice is related to HP calculation; base value is 10.
+The higher your experience penalty is, the more slowly you gain levels.
+Score modifier affects your score. The stronger you are, the lower it is.
+
+Numbers in brackets after resistances/abilities/characteristics represent
+the level at which you obtain it. If there's no numbers, you have this at
+level 1.
+
+Base value for magic realm aptitude is 5; there higher it is, the more
+proficient you are. If it's 0, you can't study this realm at all.
+
+Aptitudes are written in following order:
+
+Elements/Divination/Enchantment/Summoning - 
+Mysticism/Life/Exorcism/Nature - 
+Transformation/Darkness/Necromancy/Chaos
+
+Version 1.1.08 adds the Occult realm, but all races have standard aptitude
+for it, so it's omitted.
+
+If you're a beginner, I recommend picking a strong race disregarding
+experience penalty.'
+
+
+***** <Human>
+--- Human ---
+Str: 0 Int: 0 Wis: 0 Dex: 0 Con: 0 Chr: 0
+Dsm: 0 MDev: 0 MProt: 0 Stl: 0 Srh: 0
+Fighting: 0 Shooting: 0
+Infravision: 0
+Hit Dice: 10
+XP Penalty: 0
+Score: 100%
+
+Resistances/abilities/characteristics:
+  None
+Magic realm aptitude:
+  5/5/5/5 - 5/5/5/5 - 5/5/5/5
+Other:
+  None
+
+Keine - 'Ordinary humans without any special characteristics, except perhaps
+levelling up quickly. Their physical stats are average, but they're weak
+compared to many other non-human races. However, they don't have any weak
+points in particular, and are capable of being any class.
+Their fast growth might make playing a spellcaster easier. They're not bad
+at being dual classes as well, but since they don't have innate resistances,
+obtaining proper equipment might be difficult.
+It's a familiar race that beginners frequently pick, but it's not that
+suited for beginners.'
+
+
+***** <Youkai>
+--- Youkai ---
+Str: 2  Int: -2 Wis: -3 Dex: 0 Con: 2 Chr: -2
+Dsm: -3 MDev: -5 MProt: 0  Stl: 0 Srh: 0
+Fighting: 10 Shooting: -5
+Infravision: 3
+Hit Dice: 11
+XP Penalty: 25%
+Score: 100%
+
+Resistances/abilities/characteristics:
+  33% vulnerablity to holy attacks
+Magic realm aptitude:
+  4/4/4/4 - 2/2/1/3 - 7/7/6/6
+Other:
+  None
+
+Keine - 'There are many various kinds of youkai, but this category includes
+comparatively ordinary-looking ones (like, for example, Rumia). Their physical
+stats are clearly higher compared to humans, but they're not that smart.
+However, they still might be decent at studying Sorcery Arts.
+Also, youkai are generally vulnerable to holy attacks.'
+
+
+***** <Half-Youkai>
+--- Half-Youkai ---
+Str: 1 Int: 0  Wis: -1 Dex: 0 Con: 1 Chr: -1
+Dsm: 0 MDev: -1 MProt: 1  Stl: 0 Srh: 0 
+Fighting: 3 Shooting: 0
+Infravision: 0
+Hit Dice: 10
+XP Penalty: 20%
+Score: 90%
+
+Resistances/abilities/characteristics:
+  Slow digestion
+  Poison resistance (20)
+Magic realm aptitudes:
+  5/5/5/5 - 4/4/4/4 - 5/5/5/5
+Other:
+  None
+
+Keine - 'Half human, half youkai, with stats somewhere in between.
+They're surprisingly resilient to poisons, and they don't require much food.
+They don't have any weak points in particular and are capable of being any
+class. Their score is slightly lowered compared to humans and youkai.'
+
+***** <Hermit>
+--- Hermit ---
+Str: -1 Int: 2  Wis: 3 Dex: 0 Con: 0 Chr: 2
+Dsm: 2  MDev: 10 MProt: 8 Stl: 1 Srh: 5 
+Fighting: 0 Shooting: -10
+Infravision :2
+Hit Dice: 10
+XP Penalty: 50%
+Score: 75%
+
+Resistances/abilities/characteristics:
+  Slow digestion
+  Resistance to either holy/chaos/poison/nether/darkness (20)
+  Sustain wisdom (25)
+  Confusion resistance (30)
+  Clear Mind (30; slightly restores MP)
+Magic realm aptitudes:
+  6/6/6/5 - 9/9/8/9 - 4/6/5/4
+Other:
+  Satiation level lowers very slowly
+  Aggravates nearby shinigami
+  Starting from level 20, will be attacked by assassins from hell
+
+Keine - 'Hermits spend their days training secluded in the mountains. Their
+physical stats by themselves aren't that high, but they also hold a bit of
+mysterious power. They do fine as spellcasters, and their natural MP recovery
+is a solid asset for dual classes.
+
+The assassins from hell are mainly shinigami. The deeper down you go and
+stronger you become, the more powerful assassins will come after you. If you
+go around in the dungeon holding down keys, you might get surprise attacked
+several times by one of them.
+They have fairly large score and XP penalties.'
+
+***** <Celestial>
+--- Celestial ---
+Str: 2 Int: 3 Wis: 3 Dex: 2 Con: 3 Chr: 3
+Dsm: 0 MDev: 12 MProt: 12 Stl: 0 Srh: 5 
+Fighting: 10 Shooting: 10
+Infravision: 2
+Hit Dice: 12
+XP Penalty: 85%
+Score: 60%
+
+Resistances/abilities/characteristics:
+  Immune to holy attacks
+  Levitation
+  Fear resistance
+  Free action
+  33% vulnerability to hellfire
+  See invisible (10)
+  Confusion resistance (15)
+  Light resistance (20)
+  Sustain wisdom (25)
+  Clear Mind (30; slightly restores MP)
+Magic realm aptitude:
+  6/7/6/5 - 9/9/9/7 - 0/0/0/2
+Othor
+  AC bonus
+  Aggravates nearby shinigami
+  Starting from level 20, will be attacked by assassins from hell
+
+Keine - 'More or less a stronger version of the already strong hermits.
+You're not likely to have hard time in early game combat. You're strong, but
+your penalties are severe at well. Suitable for beginners.
+You're vulnerable to hellfire, but enemies that use it mainly appear on the
+lower levels.'
+
+
+***** <Fairy>
+--- Fairy ---
+Str: -4 Int: -4 Wis: -4 Dex: -2 Con: -3 Chr: -2
+Dsm: -5 MDev: -5 MProt: 10 Stl: 5  Srh: 0 
+Fighting: -20 Shooting: -10
+Infravision: 5
+Hit Dice: 7
+XP Penalty: 50%
+Score: 200%
+
+Resistances/abilities/characteristics:
+  Slow digestion
+  Regeneration
+  Levitation
+  Holy energy resistance (20)
+Magic realm aptitude:
+  3/1/1/1 - 2/6/1/7 - 1/1/1/1
+Other:
+  Satiation level lowers very slowly
+  Can hold short blades with both hands
+  Has a random special ability
+  (You can check it with 'Display about yourself')
+
+Keine - 'Fairies appear all over Gensoukyou. What are they thinking, going
+into a dangerous dungeon like that? They're probably not thinking at all.
+They're extremely weak, and their score is doubled compared to humans. Pick
+this race if you're confident in your skills and are looking for a challenge.'
+
+
+***** <Kappa>
+--- Kappa ---
+Str: 0  Int: 1  Wis: -3 Dex: 2 Con: 1 Chr: -1
+Dsm: 20 MDev: -4 MProt: 3 Stl: 2 Srh: 3 
+Fighting: 5 Shooting: 10
+Infravision: 0
+Hit Dice: 11
+XP Penalty: 10%
+Score: 90%
+
+Resistances/abilities/characteristics:
+  Water resistance
+  33% vulnerability to lightning
+  33% vulnerability to holy attacks
+  Water Gun (12; fires a bolt of water)
+  Acid resistance (15)
+  Tongbeiquan (25; attacks at a distance, slightly lowers amount of blows)
+  Drag In (35; attacks adjacent monster, requires standing in water terrain)
+Magic realm aptitude:
+  3/2/2/2 - 3/2/1/5 - 7/6/5/5
+Other:
+  Eating a cucumber makes you satiated
+  +2 STR/CON and regeneration while in water
+  If you're an Engineer, your machines won't malfunction when hit by water
+
+Keine - 'Kappas are very dextrous. Usually they're not that strong, but they
+become far more stronger in water. Aside from holy attacks, they're vulnerable
+to lightning. They make good Engineers, but they're not bad as warriors
+either'.
+
+
+***** <Magician>
+--- Magician ---
+Str: -2 Int: 4 Wis: 3 Dex: -1 Con: -1 Chr: 0
+Dsm:  5 MDev: 15 MProt: 10 Stl: 1 Srh: 5 
+Fighting: -10 Shooting: -10
+Infravision: 5
+Hit Dice: 8
+XP Penalty: 30%
+Score: 75%
+
+Resistances/abilities/characteristics:
+  Levitation (10)
+  See invisible (15)
+  Confusion resistance (20)
+  Sustain intelligence (25)
+  Drain Mana (25; drain MP from enemies by touch)
+Magic realm aptitude:
+  9/9/9/9 - 7/6/6/7 - 7/7/8/8
+Other:
+  Does not require food at all (but can overeat)
+
+Keine - 'That's not a class, that's a race.
+As their name implies, they specialize in magic.
+They learn spells quickly and can efficiently use them. Since they have a
+MP recovery power, they're suited for classes like Magic-Knight as well.
+However, they're fairly weak physically, so keep an eye on your health.
+They level up fairly quickly due to their curiousity, but their score is
+lowered.'
+
+
+***** <Crow-Tengu>
+--- Crow Tengu ---
+Str: 1 Int: 2 Wis: 0 Dex: 4 Con: 2 Chr: 0
+Dsm: 5 MDev: 7 MProt: 6 Stl: 2 Srh: 5 
+Fighting: 10 Shooting: 10
+Infravision: 0
+Hit Dice: 11
+XP Penalty: 40%
+Score: 70%
+
+Resistances/abilities/characteristics:
+  +33% vulnerability to holy attacks
+  Take a Photo (takes a photograph)
+  Levitation
+  Burst of Speed (20; instantly moves to a distant location in sight.
+                      Stops if you hit an obstacle)
+  Swift movement (25)
+Magic realm aptitude:
+  4/5/4/3 - 5/3/2/8 - 6/7/6/5
+Other:
+  Speed +level/7
+  Negates enemy bolt spells with high probability rate
+  Can only wear a tokin on head
+  Harder to get drunk
+
+Keine - 'Crow tengu, well known for their reputation-harming rumors.
+They can move quite fast. They're also dextrous and smart, making them good
+all around. However, they have to wear a tokin on their head. I don't know if
+a policy or rule of theirs, but it can make you cry when you see an artifact
+helmet. Has heavy penalties as well.'
+
+
+***** <WhiteWolf-Tengu>
+--- White Wolf Tengu ---
+Str: 3 Int: -2 Wis:-2 Dex: 2 Con: 3 Chr: -2
+Dsm: 8 MDev: -3 MProt: 0  Stl: 2 Srh: 10
+Fighting: 15 Shooting: 5
+Infravision: 8
+Hit Dice: 12
+XP Penalty: 35%
+Score: 85%
+
+Resistances/abilities/characteristics:
+  See invisible
+  +33% vulnerability to holy attacks
+  Detect Monsters (3; detects nearby monsters)
+  Create Food (15; creates a food ration)
+  Probing (30; learns abilities of nearby monsters)
+  Warning (30)
+  Poison resistance (35)
+Magic realm aptitude:
+  2/3/1/1 - 1/2/1/4 - 5/5/4/4
+Other:
+  Can only wear a tokin on head
+  Harder to get drunk
+
+Keine - 'White wolf tengu patrol the Youkai Mountain. They're good at
+locating enemies and objects, and they're as good at close combat as they
+look. However, they're bad at spellcasting. Just like crow tengu, they have
+to wear a tokin.'
+
+
+***** <Oni>
+--- Oni ---
+Str: 7   Int: -3 Wis:1 Dex: 1  Con: 4 Chr: 0
+Dsm: -10 MDev: 5  MProt: 0 Stl: -3 Srh: -3
+Fighting: 30 Shooting: 0
+Infravision: 0
+Hit Dice: 18
+XP Penalty: 65%
+Score: 60%
+
+Resistances/abilities/characteristics:
+  Fear resistance
+  Regeneration
+  +33% vulnerability to holy attacks
+  Darkness resistance (10)
+  Berserk Rage (12; makes you berserk)
+  Sustain strength (20)
+  Sustain constitution (20)
+  Roar (25; sonic attack with a loud shout, wakes up nearby enemies)
+  Insanity resistance (35)
+Magic realm aptitude:
+  5/5/5/5 - 5/4/2/3 - 5/7/5/6
+Other:
+  Has large horns
+  Satiation level decreases quickly
+  Very hard to get drunk
+
+Keine - 'The oni that keep crying children silent. They have astounding
+strength and immense resilience. However, they're bad at more precise
+actions, though their aptitude for spellcasting and magic devices isn't
+that low. Naturally, they make excllent warriors, but any class can take
+advantage of their resilience. High penalties, but probably the best at
+early game combat. Suited for beginners.
+
+Oni have splendid horns on their head.
+They can use them to deliver powerful attacks during melee combat, but those
+horns prevent them from wearing helmets.'
+
+
+***** <Shinigami>
+--- Shinigami ---
+Str: 2  Int: 1 Wis:2  Dex: -1 Con: 2 Chr: -3
+Dsm: -3 MDev: 8 MProt: 25 Stl: 3  Srh: 0
+Fighting: 15 Shooting: -10
+Infravision: 8
+Hit Dice: 12
+XP Penalty: 60%
+Score: 75%
+
+Resistances/abilities/characteristics:
+  Nether resistance
+  Free action
+  See invisible (10)
+  Confusion resistance (20)
+  Undead ESP (25)
+  Human ESP (25)
+  Darkness resistance (35)
+  Insanity resistance (45)
+Magic realm aptitude:
+  5/5/5/5 - 3/0/2/2 - 4/7/9/6
+Other:
+  Gets dice bonus when wielding scythes.
+
+Keine - 'The grim reapers feared by everyone. Due to their reputation,
+shopping in towns might be somewhat tough. They're a bit slow, but proficient
+both at combat and spellcasting, and they are resilient and have various
+resistances. A scythe is a weapon most appropriate for them.
+They're protected against common sources of early game accidents - paralysis,
+confusion, invisible monsters - which makes them suitable for beginners.
+As subordinates of Yama, they're not vulnerable to holy attacks, which is also
+a plus. They have fairly high penalties.'
+
+
+***** <Werebeast>
+--- Werebeast ---
+Str: 1  Int: -1 Wis:-2 Dex: 2 Con: 2 Chr: -2
+Dsm: -2 MDev: -3 MProt: -3 Stl: 2 Srh: 4
+Fighting: 10 Shooting: -5
+Infravision: 10
+Hit Dice: 11
+XP Penalty: 40%
+Score: 75%
+
+Resistances/abilities/characteristics:
+  +33% vulnerability to holy attacks 
+  Detect Monsters (3; detects nearby monsters)
+  Berserk Rage (25; makes you berserk)
+  Warning (30)
+Magic realm aptitude:
+  4/4/4/3 - 3/4/2/6 - 8/5/6/5
+Other:
+  Speed +level/15
+  During full moon night, +2 to all stats
+
+Keine - 'Werebeasts have features of both humans and beasts. This category
+includes both youkai beasts transformed into human shape and humans that
+transform into a bestial form. They're nimble and tough, but they're not that
+smart. They have useful abilities, and their penalties and restriction are
+comparatively light.
+
+Slightly meta statement:
+In Gensoukyou, were-beasts and youkai beasts are very different, but they've
+been unified for Gensouband.'
+
+
+***** <Tsukumogami>
+--- Tsukumogami ---
+Str: -1 Int: -1 Wis:-1 Dex: 0 Con: 1 Chr: -1
+Dsm: 15 MDev: 16 MProt: 8  Stl: 1 Srh: 2
+Fighting: 0 Shooting: -5
+Infravision: 2
+Hit Dice: 9
+XP Penalty: 20%
+Score: 80%
+
+Resistances/abilities/characteristics:
+  +33% vulnerability to holy attacks
+  +33% vulnerability to disenchantment
+  Poison resistance
+  Blindness resistance
+  See invisible (10)
+Magic realm aptitude:
+  3/4/7/3 - 5/3/3/3 - 7/5/5/5
+Other:
+  Can remove cursed items without uncursing (might fail)
+  Can prevent item curses from activating
+  Reduces aggravation from equipment
+  Cannot get wounded/diseased
+  Eats magical energy from staves/wands instead of normal food
+
+Keine - 'Tsukumogami are old and discarded tools that have obtained sentience.
+Tools that are no longer usable should be properly memorialized to avoid
+that. Since they were ordinary tools themselves, they're very good at using
+items. There are many powerful items that aggravate monsters, which greatly
+widens their equipment selection. Also, due to their unusual body structure
+(even for a youkai), they can't be poisoned or wounded. However, their
+physical stats are low.'
+
+
+***** <Youkai-Doll>
+--- Youkai Doll ---
+Str: 1 Int: -1 Wis:-2 Dex: 0 Con: 1 Chr: 0
+Dsm: 0 MDev: 5 MProt: -5  Stl: 2 Srh: -2
+Fighting: 5 Shooting: 5
+Infravision: 0
+Hit Dice: 11
+XP Penalty: (special)
+Score: 75%
+
+Resistances/abilities/characteristics:
+  Self-repair (1; repairs damage done to your body)
+  +33% vulnerability to holy attacks
+  +33% vulnerability to disenchantment
+  Poison resistance
+  Cold resistance
+  Free action
+  See invisible (10)
+  Fear resistance (20)
+  Insanity resistance (40)
+Magic realm aptitude:
+  5/3/7/4 - 4/2/4/3 - 6/5/6/5
+Other:
+  Doesn't gain experience trhough combat; treats total value of equipment
+    as experience
+  Cannot change race, and other races can't change into Youkai Dolls
+  Cannot get wounded/diseased
+  Eats magical energy from staves/wands instead of normal food
+  (from v.1.66) Cannot get wounded/stunned, but can get 'broken'
+
+Keine - 'Doll tsukumogami. It's a very special rate set apart from the others.
+No matter how much you fight, you won't level up, but you can empower yourself
+by becoming one with magical power of your equipment. Once you take off all
+of your equipment, you will return to level 1.
+
+If you get lucky and find a powerful item in early game, you'll be able to
+quickly level up; however, at midgame, balancing your level, resistance and
+parameters a the same time is going to be tough. In particular, dual classes
+that rely on several stats will have a lot of trouble preparing their
+equipment. Rings, amulets, and light sources don't affect your level.
+
+Another meta statement: Of course, the youkai dolls in Gensoukyou don't work
+like that. That's a feature taken from Hengband's Androids.'
+
+
+***** <Moon-Rabbit>
+--- Moon Rabbit ---
+Str: 0  Int: 0 Wis:-1 Dex: 2 Con: 1 Chr: 1
+Dsm: 8 MDev: 8 MProt: 8 Stl: 2 Srh: 2
+Fighting: 5 Shooting: 15
+Infravision: 7
+Hit Dice: 10
+XP Penalty: 50%
+Score: 85%
+
+Resistances/abilities/characteristics:
+  Holy energy resistance
+  +20% vulnerability to hellfire
+  Listen to Rumors (listens to rumors among moon rabbits)
+  Detect Monsters (5; detects nearby monsters)
+  Blink (10; short range teleport)
+Magic realm aptitude:
+  4/4/4/3 - 5/5/4/3 - 4/2/2/4
+Other:
+  None
+
+Keine - 'Rabbits from the Moon. It's unclear what they're doing on Earth.
+They resemble werebeasts, but they're not as proficient at combat. However,
+with the training they've received, their skills like magic device use are
+high. As citizens of the Moon devoid of impurity, they're not vulnerable to
+holy energy. They're rarely being seen communicating with someone using
+their large ears. They might be relying information they've collected back
+to Moon.'
+
+
+***** <Youkai-Fox>
+--- Youkai Fox ---
+Str: -1  Int: 3 Wis:3 Dex: 2 Con: 0 Chr: 1
+Dsm: 2 MDev: 10 MProt: 16 Stl: 3 Srh: 4
+Fighting: -10 Shooting: -10
+Infravision: 7
+Hit Dice: 9
+XP Penalty: 70%
+Score: 75%
+
+Resistances/abilities/characteristics:
+  +33% vulnerablity to holy attacks; goes away at level 30 if you're not
+    studying Sorcery Arts
+  See invisible
+  Detect Monsters (5; detects nearby monsters)
+  Confusion resistance (10)
+  Mind Blast (15; mental attack against a single enemy)
+  Warning (20)
+  Dazzle (25; confuses, stuns, and terrifies all monsters in sight)
+  Chaos resistance (30)
+  Telepathy (40)
+  Holy resistance (45; only if you're not studying Sorcery Arts)
+Magic realm aptitude:
+  7/8/7/7 - 7/5/5/7 - 9/7/7/7
+Other:
+  Slightly recovers MP by eating fried tofu
+  Sorcery Arts spell proficiency is easy to raise
+
+Keine - 'Fox youkai. If you see two people with the same face getting
+drunk at a banquest, one of them is a youkai fox. With their intelligence,
+they're suited for spellcasting. Their physical stats aren't that low either,
+and they have extremely sharp intuition.
+
+If your first realm doesn't belong to Sorcery Arts, your vulnerability to
+holy energy will go away as you accumulate enough experience. You'll become
+a deified fox.
+If you are studying Sorcery Arts as your first realm, your spell proficency
+will rise faster.
+
+They're powerful at high levels, but their penalties are high as well.'
+
+
+***** <Yamawaro>
+--- Yamawaro ---
+Str: 1  Int: -1  Wis:-3 Dex: 1 Con: 2 Chr: -1
+Dsm: 15 MDev: -6 MProt: 0  Stl: 2 Srh: 5 
+Fighting: 15 Shooting: 10
+Infravision: 0
+Hit Dice: 11
+XP Penalty: 25%
+Score: 90%
+
+Resistances/abilities/characteristics:
+  Water resistance
+  +33% vulnerability to holy attacks
+  Tongbeiquan (25; attacks at a distance, slightly lowers amount of blows)
+Magic realm aptitude:
+  3/2/2/2 - 3/2/1/5 - 7/6/5/5
+Other:
+  +2 STR/CON and regeneration while in forest
+  Does not move slowly through forest terrain without levitation
+  Can move through mountain chains without levitation
+
+
+Keine - 'Kappas that climb mountain become yamawaro, though it looks like
+they just have exchanged their work clothes for mountaineering equipment.
+They're more proficient in combat compared to kappas, and are no longer
+vulnerable to lightning. Their water-related abilities are gone, replaced
+by forest and mountain related ones.'
+
+
+***** <Bake-danuki>
+--- Bake-danuki ---
+Str: 0  Int: 1 Wis:1 Dex: -1 Con: 1 Chr: -1
+Dsm: 2 MDev: 2 MProt: 3 Stl: 4 Srh: 0
+Fighting: 7 Shooting: 0
+Infravision: 5
+Hit Dice: 11
+XP Penalty: 40%
+Score: 80%
+
+Resistances/abilities/characteristics:
+  +33% vulnerability to holy attacks
+  Detect Monsters (5; detects nearby monsters)
+  Teleport (12; medium range teleport)
+  See invisible (15)
+  Kawarimi (30; when hit by an enemy attack, teleports away without
+                receiving damage)
+Magic realm aptitude:
+  5/4/4/5 - 3/4/2/5 - 8/6/5/7
+Other:
+  Nothing in particular
+
+Keine - 'Youkai tanuki. They really don't get along with youkai foxes.
+They're good at transforming, disappearing, and hiding; their stats and
+special abilities make them comparatively simple to use.
+They're decent at being almost any class.'
+
+
+***** <Merfolk>
+--- Merfolk ---
+Str: 0  Int: 0  Wis:0 Dex: 1 Con: 1 Chr: 1
+Dsm: 0 MDev: 7 MProt: 7  Stl: 2 Srh: 2 
+Fighting: 0 Shooting: -5
+Infravision: 0
+Hit Dice: 10
+XP Penalty: 10%
+Score: 95%
+
+Resistances/abilities/characteristics:
+  Water resistance
+  +33% vulnerability to holy attacks
+Magic realm aptitude:
+  6/6/7/5 - 5/5/3/4 - 8/6/7/6
+Other:
+  Cannot use footwear
+  Can deal powerful martial art attacks with tail in close combat
+  Movement on ground costs 33% without levitation
+  Speed +(3+level/15) and swift movement while in water;
+    applies even when levitating
+
+Keine - 'Youkai with a large fish tail instead of their lower body.
+They move slowly on ground, but are very swift in water. Their physical
+stats don't differ too much from humans, but they're fairly proficient
+at using magic.
+
+
+***** <Hobgoblin>
+--- Hobgoblin ---
+Str: -1  Int: -1  Wis:-2 Dex: 1 Con: 2 Chr: -4
+Dsm: 7 MDev: 5 MProt: 3  Stl: 2 Srh: 2 
+Fighting: 5 Shooting: 5
+Infravision: 4
+Hit Dice: 8
+XP Penalty: 10%
+Score: 100%
+
+Resistances/abilities/characteristics:
+  +33% vulnerability to holy attacks
+  Slow digestion
+  Free action
+  Create Food (5; creates a food ration)
+  Poison resistance (15)
+Magic realm aptitude:
+  5/5/5/5 - 3/3/2/4 - 5/5/5/5
+Other:
+  None
+
+Keine - 'Do you remember the hobgoblins?
+They're creepy youkai that came to the village after the zashiki-warashi
+have vanished, but they were driven away by the shrine maiden. They aren't
+strong due to their infant-like physical build, but they're surprisingly
+dextrous. Their penalties are light.'
+
+
+***** <Nyuudou>
+--- Nyuudou ---
+Str: 3  Int: -1  Wis:-2 Dex: -3 Con: 3 Chr: -1
+Dsm: -4 MDev: -3 MProt: 0  Stl: 2 Srh: 2 
+Fighting: 20 Shooting: 0
+Infravision: 0
+Hit Dice: 13
+XP Penalty: 50%
+Score: 75%
+
+Resistances/abilities/characteristics:
+  +33% vulnerability to holy attacks
+  Blink (5; short range teleport)
+  Free action (10)
+  Shards resistance (20)
+  Teleport To (25; teleports a distant enemy close to you)
+  Sound resistance (30)
+Magic realm aptitude:
+  2/3/2/2 - 2/1/1/3 - 8/4/4/3
+Other:
+  AC bonus
+
+Keine - 'There are various nyuudou, but all of them are physically strong.
+Still, they are elusive youkai with only a vaguely-defined body.
+They're strong at physical combat and excel at defense as well, but their
+penalties are high.'
+
+
+***** <Koakuma>
+--- Koakuma ---
+Str: -1  Int: 2  Wis:-2 Dex: 1 Con: 0 Chr: -2
+Dsm: 5 MDev: 10 MProt: 10  Stl: 2 Srh: 2 
+Fighting: 0 Shooting: 0
+Infravision: 6
+Hit Dice: 9
+XP Penalty: 30%
+Score: 80%
+
+Resistances/abilities/characteristics:
+  Darkness resistance
+  Immune to insanity
+  +66% vulnerability to holy attacks
+  Nether resistance (20)
+Magic realm aptitude:
+  8/7/9/7 - 3/2/0/2 - 7/9/7/8
+Other:
+  None
+
+Keine - 'Koakuma - also called 'little devils' or 'imps' - are demons
+without much power. According to rumors, they were summoned from other worlds,
+making them completely unaffected by otherworldly horrors. They also are
+resistance to darkness and nether, but are very vulnerable to holy attacks.
+Though they're suited for spellcaster classes, you might pick a dual class to
+make use of their characteristics.
+
+By the way, the part about them being summoned from other worlds is really
+nothing more than some rumors.'
+
+
+***** <Golem>
+--- Golem ---
+Str: 4  Int: -5  Wis:-5 Dex: -3 Con: 5 Chr: -2
+Dsm: -10 MDev: -10 MProt: 20  Stl: -2 Srh: -3 
+Fighting: 20 Shooting: 0
+Infravision: 0
+Hit Dice: 14
+XP Penalty: 60%
+Score: 80%
+
+Resistances/abilities/characteristics:
+  Self-repair (1; repairs damage done to your body)
+  +33% vulnerability to disenchantment
+  Lightning resistance
+  Fire resistance
+  Cold resistance
+  Poison resistance
+  Fear resistance
+  Blindness resistance
+  Free action
+  See invisible
+  Regeneration (20)
+  Slow digestion (20)
+  Eat Wall (25; eats diggable walls in dungeon, raising satiation level)
+  Nether resistance (30)
+  Insanity resistance (30)
+Magic realm aptitude:
+  6/2/6/3 - 2/1/1/1 - 5/4/4/3
+Other:
+
+  Eats only stones/ore
+  Large AC bonus
+  Speed -3 + (level/15)
+  Cannot be turned into a statue by Ancient Foul Curse
+  (from v.1.66) Cannot get wounded/stunned, but can get 'broken'
+
+Keine - 'A stone statue animated by magic. There are rumors that an army
+of golems made in form of a certain ordinary magician has attacked Scarlet
+Devil Mansion. They're very strong, due to being made out of stone. However,
+they hardly have intelligence to speak of. I'd like to say they're suited for
+warriors, but you might have trouble with such unbalanced characteristics.'
+
+
+***** <Inchling>
+--- Inchling ---
+Str: -5  Int: 0  Wis:0 Dex: 0 Con: -4 Chr: 0
+Dsm: 20 MDev: 12 MProt: 0  Stl: 20 Srh: 20 
+Fighting: -20 Shooting: -5
+Infravision: 0
+Hit Dice: 5
+XP Penalty: -50%
+Score: 100%
+
+Resistances/abilities/characteristics:
+  None
+Magic realm aptitude:
+  5/5/5/5 - 5/5/5/5 - 5/5/5/5
+Other:
+  AC bonus (because they're hard to hit)
+  Low carry weight limit
+  Cannot use heavy equipment
+  Can hold short blades with both hands
+
+
+Keine - 'They're about up to my knee in height. They're incredibly weak,
+but level up extremely quickly as well.
+That's probably because their everyday life already is dangerous for them.
+They're unmatched at stealth, and they're not bad at handling magic devices
+either.'
+
+
+***** <Jiangshi>
+--- Jiangshi ---
+Str: 2  Int: -4  Wis:-3 Dex: -2 Con: 3 Chr: -3
+Dsm: -5 MDev: -6 MProt: 5  Stl: 2 Srh: -2 
+Fighting: 10 Shooting: -5
+Infravision: 0
+Hit Dice: 12
+XP Penalty: 50%
+Score: 80%
+
+Resistances/abilities/characteristics:
+  +66% vulnerability to holy attacks
+  Nether resistance
+  Cold resistance
+  Poison resistance
+  Fear resistance
+  Insanity resistance
+  See invisible (15)
+  Regeneration (15)
+  Slow digestion (15)
+  Darkness resistance (30)
+  Levitation (30)
+Magic realm aptitude:
+  3/2/3/2 - 1/1/1/1 - 3/3/8/3
+Other:
+  Cannot be wounded
+
+Keine - 'Corpses animated by dark magic that have hard time thinking.
+Their bodies are physically strong, but stiff, limiting their movement
+ability. Since they're corpses, getting hit by holy attacks hurts them a lot.'
+
+***** <Vampire>
+--- Vampire ---
+Str: 4  Int: 2  Wis:1 Dex: 2 Con: 7 Chr: 2
+Dsm: -2 MDev: 6 MProt: 10  Stl: 3 Srh: 1
+Fighting: 20 Shooting: 0
+Infravision: 10
+Hit Dice: 16
+XP Penalty: 75%
+Score: 65%
+
+Resistances/abilities/characteristics:
+  +66% vulnerability to holy attacks
+  +50% vulnerability to light
+  +50% vulnerability to water
+  Nether resistance
+  Immunity to darkness
+  Cold resistance
+  Poison resistance
+  See invisible
+  Regeneration
+  Slow digestion
+  Drain Life (drains blood from enemies, satiating your hunger)
+  Insanity resistance (20)
+  Levitation (35)
+  Swift movement (40)
+
+Magic realm aptitude:
+  7/7/7/7 - 1/0/0/1 - 8/8/9/6
+Other:
+  Cannot eat normal food and have to sustain themselves by draining life
+  Body emits a faint glow (1 light radius if not using a light source)
+  -2 to all stats during daytime (-1 if you resist light)
+  +3 to all stats at full moon night (day 15+30x)
+  Speed +(level/10)
+  Occasionally drains HP in martial art combat
+  When you enter water without levitation, you will start drowning regardless
+    of the weight you're carrying and your water resistance
+  Very severe penalties when drowning
+
+Keine - 'Vampires are well known as powerful beings. It's a gimmicky race with
+great stats, magic aptitude, resistances, and special abilities, but with
+a lot of vulnerabilities as well. Penalties are very high, too.
+While this race is strong, I can't say it's easy to handle either for 
+beginners or more proficient players.'
+
+
+***** <Ghost>
+--- Ghost ---
+Str: -3  Int: 0  Wis:0 Dex: -1 Con: -2 Chr: -2
+Dsm: 3 MDev: 7 MProt: 5  Stl: 4 Srh: 1
+Fighting: -10 Shooting: -15
+Infravision: 8
+Hit Dice: 7
+XP Penalty: 70%
+Score: 50%
+
+Resistances/abilities/characteristics:
+  +66% vulnerability to holy attacks
+  +50% vulnerability to light
+  Levitation
+  Free action
+  Drains nether attacks
+  See invisible
+  Poison resistance
+  Shards resistance
+  Cold resistance
+  Telepathy (35)
+
+Magic realm aptitude:
+  5/5/5/5 - 1/0/1/1 - 5/7/9/5
+Other:
+  Can pass through walls (you receive damage, but your HP won't go below zero)
+  Cannot be wounded
+
+
+Keine - 'Souls of the dead lingering in this world.
+Their greatest asset is their ability to pass through walls. It's easy to
+imagine just how usefual it is in the dungeon. You can flee through walls
+during a battle to a safe place in order to recover HP, and you receive only
+half damage from enemy breath/ball attacks while in a wall.
+Their body is faint, providing them many elemental resistances, along with
+ability to absorb nether attacks. Their physical stats are low, but they're
+still one of the strongest races.
+Naturally, their penalties are high. Their score will be half of that of a
+human, and a quarter of that of a fairy.
+
+Yet another meta statement:
+In Gensoukyou, 'ghosts', 'spirits', 'vengeful spirits', 'poltergeist' have
+their own qualities. In Gensouband, all of those are grouped in this race,
+and their characteristics are based on Hengband's Spectre.'
+
+
+***** <Stray-God>
+--- Stray God ---
+Primary stats: undefined
+Hit Dice: base 11
+XP Penalty: 50%
+Score: 80%
+
+Resistances/abilities/characteristics:
+  Undefined
+Magic realm aptitude:
+  5/5/5/5 - 5/5/5/5 - 5/5/5/5
+　（might change）
+Other:
+  Cannot change their race, and other races cannot become stray gods
+  Has virtue-like parameters - Alignment, Love of combat, Fame. They change
+    depending on ingame actions
+    (Reimu at Hakurei Shrine can roughly tell you about your current values)
+  At levels 30/45, racial characteristics get significantly changed depending
+    on virtue parameters
+    (Resistances and racial powers you had earlier on are inherited)
+
+Keine - 'They're minor gods among the Myriads of Gods, without their own
+shrine or established followers. At first, hardly anyone has faith in them,
+so they're not strong, but they can build their reputation during their
+adventure, gathering more faith. This allows them to take on new divine
+aspects, greatly changing racial stats/resistances/special abilities.
+However, if you keep failing quests and fight by cowardly means, you'll gather
+infamy and might become some weird god.
+You're likely to end up being fairly powerful in the end.'
+
+
+***** <Great-Youkai>
+--- Great Youkai ---
+Str: 4  Int: 3 Wis:1 Dex: 2 Con: 4 Chr: 2
+Dsm: 2 MDev: 10 MProt: 20  Stl: 1 Srh: 8
+Fighting: 15 Shooting: 5
+Infravision: 8
+Hit Dice: 13
+XP Penalty: 100%
+Score: 60%
+
+Resistances/abilities/characteristics:
+  +33% vulnerability to holy attacks
+  Levitation
+  Darkness resistance
+  Free action
+  See invisible
+  Fire resistance (5)
+  Cold resistance (10)
+  Lightning resistance (15)
+  Acid resistance (20)
+  Poison resistance (25)
+  Chaos resistance(30)
+  Fear resistance (35)
+  Slow digestion (40)
+  Regeneration (40)
+  
+Magic realm aptitude:
+  7/6/6/7 - 4/3/0/3 - 7/9/6/7
+Other:
+  None
+
+Keine - 'Great youkai have been living for a long, long time, accumulating
+power. They're far more powerful compared to usual youkai in all regards, but
+they're still vulnerable to holy attacks. Their penalties are extremely high;
+they take twice as much experience as humans to level up. Recommended for
+beginners.'
+
+
+***** <Arahitogami>
+--- Arahitogami ---
+Str: 1 Int: 1 Wis:1 Dex: 1 Con: 1 Chr: 1
+Dsm: 0 MDev: 3 MProt: 3 Stl: 0 Srh: 3
+Fighting: 3 Shooting: 3
+Infravision: 0
+Hit Dice: 11
+XP Penalty: 25%
+Score: 75%
+
+Resistances/abilities/characteristics:
+  See invisible
+  Slow digestion (25)
+  Regeneration (25)  
+Magic realm aptitude:
+  6/6/6/6 - 6/6/6/6 - 6/6/6/6
+Other:
+  None
+
+Keine - 'Arahitogami are humans with divine blood in their veins, or humans
+that have obtained divinity through being worshipped by people. They look
+just like ordinary humand, but all of their parameters are slightly higher.
+They can see things ordinary people are unable to.'
+
+
+***** <Lunarian>
+--- Lunarian ---
+Str: -2 Int: 7 Wis:5 Dex: 2 Con: 1 Chr: 2
+Dsm: 10 MDev: 15 MProt: 12 Stl: 3 Srh: 10
+Fighting: -30 Shooting: 15
+Infravision: 0
+Hit Dice: 11
+XP Penalty: 90%
+Score: 70%
+
+Resistances/abilities/characteristics:
+  Immune to holy energy
+  +33% vulnerability to darkness
+  +33% vulnerability to nether
+  +33% vulnerability to Ki (unless your class is Martial Artist)
+  +33% vulnerability to hellfire
+  See invisible
+  Sustain intelligence
+  Recall (5)
+  Confusion resistance (10)
+  Warning (20)
+  Summon followers (25)
+  Lower spell failure rate (30)
+  Space-time resistance (40)
+Magic realm aptitude:
+  8/8/8/8 - 9/2/9/2 - 4/0/0/4
+Other:
+  MP regeneration is doubled
+  Cannot eat some food
+  Cannot drink Potions of Life
+
+Keine - 'Nobles of the Lunar Civilization free from impurity.
+They're unpleasant people who are clearly far smarter compared to people
+on Earth, and always keep looking down on them. Lunarians can't stand
+impurity. It's not only darkness, nether, and hellfire - even life energy
+is impure to them, dealing significant damage.'
+
+
+***** <Half-Ghost>
+--- Half-Ghost ---
+Str: -1  Int: 1  Wis:1 Dex: 0 Con: -1 Chr: -1
+Dsm: 2 MDev: 5 MProt: 3  Stl: 3 Srh: 2
+Fighting: -5 Shooting: -5
+Infravision: 0
+Hit Dice: 9
+XP Penalty: 50%
+Score: 90%
+
+Resistances/abilities/characteristics:
+  +33% vulnerability to holy attacks
+  Nether resistance
+  Slow digestion
+  See invisible (20)
+  Cold resistance (10)
+Magic realm aptitude:
+  5/5/5/5 - 5/3/3/3 - 7/5/8/5
+Other:
+  None
+
+Keine - 'Konpaku Youmu, who occasionally leaves Netherworld to visit the
+village on an errand, is one of those. They look just like ordinary humans,
+but there's something always floating around them - that's another one of
+their bodies. Since they're literally half dead, they resist nether attacks.
+You wouldn't think of it by looking at Youmu, but they're also proficient at
+Sorcery Arts and stealth. As a long-lived race, they gain experience levels
+slowly.'
+
+
+***** <Haniwa>
+--- Haniwa ---
+Str: 1  Int: -3  Wis:-2 Dex: -2 Con: 1 Chr: -1
+Dsm: -5 MDev: -3 MProt: 50  Stl: 2 Srh: -3
+Fighting: 5 Shooting: 5
+Infravision: 0
+Hit Dice: 10
+XP Penalty: 50%
+Score: 70%
+
+Resistances/abilities/characteristics:
+  +25% vulnerability to shards
+  +25% vulnerability to sound
+  Immunity to nether
+  Fire resistance
+  Poison resistance
+  Free action
+  Regeneration
+  See invisible (20)
+
+Magic realm aptitude:
+  3/3/3/3 - 3/3/3/3 - 3/3/3/3
+Other:
+  Cannot get wounded/stunned, but can get 'broken'
+  Cannot be turned into a statue by Ancient Foul Curse
+  Cannot become hungry or full
+  Enemies can't drain health from you
+  Ignores various mental attacks
+  Ignores melee attacks from ghost monsters ('G' symbol)
+
+Kein - 'Human-shaped haniwa that, for some reason, recently have been
+emerging from Hell. Instead of having the familiar clay doll shape, they look
+just like humans - the sculptor's skill must be immense. They ignore attacks
+from ghost monsters, and like golems, are resistant to poison and paralysis.
+However, since they're hollow inside, they can break upon receiving a powerful
+impact, though they can repair themselves after a while.'
+
+
+***** <Animal-Ghost>
+--- Animal Ghost ---
+Str: 1  Int: -1 Wis:-2 Dex: 2 Con: 2 Chr: -3
+Dsm: -5 MDev: -3 MProt: 5 Stl: 3 Srh: 0
+Fighting: 10 Shooting: -5
+Infravision: 12
+Hit Dice: 11
+XP Penalty: 60%
+Score: 70%
+
+Resistances/abilities/characteristics:
+  +66% vulnerability to holy attacks
+  +50% vulnerability to light
+  Drains nether attacks
+  Regeneration
+  Levitation
+  Free action
+  See invisible
+  Poison resistance
+  Cold resistance
+  Warning (30)  
+Magic realm aptitude:
+  3/3/3/3 - 1/0/1/3 - 8/7/8/6
+Other:
+  Has different racial powers depending on what group you belong to
+    (randomly decided at the start of game)
+  Speed +level/15
+  Hardly gains satiation from ordinary food, has to sustained themselves by
+    defeating living beings or undead
+  Cannot be wounded
+  Enemies can't drain health from you
+
+Keine - 'Most animal ghosts are minor spirits without much power,
+but those are violent ghosts from the Animal Realm, where only the strongest
+survive. Most of them belong to some violent organization, but there are
+solitary ones as well. They have stats similar to those of werebeasts, along
+with undead resistances and vulnerabilities; they're fairly strong. However,
+despite being ghosts, they can't pass through walls.'
+
+
+***** <Zashiki-Warashi>
+--- Zashiki-Warashi ---
+Str: -2  Int: 2  Wis:1 Dex: 0 Con: -3 Chr: 5
+Dsm: 16 MDev: 6 MProt: 6  Stl: 5 Srh: 10
+Fighting: -30 Shooting: -10
+Infravision: 0
+Hit Dice: 7
+XP Penalty: 10%
+Score: 80%
+
+Resistances/abilities/characteristics:
+  +33% vulnerability to holy attacks
+  Warning
+  Human ESP (30)
+Magic realm aptitude:
+  5/9/6/5 - 6/6/4/5 - 4/5/5/3
+Other:
+  Aside from standard equipment, they have to use a special item called a
+    'mobile household'
+  If you discoved a potential new household, you can move there using your
+    racial power
+  Stats and racial powers might change depending on what househould you are
+    inhabiting
+
+Keine - 'Zashiki-Warashi are a rare kind of youkai residing in human houses.
+Recently, zashiki-warashi have been spotted walking outside houses.
+They can possess some items they view as 'households',
+and walk around carrying them, which lets them leave the Human Village.
+Depending on the household they inhabit, they might obtain new abilities and
+powers. Zashiki-Warashi are very observant, granting them high Stealth and
+Searching skills. However, they're physically frail.'
+
+
+
+***** <TheClasses>
+=== Classes ===
+
+Keine - 'Next, let's look over details for basic classes.
+Their skills are written like 12(8); it means the starting value is 12, and
+it increases by 8 each ten levels. For magic/skill aptitudes, A is highest
+value. The lower follower cost coefficient is, the more powerful followers you
+can maintain.
+
+Classes marked as '(Magic Specialist)' have several of their spells powered
+up, and can use a special ability called 'Barrier Guard'.'
+
+
+***** <Warrior>
+--- Warrior ---
+Str: 4  Int: -2 Wis:-2 Dex: 2 Con: 2 Chr: -1
+Dsm: 25(9) MDev: 18(7) MProt: 31(10)  Stl: 1(0) Srh: 14(0)
+Fighting: 70(30) Shooting: 55(30)
+Hit Dice: +9
+XP Penalty: 0
+Score: 100%
+Base max amount of blows: 6
+MP: E
+Follower cost coefficient: 60
+
+Magic realm aptitude:
+  Cannot use
+
+Skill aptitude:
+  Martial Arts  B    Shields      A      Riding      C       Dual-Wielding A
+  Throwing      B    Short Blades B      Long Blades A       Katanas       B
+  Blunt Weapons A    Staves       A      Axes        A       Spears        A
+  Polearms      A    Bows         A      Crossbows   B       Guns          D
+
+Class special abilities:
+  None
+
+Resistances/etc:
+  Fear resistance (30)
+  Regeneration (45)
+
+Other:
+  +1 melee attack/round at level 40
+
+Keine - 'Warriors are the most basic class, and the best known close combat
+specialists. They're very skilled at using weapons and level up quickly,
+but can't do much outside of physical combat. You can say they're a class
+suited for beginners due to their simplicity and strength in early game.
+However, by the time you'll reach midgame, you'll have trouble due to lack
+of combat support. Once you've became familiar with the game, it's better
+to pick anouther class if you're aiming for your first victory.'
+
+
+
+***** <Mage>
+--- Mage ---
+Str: -3  Int: 3 Wis:1 Dex: 0 Con: -2 Chr: 1
+Dsm: 30(12) MDev: 40(15) MProt: 40(13)  Stl: 3(0) Srh: 21(3)
+Fighting: 34(6) Shooting: 20(7)
+Hit Dice: +0
+XP Penalty: 30%
+Score: 85%
+Base max amount of blows: 3
+MP: B
+Follower cost coefficient: 30
+
+Magic realm aptitude:
+  Can study two realms
+  Aptitude B for all realms
+  (Magic Specialist)
+
+Skill aptitude:
+  Martial Arts  E    Shields      E      Riding      E       Dual-Wielding E
+  Throwing      C    Short Blades C      Long Blades D       Katanas       E
+  Blunt Weapons D    Staves       C      Axes        E       Spears        E
+  Polearms      E    Bows         E      Crossbows   E       Guns          D
+
+Class special abilities:
+  Eat Magic (25; recovers MP by draining charges from magic devices)
+
+Resistances/etc:
+  None
+
+Other:
+  Slightly better at using some spells/magic devices
+
+Keine - 'The most basic spellcaster class. Their class name changes according
+to the first realm they pick. They can study two realms, and do it at a pretty
+fast rate. They're good at using magic devices as well, and will get a special
+ability to recover MP as they level up. However, they're very bad at physical
+combat. Always keep an eye on how much MP you have left.
+
+Spellcasters have low HP, so they might get taken down pretty quickly upon
+getting hit by an unresisted attack. If they get confused or blinded, they
+can't read spellbooks and are unable to do anything. They attack enemies with
+spells, which might end up completely ineffective depending on spell element
+and enemy resistance. When facing a tough enemy, you might not be able to
+finish them off even after you exhaust all of your MP. Therefore, spellcasters
+have to be more careful picking their fights and developing tactics. If you're
+not that familiar with elements and dangerous monsters, playing a spellcaster
+will be tough. Once you obtain more powerful spells at midgame, you'll be
+able to use far more various strategies.'
+
+
+
+***** <Shrine-Maiden>
+--- Priest/Shrine Maiden ---
+Str: 0  Int: 1 Wis:3 Dex: -1 Con: 0 Chr: 2
+Dsm: 25(7) MDev: 35(11) MProt: 50(15)  Stl: 2(0) Srh: 18(1)
+Fighting: 40(13) Shooting: 40(12)
+Hit Dice: +4
+XP Penalty: 65%
+Score: 80%
+Base max amount of blows: 5
+MP: B
+Follower cost coefficient: 40
+
+
+Magic realm aptitude:
+  Can study two realms
+  Life/Exorcism/Darkness/Necromancy     - B
+  Mysticism/Nature/Transformation/Chaos - C
+  (Cannot study realms belonging to different major realms)
+  (Magic Specialist)
+
+Skill aptitude:
+  Martial Arts  C    Shields      D      Riding      E       Dual-Wielding E
+  Throwing      D    Short Blades C      Long Blades D       Katanas       C
+  Blunt Weapons B    Staves       B      Axes        E       Spears        D
+  Polearms      D    Bows         C      Crossbows   E       Guns          E
+
+Class special abilities:
+  Offering (1; offers an item to your deity, obtaining experience)
+  Blessing (30; bestows your deity's blessing upon a weapon; cannot be used
+                if you study Sorcery Arts)
+
+Resistances/etc:
+  Fear resistance (30)
+  Holy energy resistance (40; only if you study Hermit Arts)
+  Nether resistance (40; only if you study Sorcery Arts)
+  Insanity resistance (45)
+
+Other:
+  Slightly better at using some spells/magic devices
+  Receives penalties to attack power and spell failure rate when holding an
+    unsuitable weapon
+  Large dice bonus when holding an Oonusa (weapon)
+  Large dice bonus when throwing needles
+  Stat bonus when wearing shrine maiden clothes if you're a shrine maiden
+    (female class title)
+
+Keine - 'Priests and shrine maiden can use magic through faith in their deity.
+Because of that, they can only study major realms that are governed by deity
+they worship. Depending on whether you study Hermit or Sorcery Arts, items
+suitable for wielding or offering will be different. If you study Hermit Arts,
+your deity likes blessed weapons, but dislikes edged weapons and cursed items.
+If you study Sorcery Arts, it's the other way around - blessed items are
+unsuitable for you. Any deity enjoys a lot when you offer them alcohol.
+
+This class is capable of both close combat and spellcasting. Classes like
+this are often called 'dual' or 'composite' classes. Dual classes might have
+some trouble in early game - you have to focus on multiple stats, you gain
+levels slowly, and you're not that strong in combat. In early game, it might
+be a good idea to focus on your physical stats, relegating spellcasting to
+support role. You're going to end up powerful if you reach endgame.'
+
+
+
+***** <Explorer>
+--- Explorer ---
+Str: 1  Int: 1 Wis:-2 Dex: 2 Con: 1 Chr: 0
+Dsm: 45(15) MDev: 37(12) MProt: 36(10)  Stl: 4(1) Srh: 40(7)
+Fighting: 48(16) Shooting: 43(18)
+Hit Dice: +4
+XP Penalty: 20%
+Score: 85%
+Base max amount of blows: 5
+MP: C
+Follower cost coefficient: 55
+
+Magic realm aptitude:
+  Can study one realm
+  Aptitude E for all realms
+
+Skill aptitude:
+  Martial Arts  C    Shields      D      Riding      D       Dual-Wielding B
+  Throwing      B    Short Blades A      Long Blades C       Katanas       C
+  Blunt Weapons D    Staves       D      Axes        D       Spears        D
+  Polearms      E    Bows         D      Crossbows   B       Guns          C
+
+Class special abilities:
+  Detect Traps (10)
+  Activate Traps (15; remotely activates known traps. Their activation can
+                      affect nearby monsters)
+  Hit and Away (20; attacks an adjacent enemy, then immediately teleports
+                    away; might fail)
+  Identify (30)
+  Probing (40)
+
+Resistances/etc:
+  See invisible (30)
+  Powerful throwing (40)
+
+Other:
+  +1 melee attack/round for short blades
+
+Keine - 'This class has high dexterity along with various useful abilities.
+They're good at exploring the dungeon, but a bit lacking in power to defeat
+strong enemies. You'll have to fight carefully using throwing, magic devices
+and Hit & Away. They can use some magic, but they learn spells very slowly,
+and are unable to learn the more powerful ones.'
+
+
+
+***** <Ranger>
+--- Ranger ---
+Str: 2  Int: 0 Wis:-1 Dex: 3 Con: 1 Chr: -1
+Dsm: 30(10) MDev: 23(9) MProt: 36(10)  Stl: 3(2) Srh: 35(5)
+Fighting: 60(21) Shooting: 72(32)
+Hit Dice: +5
+XP Penalty: 30%
+Score: 70%
+Base max amount of blows: 5
+MP:  C
+Follower cost coefficient: 40
+
+
+Magic realm aptitude:
+  Can study one realm
+  Nature/Transformation - C
+
+Skill aptitude:
+  Martial Arts  C    Shields      D      Riding      B       Dual-Wielding C
+  Throwing      B    Short Blades A      Long Blades B       Katanas       D
+  Blunt Weapons C    Staves       C      Axes        A       Spears        C
+  Polearms      C    Bows         A      Crossbows   C       Guns          C
+
+Class special abilities:
+  Quick Swap (10; changes equipment quickly)
+  Probing (25)
+
+Resistances/etc:
+  Free action (20)
+  Animal ESP (30)
+  Poison resistance (40)
+
+Other:
+  Does not slow down while walking through forest terrain
+
+Keine - 'A powerful dual class with various combat-related skills. They're
+good at both close and ranged combat, and are skilled at riding; they'll be
+able to fight comparatively comfortably starting from the early game all the
+way to the end. While their selection of magic realms is limited, they can
+use magic relatively well, and aren't lacking in support and detection.
+However, they're not that good at using magic devices.'
+
+
+
+***** <Guardian>
+--- Guardian ---
+Str: 1  Int: -2 Wis:2 Dex: -1 Con: 2 Chr: 3
+Dsm: 16(7) MDev: 20(10) MProt: 37(14)  Stl: 1(0) Srh: 18(2)
+Fighting: 68(24) Shooting: 40(15)
+Hit Dice: +8
+XP Penalty: 45%
+Score: 75%
+Base max amount of blows: 5
+MP: C
+Follower cost coefficient: 40
+
+
+Magic realm aptitude:
+  None
+
+Skill aptitude:
+  Martial Arts  D    Shields      A      Riding      B       Dual-Wielding C
+  Throwing      D    Short Blades C      Long Blades A       Katanas       B
+  Blunt Weapons C    Staves       C      Axes        C       Spears        A
+  Polearms      B    Bows         D      Crossbows   D       Guns          E
+
+Class special abilities:
+  Learns various defense-related special abilities
+
+Resistances/etc:
+  Fear resistance (20)
+  Holy energy resistance (40)
+
+Other:
+  Gets dice bonus while wielding a blessed weapon
+  Receives attack power penalties while wielding a cursed weapon
+  Maintenance cost for chaotically aligned follower is 10x
+
+Keine - 'This class is similar to paladins or other guardian knights.
+They have high endurance and excel at combat, are skilled at riding, and can
+use various abilities like setting barriers or healing. However, since they
+have hard time controlling chaotic followers, their choices for riding are
+limited. They're not very dextrous, and aren't skilled at disarming traps
+or using magic devices.'
+
+
+
+***** <Teacher>
+--- Teacher ---
+Str: 0  Int: 2 Wis:0 Dex: 1 Con: 0 Chr: 1
+Dsm: 30(9) MDev: 35(10) MProt: 36(10)  Stl: 2(0) Srh: 20(1)
+Fighting: 45(15) Shooting: 45(15)
+Hit Dice: +3
+XP Penalty: 25%
+Score: 80%
+Base max amount of blows: 5
+MP: B
+Follower cost coefficient: 45
+
+
+Magic realm aptitude:
+  Can study two realms
+  Aptitude C for all realms
+
+Skill aptitude:
+  Martial Arts  C    Shields      C      Riding      C       Dual-Wielding C
+  Throwing      C    Short Blades C      Long Blades C       Katanas       C
+  Blunt Weapons C    Staves       C      Axes        C       Spears        C
+  Polearms      C    Bows         C      Crossbows   C       Guns          C
+
+Class special abilities:
+  None
+
+Resistances/etc:
+  None
+
+Other:
+  Starts out with fairly high proficiency for all weapon kinds
+
+Keine - 'A dual classes that can do anything, but doesn't specialize in
+anything in particular. Their skill growth is limited, so you might have
+trouble deciding what to focus on. You should adapt your strategy
+corresponding to items you find during exploration.'
+
+
+***** <Maid>
+--- Butler/Maid ---
+Str: 0  Int: 1 Wis:1 Dex: 1 Con: 1 Chr: 1
+Dsm: 40(12) MDev: 30(12) MProt: 36(12)  Stl: 3(0) Srh: 25(3)
+Fighting: 63(22) Shooting: 50(18)
+Hit Dice: +3
+XP Penalty: 25%
+Score: 85%
+Base max amount of blows: 5
+MP: C
+Follower cost coefficient: 50
+
+Magic realm aptitude:
+  Can study one realm
+  Aptitude D for all realms
+
+Skill aptitude:
+  Martial Arts  C    Shields      B      Riding      E       Dual-Wielding B
+  Throwing      B    Short Blades B      Long Blades B       Katanas       B
+  Blunt Weapons B    Staves       B      Axes        B       Spears        B
+  Polearms      B    Bows         D      Crossbows   D       Guns          D
+
+Class special abilities:
+  Learns several non-combat related useful abilities
+
+Resistances/etc:
+  Sustain dexterity (25)
+  Sustain constitution (25)
+  Fear resistance (40)
+
+Other:
+  Can receive a reward or a punishment from their master upon levelling up
+  Has to wear a suit (butler) or maid uniform (maid)
+  Cannot receive Chaos Patron/Xom mutations
+
+Keine - 'A dual class that's proficient at combat, and is also capable of
+using support/exploration spells and special abilities. It's a strong class
+for its low penalties, but there are some drawbacks. With your body armor
+restriction, it's hard to cover required resistances; you have harder time
+building AC compared to other combat oriented classes, and your HP isn't
+that high. If you're really unlucky, you might get into major trouble due
+to an unreasonable punishment from your master. However, if you're lucky,
+you might receive a powerful reward.'
+
+
+
+***** <Martial-Artist>
+--- Martial Artist ---
+Str: 2  Int: -2 Wis:1 Dex: 3 Con: 1 Chr: 1
+Dsm: 20(10) MDev: 18(7) MProt: 26(14)  Stl: 2(1) Srh: 22(3)
+Fighting: 55(28) Shooting: 30(12)
+Hit Dice: +4
+
+XP Penalty: 20%
+Score: 80%
+Base max amount of blows: 5
+MP: E
+Follower cost coefficient: 80
+
+Magic realm aptitude:
+  None
+
+Skill aptitude:
+  Martial Arts  A    Shields      E      Riding      E       Dual-Wielding E
+  Throwing      C    Short Blades D      Long Blades E       Katanas       E
+  Blunt Weapons E    Staves       B      Axes        E       Spears        E
+  Polearms      E    Bows         E      Crossbows   E       Guns          E
+
+Class special abilities:
+  Focus (increases MP, can go over maximum value)
+  Learns many other special abilities, mainly using 'Ki'; many of them cannot
+    be used if you're holding something in your hands
+
+Resistances/etc:
+  Fear resistance (20)
+  Sustain strength (30)
+  Levitation (40)
+
+Other:
+  Easier to get more blows/round in martial art combat
+  Easier to get more blows/round when holding a staff with both hands
+  Low weight limit on equipment, with fairly heavy penalties for holding
+    a shield
+  Force branded weapons don't work
+  Reduces Ki damage received by (level * 3)
+  Speed +(level+5)/15 when using light equipment
+  AC +(level+10) when using light equipment
+  Can dodge enemy breath/spell attacks with medium-low probability rate
+    (Attacks from powerful or high level enemies are harder to dodge)
+  When your MP goes over maximum value, your attack power, AC, and
+    special ability power is increased
+
+Keine - 'One of the close combat classes, specialising in martial art combat.
+They're guaranteed to grow in power as they gain levels and proficiency,
+without having to obtain a powerful weapon, and are as good at combat as an
+armed warrior. They're not limited to punches and kicks, they can focus and
+use powerful special abilities for ranged attacks or support.
+
+However, they're lacking defense-wise.
+Martial artists usually don't use weapons, and using shield or heavy armor
+slows down their movement, reducing attack power. You'll have to cover your
+resistances and raise parameters while keeping this limit in mind. On top of
+that, they have surprisingly low HP for a close combat class.
+They can stun enemies with martial art combat or avoid their special attacks,
+but there's always an element of risk present. Like other close combat
+specialists, they're not good at using magic devices.'
+
+
+***** <Mindcrafter>
+--- Mindcrafter ---
+Str: 0  Int: -1 Wis:3 Dex: 1 Con: 0 Chr: 2
+Dsm: 30(12) MDev: 33(11) MProt: 38(12)  Stl: 3(0) Srh: 24(4)
+Fighting: 50(18) Shooting: 45(18)
+Hit Dice: +3
+
+XP Penalty: 20%
+Score: 60%
+Base max amount of blows: 5
+MP: B
+Follower cost coefficient: 30
+
+Magic realm aptitude:
+  Special (Mindcraft)
+
+Skill aptitude:
+  Martial Arts  B    Shields      D      Riding      E       Dual-Wielding E
+  Throwing      B    Short Blades B      Long Blades B       Katanas       D
+  Blunt Weapons C    Staves       C      Axes        C       Spears        C
+  Polearms      C    Bows         D      Crossbows   D       Guns          E
+
+Class special abilities:
+  Clear Mind (15; slightly recovers MP)
+
+Resistances/etc:
+  Fear resistance (10)
+  Sustain wisdom (20)
+  Levitation (25)
+  Confusion resistance (30)
+  Telepathy (40)
+
+Other:
+  Can perform powerful special attacks in martial art combat
+
+Keine - 'One of dual classes that uses 'mindcraft' instead of magic.
+Failure rate for mindcraft depends on your wisdom instead of intelligence,
+so you're still able to use your abilities without problems even if you don't
+invest in intelligence. You learn new mindcraft powers depending on your
+level, and there are many useful abilities for defense, support, and
+detection. They also have better physical stats and martial art proficiency
+compared to their original version counterparts, so they're very strong.
+Due to that, their score is significantly lowered; it's a class suited for
+beginner players.'
+
+
+
+***** <High-Mage>
+--- High Mage ---
+Str: -4  Int: 4 Wis:2 Dex: -1 Con: -2 Chr: 0
+Dsm: 30(7) MDev: 40(18) MProt: 40(13)  Stl: 3(0) Srh: 18(2)
+Fighting: 34(6) Shooting: 20(7)
+Hit Dice: +0
+XP Penalty: 10%
+Score: 90%
+Base max amount of blows: 3
+MP: A
+Follower cost coefficient: 25
+
+
+Magic realm aptitude:
+  Can study one realm
+  Aptitude A for all realms
+  (Magic Specialist)
+
+Skill aptitude:
+  Martial Arts  E    Shields      E      Riding      E       Dual-Wielding E
+  Throwing      D    Short Blades C      Long Blades D       Katanas       E
+  Blunt Weapons D    Staves       C      Axes        E       Spears        E
+  Polearms      E    Bows         E      Crossbows   E       Guns          E
+
+Class special abilities:
+  Eat Magic(25; recovers MP by draining charges from magic devices)
+
+Resistances/etc:
+  Warning (20; only if you study Divination realm)
+  Regeneration (20; only if you study Life/Transformation realm)
+
+Other:
+  Slightly better at using some spells/magic devices
+  If studying Elements/Chaos realm, energy consumption for casting spells
+    is reduced by (level/2)%
+  If studying Divination realm, can sense all nearby enemies at level 35
+  If studying Summoning realm, maintenance cost for followers is 1/3
+  If studying Enchantment realm, always succeeds at using magic devices
+    at level 40
+  If studying Mysticism realm, +1 melee blow/round at level 40
+  If studying Life realm, drastically increases natural HP regeneration
+    and Reactive Heal effect at level 40
+  If studying Exorcism realm, can perform two divine possessions at the
+    same time starting from level 40
+  If studying Nature realm, maintenace cost for animals and specific
+    sacred beast followers is 1/3
+  If studying Transformation realm, raises parameters while in dragon form
+  If studying Necromancy realm, maintenance cost for undead followers is 1/3
+  If studying Darkness realm, maintenance cost for demon followers is 1/3
+  If studying Occult realm, insanity resistance at level 40
+
+Keine - 'This spellcaster class studies only one realm of magic and cannot
+change it. However, they're incredibly good at using magic of their realm, and
+have a lot of MP. It's important to carefully pick your realm. If you pick a
+realm with powerful offensive spells, you have to rely on devices for 
+detection and defense.'
+
+
+
+***** <Civilian>
+--- Civilian ---
+Str: 0  Int: 0 Wis:0 Dex: 0 Con: 0 Chr: 0
+Dsm: 25(12) MDev: 20(9) MProt: 30(9)  Stl: 3(0) Srh: 20(2)
+Fighting: 43(12) Shooting: 25(10)
+Hit Dice: +3
+XP Penalty: 0%
+Score: 150%
+Base max amount of blows: 4
+MP: D
+Follower cost coefficient: 80
+
+Magic realm aptitude:
+  Can study one realm
+  Aptitude E for all realms
+
+Skill aptitude:
+  Martial Arts  C    Shields      C      Riding      C       Dual-Wielding C
+  Throwing      C    Short Blades C      Long Blades C       Katanas       C
+  Blunt Weapons C    Staves       C      Axes        C       Spears        C
+  Polearms      C    Bows         C      Crossbows   C       Guns          C
+
+Class special abilities:
+  None
+
+Resistances/etc:
+  None
+
+Other:
+  Starts out with double amount of money
+  Can change their class title at the start of the game
+
+Keine - 'An average Gensoukyou resident. Includes not only residents of Human
+Village, but various youkai and fairies living outside as well. They're not
+suited for battle, and don't have any special abilities either for physical
+combat or spellcasting. Pick this if you're aiming for a high score or
+roleplaying.'
+
+
+
+***** <Shugenja>
+--- Shugenja ---
+Str: 1  Int: 0 Wis:2 Dex: 1 Con: 1 Chr: 0
+Dsm: 25(7) MDev: 30(10) MProt: 36(15)  Stl: 2(0) Srh: 24(2)
+Fighting: 60(18) Shooting: 40(16)
+Hit Dice: +4
+XP Penalty: 45%
+Score: 75%
+Base max amount of blows: 5
+MP: B
+Follower cost coefficient: 55
+
+Magic realm aptitude:
+  Can study one realm
+  Mysticism/Life/Exorcism/Nature/Transformation/Necromancy - C
+
+Skill aptitude:
+  Martial Arts  A    Shields      E      Riding      D       Dual-Wielding E
+  Throwing      C    Short Blades C      Long Blades D       Katanas       B
+  Blunt Weapons D    Staves       A      Axes        D       Spears        D
+  Polearms      D    Bows         E      Crossbows   E       Guns          E
+
+Class special abilities:
+  Clear Mind (30; slightly recovers MP)
+
+Resistances/etc:
+  Fear resistance (20)
+  Confusion resistance (30)
+  Holy energy resistance (45; only if studying Hermit Arts)
+
+Other:
+  Nothing
+
+Keine - 'A dual class proficient in martial art. Can use magic as well, though
+learns spells somewhat slowly. Amount of blows per round in martial art combat
+is determined by level, dexterity, and proficiency. In early game, it's
+comparatively difficult to raise power of your martial art, so it might be
+better to use a weapon. In endgame, they might become masters of both magic
+and close combat.'
+
+
+
+***** <Magic-Knight>
+--- Magic Knight ---
+Str: 1  Int: 2 Wis:0 Dex: 1 Con: 0 Chr: 1
+Dsm: 28(9) MDev: 40(12) MProt: 34(11)  Stl: 2(0) Srh: 17(1)
+Fighting: 50(16) Shooting: 33(10)
+Hit Dice: +4
+XP Penalty: 45%
+Score: 75%
+Base max amount of blows: 5
+MP: B
+Follower cost coefficient: 50
+
+Magic realm aptitude:
+  Can study one realm
+  Elements/Divination/Enchantment/Summoning/Darkness/Chaos - C
+
+Skill aptitude:
+  Martial Arts  D    Shields      C      Riding      D       Dual-Wielding B
+  Throwing      D    Short Blades B      Long Blades A       Katanas       B
+  Blunt Weapons E    Staves       E      Axes        E       Spears        E
+  Polearms      E    Bows         E      Crossbows   E       Guns          E
+
+Class special abilities (Elements):
+  Magic Sword (Fire)       (8)
+  Magic Sword (Frost)      (16)
+  Magic Sword (Lightning)  (24)
+  Magic Sword (Acid)       (32)
+Class special abilities (Divination):
+  Magic Sword (Foresight)  (32)
+Class special abilities (Summoning):
+  Magic Sword (Distortion) (20)
+Class special abilities (Enchantment):
+  Magic Sword (Enchanted)  (25)
+Class special abilities (Darkness):
+  Demonblade               (25)
+Class special abilities (Chaos):
+  Magic Sword (Chaos)      (20)
+
+Resistances/etc:
+  See invisible (20)
+  Regeneration (30)
+
+Other:
+  None
+
+Keine - 'A standard dual class proficient with using swords. Can use magic
+as well, though learns spells somewhat slowly. Also can learn various 'Magic
+Sword' abilities that bestow elements/effects on their weapon. They're bad at
+using weapons other than swords, making it somewhat difficult to obtain
+powerful equipment. Very strong if you use powerful weapons and match spells
+and abilities you're using to enemy characteristics.'
+
+
+
+***** <Danmakulogist>
+--- Danmakulogist ---
+Str: -2 Int: 3  Wis:1  Dex: 1 Con: 0 Chr: -2
+Dsm: 24(10) MDev: 32(12) MProt: 33(11)  Stl: 2(0) Srh: 21(3)
+Fighting: 40(10) Shooting: 20(8)
+Hit Dice: +1
+XP Penalty: 45
+Score: 70%
+Base max amount of blows: 3
+MP: C
+Follower cost coefficient: 30
+
+Magic realm aptitude:
+  Cannot use
+
+Skill aptitude:
+  Martial Arts  D    Shields      E      Riding      D       Dual-Wielding E
+  Throwing      D    Short Blades C      Long Blades D       Katanas       E
+  Blunt Weapons D    Staves       D      Axes        E       Spears        E
+  Polearms      E    Bows         E      Crossbows   E       Guns          D
+
+Class special abilities:
+  Special Technique (1; uses learned special technique)
+  Analyze Monsters (20; probing)
+  Focus (30)
+  Concentrate (40)
+
+Resistances/etc:
+  See invisible (15)
+  Blindness resistance (30)
+
+Other:
+  Can learn special techniques monsters use by observing them
+
+Keine - 'An odd mage that learns monster special techniques (like spells and
+breath attacks) and uses them. You have to observe a monster using a technique
+in order to learn it. You can learn to some extent by observing monsters
+casting spells at other monsters, but you have to get hit by it yourself in
+order to learn it perfectly.
+
+Monsters in endgame use very powerful spells, however, you might end up being
+taking down as you attempt to learn them. Carefully think about whether you
+want to learn only the most necessary techniques, or if you desire
+overwhelming power and are prepare to brave danger.
+
+They're similar to Blue Mages from Hengband, but they can use support
+spells like teleportation or healing as well.'
+
+
+
+***** <Marksman>
+--- Marksman ---
+Str: 2  Int: -1 Wis:-2 Dex: 3 Con: 1 Chr: 0
+Dsm: 40(13) MDev: 24(10) MProt: 35(10)  Stl: 3(0) Srh: 30(3)
+Fighting: 45(15) Shooting: 85(40)
+Hit Dice: +4
+XP Penalty: 10
+Score: 85%
+Base max amount of blows: 4
+MP: E
+Follower cost coefficient: 60
+
+
+Magic realm aptitude:
+  Cannot use
+
+Skill aptitude:
+  Martial Arts  D    Shields      E      Riding      E       Dual-Wielding E
+  Throwing      B    Short Blades C      Long Blades C       Katanas       D
+  Blunt Weapons D    Staves       D      Axes        D       Spears        D
+  Polearms      D    Bows         A      Crossbows   A       Guns          B
+
+Class special abilities:
+  Create Arrows (5; creates arrows from forest terrain)
+  Create Bolts (10; creates crossbow bolts from forest terrain)
+
+Resistances/etc:
+  See invisible (20)
+  Blindness resistance (40)
+
+Other:
+  Bonus to amount of shots per round
+  Arrows/bolts you shoot are less likely to break
+  Can enmpower arrows with materials at Archers Guild
+
+
+Keine - 'A warrior specialising in ranged combat. They're not good at melee,
+but their shooting power might exceed warrior's melee combat. They can make
+arrows from trees and imbue them with elements using materials. In Gensouband,
+ranged weapon equipment slot got replaced, and holding a shield or a melee
+weapons will interfere with shooting. They're a lot weaker compared to
+original Hengband, but they're still strong.
+Magic Quivers, which let you access arrows from your exploration base, are
+important for this class.'
+
+
+
+***** <Magic-Eater>
+--- Magic Eater ---
+Str: -1 Int: 3  Wis:1  Dex: 1 Con: -2 Chr: 0
+Dsm: 30(10) MDev: 45(22) MProt: 36(10)  Stl: 3(0) Srh: 22(2)
+Fighting: 45(12) Shooting: 35(10)
+Hit Dice: +2
+XP Penalty: 30
+Score: 80%
+Base max amount of blows: 4
+MP: C
+Follower cost coefficient: 50
+
+Magic realm aptitude:
+  Cannot use
+  (Magic Specialist)
+
+Skill aptitude:
+  Martial Arts  E    Shields      C      Riding      E       Dual-Wielding E
+  Throwing      C    Short Blades C      Long Blades D       Katanas       D
+  Blunt Weapons D    Staves       C      Axes        D       Spears        D
+  Polearms      D    Bows         D      Crossbows   D       Guns          C
+
+Class special abilities:
+  Absorb Magic Device (1; absorb staff/wand/rod)
+  Replenish Magic I (10; recharges staff/wand/rod)
+  Replenish Magic II (20; recharges absorbed staves/wands/rods)
+  Replenish Magic III (30; reduces charged time of a recharging equipped item)
+  Powerful Activation (40; uses an absorbed magic device with heightened power
+                           and effect)
+
+Resistances/etc:
+  None
+
+Other:
+  Replenishes amount of charges in absorbed magic devices upon visiting
+    exploration base
+  Restores 1/3 of charges in absorbed magic devices upon drinking Potion
+    of Restore Mana
+  If you absorb a second or further device of the same kind, you get less
+    extra charges compared to amount you got from absorbing it for the
+    first time
+
+Keine - 'A dual class that cannot study spellbooks, instead fighting using
+magic items. Their most notable ability is to absorb staves, wands and rods,
+storing their power. The items you absorb don't take up inventory space,
+and you can use them with 'm' command. You can absorb up to 99 charges for
+each magic device. Also, you can recharge activated items like Rings of 
+Flames.
+
+Since you can hold as many devices as you want, you have plenty of
+identification and detection sources, which will help a lot during dungeon
+exploration. Probably only a Magic Eater can dive deep into the dungeon
+without anything in inventory.
+
+However, you're not that good at combat in early and middle game.
+Offensive magic devices in early game aren't powerful, and you'll quickly
+use up their charges. Your own close combat abilities aren't high either,
+and there aren't many combat support magic devices. Also, since you rely
+on multiple stats, and you don't have any innate resistances, preparing
+your equipment will be difficult. If you don't gather enough powerful
+equipment and magic devices, you'll have difficulty going past midgame.
+If you manage to find what you need, you'll be considerably strong in
+late game.'
+
+
+
+***** <Engineer>
+--- Engineer ---
+Str: 1  Int: 3 Wis:-3 Dex: 2 Con: 0 Chr: 0
+Dsm: 40(20) MDev: 15(6) MProt: 20(8)  Stl: 2(0) Srh: 25(4)
+Fighting: 47(16) Shooting: 55(24)
+Hit Dice: +2
+XP Penalty: 20
+Score: 85%
+Base max amount of blows: 4
+MP: D
+Follower cost coefficient: 80
+
+Magic realm aptitude:
+  Cannot use
+
+Skill aptitude:
+  Martial Arts  C    Shields      C      Riding      E       Dual-Wielding E
+  Throwing      B    Short Blades B      Long Blades D       Katanas       D
+  Blunt Weapons B    Staves       C      Axes        D       Spears        D
+  Polearms      D    Bows         D      Crossbows   B       Guns          B
+
+Class special abilities:
+  Can install, use, or remove machines on their backpack; can replenish ammo
+  Salvo (30; attacks with all ranged weaponry installed on your backpack
+             at once)
+
+Resistances/etc:
+  Levitation
+  Blindness resistance (25)
+  Shards resistance (40)
+
+Other:
+  Can install (2+level/6) machines on backpack
+  Installed machines can temporarily malfunction when you get hit by water or
+    lightning. Malfunction probability depends on attack power and machine.
+  Can create new machines at Engineer Guild (requires money; machines you can
+    create depend on your level, intelligence, and dexterity)
+  Can request ammo/energy packs at Engineer Guild (requires money, floating
+    exchange rate)
+  Always succeeds at activating the Gun 'Crimson'
+
+Keine - 'Classified as a dual class, but has its own unique characteristics.
+You can create machines at Engineer Guild in town, install those on your
+backpack, and use them in combat. Machine attacks are very powerful, and you
+can also make various excellent non-combat machines.
+
+This is a powerful class, but it has its drawbacks. They're very bad at magic
+device use and protection from magic, their machines might malfunction upon
+getting hit by lightning or water, and most of all, creating machines and
+obtaining ammo requires money. You'll probably want to use a crossbow or a
+gun to deal with weaker enemies.'
+
+
+
+***** <Librarian>
+--- Librarian ---
+Str: 1  Int: 2 Wis:-1 Dex: 1 Con: 1 Chr: 0
+Dsm: 20(7) MDev: 34(11) MProt: 34(11)  Stl: 3(0) Srh: 16(2)
+Fighting: 55(17) Shooting: 25(11)
+Hit Dice: +4
+XP Penalty: 30%
+Score: 75%
+Base max amount of blows: 5
+MP: B
+Follower cost coefficient: 60
+
+Magic realm aptitude:
+  Has finished learning all realms (only up to 2nd volume; cannot use Occult)
+
+Skill aptitude:
+  Martial Arts  D    Shields      C      Riding      D       Dual-Wielding D
+  Throwing      C    Short Blades B      Long Blades B       Katanas       C
+  Blunt Weapons B    Staves       D      Axes        D       Spears        E
+  Polearms      E    Bows         D      Crossbows   C       Guns          D
+
+Class special abilities:
+  High-Speed Casting (40; casts spells quickly, but they cost 30% more MP)
+
+Resistances/etc:
+  None
+
+Other:
+  Good at shopping for spellbooks (+10 CHR for purposes of buying/selling)
+
+Keine - 'A special dual class.
+They can cast spells without having to learn them - they just have to be at
+high enough level. However, they can only use basic magic - as in, spellbooks
+up to 2nd volume, and their level requirement for spellcasting is very high.
+They have an easy early game due to available means of detection/support, but
+in late game, they're lacking both in spellcasting and combat.'
+
+
+
+***** <Samurai>
+--- Samurai ---
+Str: 3  Int: -2 Wis:1 Dex: 2 Con: 1 Chr: 0
+Dsm: 25(12) MDev: 18(7) MProt: 32(10)  Stl: 2(0) Srh: 16(1)
+Fighting: 70(23) Shooting: 40(18)
+Hit Dice: +6
+XP Penalty: 30
+Score: 90%
+Base max amount of blows: 5
+MP: E
+Follower cost coefficient: 60
+
+Magic realm aptitude:
+  Special (Sword techniques)
+
+Skill aptitude:
+  Martial Arts  D    Shields      E      Riding      C       Dual-Wielding A
+  Throwing      B    Short Blades B      Long Blades A       Katanas       A
+  Blunt Weapons D    Staves       B      Axes        D       Spears        C
+  Polearms      C    Bows         B      Crossbows   D       Guns          E
+
+Class special abilities:
+  Focus (increases MP, can go over maximum value)
+  Assume Posture (25; assumes specific posture, changing resistance/status)
+
+Resistances/etc:
+  Fear resistance (30)
+
+Other:
+  If wielding a katana, +1 to weapon dice at level 25;
+    increases to +2 at level 45
+  Force branded weapons don't work
+
+Keine - 'A close combat class, especially skilled at using katanas.
+Their 'sword techniques' are weapon-based; if you get a book of sword
+techniques, you can learn them if your level is high enough. There's plenty
+of techniques that increase your weapon's dice or attack with an elemental
+brand. In contrast to original Hengband, you have to wield a weapon of a
+specific kind in order to use some techniques. You'll have trouble fighting
+if you don't understand enemy resistances to some degree, but you're extremely
+powerful if you use appropriate techniques. Just like warriors, they're not
+that good at skills other than combat.'
+
+***** <Soldier>
+--- Soldier ---
+Str: 2  Int: 1 Wis:-1 Dex: 2 Con: 2 Chr: -3
+Dsm: 32(14) MDev: 20(8) MProt: 20(8)  Stl: 4(0) Srh: 28(4)
+Fighting: 55(20) Shooting: 60(25)
+Hit Dice: +4
+XP Penalty: 50
+Score: 80%
+Base max amount of blows: 5
+MP: D
+Follower cost coefficient: 120
+
+Magic realm aptitude:
+  None
+
+Skill aptitude:
+  Martial Arts  B    Shields      E      Riding      E       Dual-Wielding B
+  Throwing      B    Short Blades A      Long Blades C       Katanas       C
+  Blunt Weapons C    Staves       D      Axes        D       Spears        E
+  Polearms      E    Bows         D      Crossbows   B       Guns          A
+
+Class special abilities:
+  Learn skills (you gain skill points as you level up, and you can spend them
+                to learn special abilities and raise your parameters)
+
+Resistances/etc:
+  Fire resistance (20)
+  Fear resistance (30)
+  Warning (40)
+
+Other:
+  Amount of shots (crossbow) increased by 0.02*level per turn
+
+Keine - 'Modern soldier equipped with guns and knives. By learning new skills
+as they level up, they might specialise in close combat, ranged combat, or
+sabotage and engineering.'
+
+***** <Chemist>
+--- Chemist ---
+Str: -1 Int: 4 Wis:0 Dex: 1 Con: 0 Chr: 2
+Dsm: 37(11) MDev: 32(12) MProt: 32(10)  Stl: 4(0) Srh: 36(5)
+Fighting: 47(18) Shooting: 52(20)
+Hit Dice: +3
+XP Penalty: 30
+Score: 100%
+Base max amount of blows: 4
+MP: C
+Follower cost coefficient: 60
+
+Magic realm aptitude:
+  Special (chemistry)
+
+Skill aptitude:
+  Martial Arts  C    Shields      D      Riding      E       Dual-Wielding E
+  Throwing      B    Short Blades B      Long Blades D       Katanas       D
+  Blunt Weapons C    Staves       C      Axes        D       Spears        D
+  Polearms      E    Bows         D      Crossbows   C       Guns          D
+
+Class special abilities:
+  Medicine box (treated as separate inventory)
+  First Aid (5; slightly recovers HP and cures poison/other bad effects)
+  Component Analysis (10; identifies mushrooms/potions)
+  Create Food (16; creates a food ration)
+  Vegetation Survey (24; roughly detects mushrooms/materials on current level)
+
+Resistances/etc:
+  Free action (15)
+  Poison resistance (30)
+
+Other:
+  Can browse Pharmacy Recipes with 'b'rowse command
+  Can use Pharmacy in town to create new potions by combining potions and
+    materials; success depends on your level, intelligence, location,
+    whether you have the proper book, and if you made that potion before; 
+  Consumes slightly less energy when quaffing potions
+  At level 40, potions in your inventory won't get shattered by attacks
+
+Keine - 'A special class; they're bad at fighting, but they can make potions.
+The potions they can make include strong acid, explosive, and transformation
+potions - all of them are powerful. However, the materials you'll have to
+use are valuable, so plan carefully.
+
+In order to gather required materials, you have to explore dangerous dungeons.
+Aside from Searching skill, that requires stealth, and at least some degree
+of combat ability. You also have to be aware of what enemies are vulnerable
+to which elements. With proper preparations, you might be able to easily 
+defeat even very strong foes.
+
+By reading pharmacy recipes you can learn how you can make potions, but those
+are just examples. Feel free to try different combinations.'
+
+***** <Cavalry>
+--- Cavalry ---
+Str: 2  Int: -2 Wis:-2 Dex: 2 Con: 2 Chr: 0
+Dsm: 20(10) MDev: 18(7) MProt: 32(10)  Stl: 1(0) Srh: 16(0)
+Fighting: 60(22) Shooting: 66(26)
+Hit Dice: +5
+XP Penalty: 20
+Score: 90%
+Base max amount of blows: 5
+MP: E
+Follower cost coefficient: 35
+
+Magic realm aptitude:
+  Cannot use
+
+Skill aptitude:
+  Martial Arts  E    Shields      B      Riding      A       Dual-Wielding C
+  Throwing      D    Short Blades D      Long Blades B       Katanas       C
+  Blunt Weapons B    Staves       B      Axes        C       Spears        A
+  Polearms      A    Bows         B      Crossbows   C       Guns          D
+
+Class special abilities:
+  Tame Unruly Mount (10; jumps on a rideably hostile monster, forcibly taming
+                         them)
+
+Resistances/etc:
+  None
+
+Other:
+  Starts the game out with a horse
+  Less penalty for wielding a weapon unsuitable for riding while riding
+  Lesser maintenance cost for the follower you're riding
+
+Keine - 'A close combat class, especially skilled at riding.
+Check 'Riding' section for more details; in short, riding is a powerful
+skill. Especially starting from midgame, combat starts to feel far more
+enjoyable compared to ordinary warriors. They're decent at shooting as well;
+using a bow might help you stay out of trouble even at lower levels. However,
+they're not good at support skills aside from fighting.'
+
+
+
+***** <Tsukumo-Master>
+--- Tsukumo Master ---
+Str: 1  Int: 2 Wis:-1 Dex: 1 Con: 1 Chr: -2
+Dsm: 40(13) MDev: 36(14) MProt: 35(12)  Stl: 2(0) Srh: 24(3)
+Fighting: 50(18) Shooting: 45(15)
+Hit Dice: +4
+XP Penalty: 35
+Score: 80%
+Base max amount of blows: 4
+MP: C
+Follower cost coefficient: 25
+
+Magic realm aptitude:
+  Cannot learn
+
+Skill aptitude:
+  Martial Arts  D    Shields      D      Riding      D       Dual-Wielding D
+  Throwing      A    Short Blades B      Long Blades C       Katanas       C
+  Blunt Weapons B    Staves       C      Axes        B       Spears        C
+  Polearms      C    Bows         E      Crossbows   D       Guns          E
+
+Class special abilities:
+  Turn into Tsukumogami (3; makes a weapon fight along with you as a follower)
+  Detect Items and Traps (9)
+  Destroy Traps (15)
+  Identify (24)
+  Recall Order (30; recovers all of your tsukumogami followers)
+
+Resistances/etc:
+  See invisible (10)
+
+Other:
+  Can control up to 1+(level-5)/10 tsukumogami at once
+  When fighting with a weapon other than a fixed artifact, the weapon may
+    obtain youkai powers and gain up to 2 new abilities
+  Can take off cursed equipment without uncursing (might fail)
+  Gains experience and items from tsukumogami attacks
+
+Keine - 'A very special class that fights by imbuing weapons with youkai
+powers. A weapon that becomes a tsukumogami is treated as a follower, and
+its parameters change according to power of original weapon. Also, tsukumogami
+attacks are treated as your own - you gain experience and items from monsters
+they defeat, and they can defeat unique monsters. If you find a powerful
+weapon and turn it into a tsukumogami, you'll be able to steadily accumulate
+experience. Also, the weapon you wield might get imbued with youkai power,
+powering it up. It's hard to guess what kind of power up it will be, but it
+might end up a very powerful weapon.
+
+As tool specialists, their disarming and magic device use skills are high.
+However, they're not that proficienct at direct combat. You'll have to use
+a unique approach to dungeon exploration.'
+
+
+
+***** <Secondhand-Dealer>
+--- Secondhand Dealer---
+Str: 1  Int: 2 Wis:0 Dex: 1 Con: 0 Chr: -1
+Dsm: 40(12) MDev: 30(12) MProt: 30(10)  Stl: 3(0) Srh: 35(6)
+Fighting: 48(17) Shooting: 45(18)
+Hit Dice: +4
+XP Penalty: 35
+Score: 80%
+Base max amount of blows: 5
+MP: D
+Follower cost coefficient: 70
+
+Magic realm aptitude:
+  Cannot use
+
+Skill aptitude:
+  Martial Arts  E    Shields      C      Riding      D       Dual-Wielding C
+  Throwing      C    Short Blades C      Long Blades C       Katanas       C
+  Blunt Weapons C    Staves       C      Axes        C       Spears        C
+  Polearms      C    Bows         C      Crossbows   B       Guns          C
+
+Class special abilities:
+  Appraise (5; identify)
+  Detect Lucky Finds (20; roughly searchs for ego-items/curios/etc on
+                          current level)
+  True Appraisal (40; identifies all nearby items on the ground)
+
+Resistances/etc:
+  None
+
+Other:
+  Has a toolbox as a separate inventory with 5 item slots
+  Can use guilds in town to extract essences from pieces of equipment or
+    materials, and imbue other items with those essences
+  Can carry 25% more weight
+  When buying/selling in stores, uses the highest of CHR and (INT + 5)
+  'No fixed artifacts generated' option doesn't raise your score as much
+
+Keine - 'A close combat combat with ability to enchance weapons and armor.
+They don't have innate resistances, but they probably won't have much trouble
+due to their ability to enhance armor. They can carry a lot of items, and
+are great at identification, making them suited for exploration. However,
+they don't have any monster detection or combat support abilities, and they're
+not that great in combat by themselves.
+
+They're close to Weaponsmith in Hengband, but somewhat worse at close
+combat. They also can't extract essences in dungeon and have to return to
+town. In return, they have better magic device use and identification skills,
+and can handle essences like sharpness, force, or extra shots. They're not
+bad at fighting powerful enemies with essence-imbued crossbow and bolts.'
+
+
+
+***** <Jeweler>
+--- Jeweler ---
+Str: -2  Int: 2 Wis:0 Dex: 2 Con: -2 Chr: 2
+Dsm: 30(10) MDev: 40(17) MProt: 36(12)  Stl: 2(0) Srh: 24(3)
+Fighting: 40(15) Shooting: 30(10)
+Hit Dice: +1
+XP Penalty: 50
+Score: 75%
+Base max amount of blows: 4
+MP: B
+Follower cost coefficient: 45
+
+Magic realm aptitude:
+  Can study one realm
+  Aptitude B for all realms
+
+Skill aptitude:
+  Martial Arts  E    Shields      D      Riding      E       Dual-Wielding E
+  Throwing      D    Short Blades B      Long Blades C       Katanas       D
+  Blunt Weapons C    Staves       D      Axes        D       Spears        D
+  Polearms      D    Bows         D      Crossbows   D       Guns          E
+
+Class special abilities:
+  Eat Magic (25; recovers MP by draining mana from gemstones)
+
+Resistances/etc:
+  Blindness resistance (20)
+
+Other:
+  Can use guilds in town to extract essences from accessories or materials,
+    and imbue other items with those essences
+  'No fixed artifacts generated' option doesn't raise your score as much
+
+
+Keine - 'A dual class leaning towards spellcasting with ability to enhance
+accessories. They can extract essences from rings, amulets, ribbons, light
+sources (aside from torches), material, and some curios. They can imbue
+melee weapons, rings, amulets, ribbons, headwear, and light sources (aside
+from torches) with those essences. They can't extract essences from weapons,
+but they can obtain essences like element brands from materials and gemstones.
+You're probably not going to get powerful brands like vampirism or force
+until the end of the game. Your strategy will greatly change depending on
+whether you pick a realm with offensive or support spells.'
+
+
+
+***** <Ninja>
+--- Ninja ---
+Str: 0  Int: 1 Wis:0 Dex: 3 Con: 0 Chr: -2
+Dsm: 45(15) MDev: 27(12) MProt: 27(10)  Stl: 5(2) Srh: 33(6)
+Fighting: 55(24) Shooting: 63(18)
+Hit Dice: +2
+XP Penalty: 45
+Score: 80%
+Base max amount of blows: 4
+MP: C
+Follower cost coefficient: 90
+
+Magic realm aptitude:
+  Cannot use
+
+Skill aptitude:
+  Martial Arts  A    Shields      E      Riding      E       Dual-Wielding B
+  Throwing      A    Short Blades A      Long Blades D       Katanas       C
+  Blunt Weapons D    Staves       E      Axes        E       Spears        E
+  Polearms      E    Bows         C      Crossbows   C       Guns          E
+
+
+Class special abilities:
+  Learns ninjutsu mainly focused on exploration and support
+
+Resistances/etc:
+  Slow digestion  
+  See invisible (10)
+  Free action (15)
+  Poison resistance (20)
+  Swift movement (20)
+  Sustain dexterity (25)
+  Fear resistance (30)
+  Powerful throw (35)
+  Darkness resistance (40)
+  Double poison resistance (45)
+
+Other:
+  Cannot use shields or weapon/armor above a specific weight limit
+  Gains 'superstealth' in dark areas, making it harder for enemies to
+    perceive you
+  Extra damage when attacking sleeping or fleeing enemies
+  When using martial art combat or short blades, can deliver a powerful
+    attack stronger than an ordinary critical hit
+  Can see in darkness
+  Speed +(level+15)/20
+  AC +(level/2)+5
+  Performs no extra martial art attacks when attacking with a weapon, aside
+    from mutation-related ones
+  Enemies use Light Area instead of darkness spells
+  Accuracy/damage bonuses on equipment are only half as effective
+  Thrown weapons are less likely to break
+  Can carry 2/3 of normal weight compared to other classes
+  Using Staves/Scrolls of Darknes doesn't make you blind
+
+Keine - 'A very unusual close combat class. They can fight in the dark
+without requiring a light source. While in the dark, enemies are less likely
+to notice them, allowing them to deliver devastating sneak attacks. Also,
+when using martial art combat or short blades, they might occasionally hit
+the enemy in a vital spot, dealing extreme damage in a single strike. This
+strike multiplies total damage you deal, potentially letting you deal
+absurd amounts of damage. If you can't find a good weapon, fighting with
+martial arts works well, too. Your barehanded attacks are weak in early game,
+but they're going to be stronger compared to weaker weapons by the endgame.
+
+They're also good at throwing. If you buy a lot of daggers/knives in early
+game, you'll be able to defeat most of the enemies from distance. If you
+happen to find an excellent artifact suitable for throwing, you'll deal a lot
+of damage.
+
+While they have excellent resistances, their armor restrictions are very
+severe, and their HP is low. Since you'll probably have to explore without
+good defense, you have to be very careful and don't get into fights you can't
+win.'
+
+
+
+***** <Card-Trader>
+--- Card Trader ---
+Str: -1  Int: 1 Wis:0 Dex: 1 Con: -1 Chr: 3
+Dsm: 30(10) MDev: 32(16) MProt: 30(10)  Stl: 2(0) Srh: 27(3)
+Fighting: 48(16) Shooting: 30(10)
+Hit Dice: +1
+XP Penalty: 30
+Score: 80%
+Base max amount of blows: 4
+MP: C
+Follower cost coefficient: 75
+
+Magic realm aptitude:
+  Can study one realm
+  Aptitude C for all realms
+
+Skill aptitude:
+  Martial Arts  D    Shields      D      Riding      E       Dual-Wielding E
+  Throwing      C    Short Blades C      Long Blades C       Katanas       D
+  Blunt Weapons C    Staves       C      Axes        D       Spears        D
+  Polearms      D    Bows         D      Crossbows   D       Guns          C
+
+Class special abilities:
+  Can carry cards around in a card case
+  Identify (20)
+  Buy Cards (30)
+
+Resistances/etc:
+  None
+
+Other:
+  Can use card trading/gambling facilities
+
+Keine - 'Recently, new magic items called 'ability cards' have been going
+around. Holding those cards lets you use abilities similar to those of
+well-known humans and youkai of Gensoukyou. Card trader buy up those cards,
+planning to make a lot of money.
+
+You can purchase cards from traders at Moriya Shrine and False Heaven Shelf,
+or you can directly buy them from humans and youkai who are holding them.
+Card traders aren't that greate at physical combat or using magic, but they
+can become astoundingly strong if they collect enough ability cards. However,
+card prices will keep on rising, so if you want to obtain a large amount, 
+you'll have to keep making money.'
+
+
+
+***** <Beekeeper>
+--- Beekeeper ---
+Str: 0  Int: 2 Wis: -1 Dex: 1 Con: 0 Chr: 1
+Dsm: 30(10) MDev: 36(12) MProt: 30(10)  Stl: 3(0) Srh: 24(3)
+Fighting: 48(18) Shooting: 40(12)
+Hit Dice: +3
+XP Penalty: 30
+Score: 85%
+Base max amount of blows: 4
+MP： C
+Follower cost coefficient: 40
+
+Magic realm aptitude:
+  Can study one realm
+  Aptitude C for all realms
+
+Skill aptitude:
+  Martial Arts  D    Shields      D      Riding      D       Dual-Wielding D
+  Throwing      C    Short Blades B      Long Blades D       Katanas       D
+  Blunt Weapons D    Staves       D      Axes        B       Spears        D
+  Polearms      D    Bows         D      Crossbows   D       Guns          E
+
+Class special abilities:
+  Learns abilities mainly related to detection and supply
+  replenishment
+
+Resistances/etc:
+  Sustain CON (20)
+  Poison resistance (30)
+
+Keine - 'There are bees in Forest of Magic that have been partially turned
+into youkai by the forest's mana. Beekeepers raise them and collect honey.
+They can refine it into mead or magical potions, and they can give their bees
+orders to fight or search for items. However, failing to communicate with them
+might cause the bees to attack you. High charisma makes the bees less likely
+to revolt. Eating honey recovers MP, but also poisons you and drains CON;
+at high enough levels, beekeepers will resist those effects.
+
+Their combat skills aren't that high, and they require multiple stats to
+function well, so early game will be tough. You can rely on abundant MP
+recovery items and fight with offensive magic, or you can rely on bees and
+fight in close combat.'
+
+
+
+***** <Outsider>
+--- Outsider ---
+Str: -3  Int: -3 Wis:-3 Dex: -3 Con: -3 Chr: -3
+Dsm: 10(10) MDev: 10(10) MProt: 10(10)  Stl: 1(1) Srh: 10(1)
+Fighting: 30(12) Shooting: 30(12)
+Hit Dice: +1
+XP Penalty: 30
+Score: 300%
+Base max amount of blows: 3
+MP: E
+Follower cost coefficient: 90
+
+Magic realm aptitude:
+  Cannot use
+
+Skill aptitude:
+  Martial Arts  D    Shields      D      Riding      D       Dual-Wielding D
+  Throwing      D    Short Blades D      Long Blades D       Katanas       D
+  Blunt Weapons D    Staves       D      Axes        D       Spears        D
+  Polearms      D    Bows         D      Crossbows   D       Guns          D
+
+Class special abilities:
+　None
+
+Resistances/etc:
+　None
+
+Other:
+  Always starts out as a human
+  Starts out with 0 money
+  Only has a smartphone in inventory, without food or torches
+  Can leave to Outside World from Hakurei Shrine, which counts as clearing
+    the game (retiring)
+
+Keine - 'Ordinary people from Outside World that were spirited away into
+Gensoukyou. They're as powerless as they look. Reaching Hakurei Shrine
+safely would be good enough, but there's no end to reckless people trying
+to investigate this incident.'
+
+
+
+***** <ThePersonalities>
+=== Personalities ===
+
+Keine - 'Next up is information on personalities.
+Some of them are weird and can't really be called a 'personality', but
+don't think about it too much.'
+
+***** <Ordinary>
+--- Ordinary ---
+Str: 0  Int: 0 Wis:0 Dex: 0 Con: 0 Chr: 0
+Dsm: 0 MDev: 0 MProt: 0  Stl: 0 Srh: 0
+Fighting: 0 Shooting: 0
+Hit Dice modifier: 0
+Other:
+  None
+
+***** <Mighty>
+--- Mighty ---
+Str: 2  Int: -2 Wis:-1 Dex: 0 Con: 1 Chr: 0
+Dsm: -5 MDev: -5 MProt: -3  Stl: -1 Srh: -2
+Fighting: 10 Shooting: 0
+Hit Dice modifier: 1
+Other:
+  Spell/etc failute rate +1%
+
+***** <Shrewd>
+--- Shrewd/Clever ---
+Str: -2  Int: 2 Wis:1 Dex: 0 Con: -1 Chr: 0
+Dsm: 3 MDev: 8 MProt: 2  Stl: 0 Srh: 3
+Fighting: -8 Shooting: -5
+Hit Dice modifier: -1
+Other:
+  Spell/etc failure rate -3%
+
+***** <Easygoing>
+--- Easygoing ---
+Str: 0  Int: -1 Wis:2 Dex: -1 Con: 1 Chr: 1
+Dsm: -5 MDev: 2 MProt: 6  Stl: -1 Srh: 0
+Fighting: -3 Shooting: -6
+Hit Dice modifier: 0
+Other:
+  None
+    
+***** <Nimble>
+--- Nimble ---
+Str: -1  Int: 1 Wis:-1 Dex: 2 Con: -1 Chr: -1
+Dsm: 7 MDev: 2 MProt: -1  Stl: 1 Srh: 5
+Fighting: 0 Shooting: 10
+Hit Dice modifier: 0
+Other:
+  None
+
+***** <Fearless>
+--- Fearless/Tomboy ---
+Str: 2  Int: 1 Wis:1 Dex: -1 Con: -1 Chr: 0
+Dsm: -5 MDev: 5 MProt: -2  Stl: 0 Srh: 2
+Fighting: 10 Shooting: 10
+Hit Dice modifier: -1
+Other:
+  None
+    
+***** <Combat>
+--- Trigger-Happy ---
+Str: 0  Int: 4 Wis:4 Dex: 2 Con: -4 Chr: 5
+Dsm: -10 MDev: 10 MProt: -10  Stl: -3 Srh: -5
+Fighting: 5 Shooting: 50
+Hit Dice modifier: -3
+Other:
+  Spell/etc failure rate -5%
+  Amount of shots per turn increased by level/50
+  Throwing consumes 20% less energy
+  Shooting with machines as an Engineer consumes 20% less energy
+  Guns reload somewhat faster
+
+***** <Elegant>
+--- Dandy/Elegant ---
+Str: -1  Int: 1 Wis:0 Dex: 1 Con: -1 Chr: 3
+Dsm: 3 MDev: 3 MProt: 0  Stl: -1 Srh: 3
+Fighting: -5 Shooting: 5
+Hit Dice modifier: 0
+Other:
+  Carry weight limit -20%
+
+***** <Cannonballer>
+--- Cannonballer ---
+Str: 1  Int: 1 Wis:1 Dex: 1 Con: 1 Chr: 3
+Dsm: 10 MDev: 5 MProt: 3  Stl: 0 Srh: 2
+Fighting: 10 Shooting: 10
+Hit Dice modifier: 0
+Other:
+  Always aggravates monsters
+  Receives score bonus depending on amount of in-game days spent when you
+    finish the game after *winning*
+    
+***** <Lucky>
+--- Lucky ---
+Str: -2  Int: -2 Wis:-2 Dex: -2 Con: -2 Chr: 2
+Dsm: 10 MDev: 7 MProt: 3  Stl: 2 Srh: 10
+Fighting: 15 Shooting: 15
+Hit Dice modifier: 0
+Other:
+  Always has the 'White Aura' mutation'
+    (has beneficial effects on item generation/etc)
+
+***** <Patient>
+--- Patient ---
+Str: -1  Int: -1 Wis:1 Dex: -2 Con: 2 Chr: 0
+Dsm: -5 MDev: -3 MProt: 3  Stl: 1 Srh: 0
+Fighting: -6 Shooting: -6
+Hit Dice modifier: 1
+Other:
+  Spell/etc failure rate +1%
+  
+***** <Munchkin>
+--- Munchkin ---
+Str: 10  Int: 10 Wis:10 Dex: 10 Con: 10 Chr: 10
+Dsm: 20 MDev: 40 MProt: 30  Stl: 10 Srh: 40
+Fighting: 80 Shooting: 80
+Hit Dice modifier: 15
+Other:
+  Blindness resistance
+  Confusion resistance
+  Constant light
+  Speed +5+(level/10)
+  Starts out with $10000000
+  Always knows level layout and item locations
+  Good items appear more often
+  Picked up items are immediately identified
+  Score is 1%
+
+***** <Berserk>
+--- Berserk ---
+Str: 5  Int: -5 Wis:-5 Dex: 5 Con: 5 Chr: -5
+Dsm: -50 MDev: -50 MProt: -50  Stl: -10 Srh: -50
+Fighting: 150 Shooting: 0
+Hit Dice modifier: 10
+Other:
+  Always berserk
+  Higher normal limit for strength/constitution
+  Sustain strength/dexterity/constitution, regeneration, free action,
+    fear resistance, immune to insanity, cannot be turned into statue
+  Gets swift movement and stun resistance on higher levels
+  Cannot get knocked out by drinking too much
+  Easily bashes down doors
+  Gains bonuses to speed, fighting skill, amount of blows as you level up
+  Always fails to use scrolls/staves/wands/rods or activate items
+    (some classes have exceptions)
+  Spells are more powerful, but their failure rate has a lower limit, and
+   failing to cast a spell might cause bad things to happen
+  Has 'Recall' as racial power
+  Cannot use item cards in Extra mode
+  Cannot push past friendly/follower monsters, attacks them instead
+  Terror Mask gets generated without Ancient Foul Curse/etc
+  Melee attacks have 50% to pierce invulnerability
+  Has only 1/7 chance to get teleported away by an enemy *Destruction* spell
+  Score is halved
+
+

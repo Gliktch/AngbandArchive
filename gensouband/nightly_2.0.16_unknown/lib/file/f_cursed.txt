@@ -1,0 +1,81 @@
+N:*:Default
+#呪いの
+of Curses
+#悲運の
+of Misfortune
+#非業の
+of Powerlessness
+#血塗られた
+(Bloodstained)
+#無慈悲なる
+'No Mercy'
+#せっかくだから
+'Because it's time'
+#『クリムヅン』
+'Crimzun'
+#『やりやがったな！』
+'Now you've done it!'
+#『お前は何を言っているんだ』
+'The hell are you saying?'
+#『みんな死ぬしかないじゃない』
+'Everyone Has to Die'
+#『捨丸のやつ要らぬことを』
+'Sutemaru is fooling around'
+#『バイドシステムα』
+'Bydo System Alpha'
+#『ムスタディオをやっつけろ』
+'Defeat Mustadio'
+#『モルダーあなた疲れてるのよ』
+'Mulder, you're tired'
+#セキュリティクリアランス違反の
+of Security Unclearance
+#『y=ｰ( ﾟдﾟ)･∵.ﾀｰﾝ』
+#R&D部の
+of R&D
+#大月先生の
+of Mr. Ootsuki the science teacher
+#ネビル・シュートの
+of Nevil Shoot
+#なんか事件の香りがする
+(Smells Like an Incident)
+#天邪鬼の
+of Amanojaku
+#『ウィドウ・メーカー』
+'Widowmaker'
+#ルークとヤンの
+of Luke and Jan
+#魔王ザミエルの
+of Samiel
+#天若日子の
+of Ame-no-waka
+#杉谷善住坊の
+of Sugitani Zenjubou
+#堕落の都市ソドムの
+of the fallen city of Sodom
+#『グレムリン』
+'Gremlin'
+#『TATSUTIN』
+'TATSUTIN'
+#『九連放銃』
+#Mahjong pun, the equivalent of "hit me" uses literal kanji for shooting a gun
+'Nine-Card Misfire'
+#上九一色村の
+of Kamikuishiki Village
+#ウィルバー・ウェイトリーの
+of Wilbur Waitley
+#『ロシアンルーレット』
+'Russian Roulette'
+#スーサイド・
+(Suicidal)
+#ジャミーズの
+of Jamming
+#『なんじゃこりゃぁ！？』
+'What is this!?'
+#『ギャフンEND』
+'Gyafun END'
+#『ボスケテ』
+'Boskete'
+#『ラッキー弾幕占い』
+'Lucky Danmaku Divination'
+#『裏切りの後方射撃』
+'Treacherous Shot in the Back'

@@ -1,0 +1,84 @@
+Symbols On Your Map
+===================
+
+Symbols on your map can be broken down into three categories: Features of
+the dungeon such as walls, floor, doors, and traps; Objects which can be
+picked up such as treasure, weapons, magical devices, etc; and creatures
+which may or may not move about the dungeon, but are mostly harmful to your
+character's well being.
+
+Some symbols are used to represent more than one type of entity, and some
+symbols are used to represent entities in more than one category. The "@"
+symbol (by default) is used to represent the character.
+
+It will not be necessary to remember all of the symbols and their meanings.
+The "pipe" command ('|') will identify any character appearing on your
+map (see 'commands.txt').
+
+Note that you can use a "user pref file" to change any of these symbols to
+something you are more comfortable with.
+
+
+
+Features that do not block line of sight
+----------------------------------------
+
+.  A floor space                 '  An open door
+.  A trap (hidden)               '  A broken door
+^  A trap (known)                <  A staircase up
+;  A glyph of warding            >  A staircase down
+   A chasm
+
+
+Features that block line of sight
+---------------------------------
+
+#  A secret door                 #  A wall
++  A closed door                 :  A pile of rubble
+
+
+Objects
+-------
+
+!  A potion (or flask)           /  A pole-arm
+?  A horn                        |  An edged weapon
+,  A herb (or food)              \  A hafted weapon
+~  Lights, Metal, Chests, etc    }  A bow
+_  A staff                       {  An arrow
+=  A ring                        (  Soft armour
+"  An amulet                     [  Hard armour
+)  A shield                      ]  Misc. armour
+$  Multiple items
+
+
+Monsters
+--------
+
+a  -                          A  -
+b  Bat/Bird                   B  -
+c  -                          C  Wolf
+d  Dragon                     D  Great Dragon
+e  -                          E  -
+f  Cat                        F  -
+g  -                          G  Giant
+h  -                          H  Horror
+i  -                          I  Insect
+j  -                          J  -
+k  -                          K  -
+l  -                          L  -
+m  Spider hatchling           M  Spider
+n  -                          N  Nameless Thing
+o  Orc                        O  -
+p  -                          P  -
+q  -                          Q  -
+r  -                          R  Rauko
+s  Serpent                    S  Ancient Serpent
+t  -                          T  Troll
+u  -                          U  -
+v  Vampire                    V  Valar
+w  Whispering Shadow          W  Wight/Wraith
+x  -                          X  -
+y  -                          Y  -
+z  -                          Z  -
+&  Thorn                      @  Person
+|  Deathblade

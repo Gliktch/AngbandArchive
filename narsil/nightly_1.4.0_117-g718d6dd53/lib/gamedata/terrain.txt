@@ -1,0 +1,342 @@
+# File: terrain.txt
+#
+# This file is used to create the "terrain feature" information for Sil.
+#
+# Do not modify this file unless you know exactly what you are doing,
+# unless you wish to risk possible system crashes and broken savefiles.
+#
+# Note that, unlike other edit files, modifying this file casually is likely
+# to be a BAD IDEA (unless you intend to make actual programming changes)
+# for two reasons:
+
+#   1. Terrain features do not appear unless there is specific code in the
+#   level generation algorithms to include them, so adding new terrain
+#   features to this file will by itself have no effect.
+
+#   2. Changing the properties (especially flags but also mimicry and extra
+#   info) can significantly change game behavior, and any changes will likely
+#   mess up a game which was started before the changes took place and is
+#   reloaded when the changes are in effect.
+
+# You may more freely alter the graphics, names, messages, and descriptions.
+# Note that terrain feature zero contains the "darkness" picture.
+
+# === Understanding terrain.txt ===
+#
+# code : code name from list-terrain.h
+# name : terrain printable name
+# graphics : symbol : color
+# mimic : code name for the feature to mimic
+# priority : display priority on mini-map
+# flags : terrain flags
+# info : supply additional information when diggable, a forge, or pit
+# dig-msg : message for successfully digging
+# fail-msg : message for not having an appropriate digger
+# str-msg : message for when the player is not strong enough to dig
+# walk-msg : warning message - waliking
+# run-msg : warning message - running
+# hurt-msg : damage message
+# die-msg : death message
+# confused-msg : message for confused monster move into non-passable terrain
+# look-prefix : used before the name in the result from looking
+# look-in-preposition : preprosition when looking at one's own position
+
+# 'code' indicates the start of an entry.  The value used for the code
+# must match the argument to one of the FEAT() macros in list-terrain.h.
+#
+# 'name' specifies the printable name for the terrain.  As this is displayed
+# in the status bar and various menus, a short name is preferable.
+#
+# 'graphics' is for graphics - symbol and color. There are 27 colors:
+#
+# D - Dark Gray    w - White          s - Gray          o - Orange
+# r - Red          g - Green          b - Blue          u - Umber
+# W - Light Gray   P - Light Purple   y - Yellow        R - Light Red
+# G - Light Green  B - Light Blue     U - Light Umber   p - Purple
+# v - Violet       t - Teal           m - Mud           Y - Light Yellow
+# i - Magenta-Pink T - Light Teal     V - Light Violet  I - Light Pink
+# M - Mustard      z - Blue Slate     Z - Deep Light Blue
+#
+# 'mimic' is the code name (one of the arguments to the FEAT() macros in
+# list-terrain.h) of a feature to mimic; some features look like another
+# feature until they are discovered by the player.
+#
+# 'priority' is for display priority on the minimap, where only a selection
+# of grids are chosen.  This enables the minimap to display the information
+# most likely to be useful to the player.
+#
+# 'flags' is for terrain flags.
+#
+# 'info' is for other terrain information.  The first value is the bonus to
+# give to forging when on the terrain.  The second value is the difficulty
+# to dig out the terrain.  The third value is the difficulty for the player
+# to get out of the terrain (i.e. to exit a pit).  When an entry does not
+# have a 'info' line, all those values default to be zero.
+#
+# 'dig-msg' sets the message displayed when the terrain is dug out.  It is
+# only relevant for diggable terrain (no PERMANENT flag and meets the
+# criteria set by square_is_diggable() in cave-square.c).
+#
+# 'fail-msg' sets the message displayed when the player has a digger but
+# it is not good enough to dig out the terrain.  It is only relevant for
+# diggable terrain (see 'dig-msg' above).
+#
+# 'str-msg' sets the message displayed when the player has a digger that
+# is good enough to dig out the terrain but the player is not strong enough
+# to do the digging.  It is only relevant for diggable terrain (see 'dig-msg'
+# above.
+#
+# 'walk-msg', 'run-msg', 'hurt-msg', 'die-msg', and 'confused-msg' are parsed
+# but changes to the code would be needed to have them displayed to the
+# player when appropriate.
+#
+# 'look-prefix' is printed before the name in the result of looking at the
+# terrain.  If not set, the default is to use 'an' if the name starts with
+# a vowel or 'a' if the name does not start with a vowel.
+#
+# 'look-in-preposition' is the preposition that will be used when printing
+# the result for an observer looking at the observer's grid:  'You are
+# <preposition> <prefix> <name>'.  If not set, the default is to use 'on'.
+#
+# 'desc' is for description. As many desc: lines may be used as are neeeded
+# to describe the terrain. Note that lines will need spaces at their
+# ends or the beginning of the next line to prevent words from running
+# together.
+
+# 0x00 --> <darkness>
+
+code:NONE
+name:unknown grid
+graphics: :w
+priority:2
+
+
+# 0x01 --> open floor
+
+code:FLOOR
+name:open floor
+graphics:.:W
+priority:5
+flags:LOS | PROJECT | PASSABLE | FLOOR | OBJECT | EASY | TRAP | TORCH
+desc:An open floor or bare ground.  Can be walked across by anything, and can
+desc: hold traps or items.  Does not break line of sight.
+
+# # 0x20 --> locked door (power 0) -- aka a normal door
+
+code:CLOSED
+name:closed door
+graphics:+:U
+priority:17
+flags:DOOR_ANY | DOOR_CLOSED | INTERESTING
+confused-msg:bangs into a door
+desc:Doors may be locked; getting through them may not be easy.  Your
+desc: disarming skill makes all the difference to your ability to handle locks,
+desc: but you can also take a pickaxe to them, or blast them open
+desc: with magic.  Monsters are also slowed down by doors; you can earn yourself
+desc: valuable time by locking them.
+
+# 0x04 --> open door
+
+code:OPEN
+name:open door
+graphics:':U
+priority:15
+flags:LOS | PROJECT | PASSABLE | DOOR_ANY | INTERESTING | CLOSABLE | EASY
+look-in-preposition:in
+desc:A door that is already open.  Player, monster, spell and missile can pass
+desc: through as long as it stays open.
+
+# 0x05 --> broken door
+
+code:BROKEN
+name:broken door
+graphics:.:U
+priority:15
+flags:LOS | PROJECT | PASSABLE | DOOR_ANY | INTERESTING | EASY
+look-in-preposition:in
+desc:A door so broken that it cannot be shut.
+
+# 0x50 --> up stairs (perm)
+
+code:LESS
+name:up staircase
+graphics:<:W
+priority:25
+flags:LOS | PROJECT | PASSABLE | PERMANENT | INTERESTING | STAIR | UPSTAIR
+flags:EASY | TORCH
+desc:A staircase up to a shallower part of the dungeon.
+
+# 0x51 --> down stairs (perm)
+
+code:MORE
+name:down staircase
+graphics:>:W
+priority:25
+flags:LOS | PROJECT | PASSABLE | PERMANENT | INTERESTING | STAIR | DOWNSTAIR
+flags:EASY | TORCH
+desc:A staircase down to a deeper part of the dungeon.
+
+# 0x52 --> up shaft (perm)
+
+code:LESS_SHAFT
+name:up shaft
+graphics:<:D
+priority:25
+flags:LOS | PROJECT | PASSABLE | PERMANENT | INTERESTING | SHAFT | UPSTAIR
+flags:EASY | TORCH
+desc:A shaft up to a shallower part of the dungeon.
+
+# 0x53 --> down shaft (perm)
+
+code:MORE_SHAFT
+name:down shaft
+graphics:>:D
+priority:25
+flags:LOS | PROJECT | PASSABLE | PERMANENT | INTERESTING | SHAFT | DOWNSTAIR
+flags:EASY | TORCH
+desc:A shaft down to a deeper part of the dungeon.
+
+# 0x02 --> unused
+
+code:CHASM
+name:chasm
+graphics:%:D
+priority:20
+flags:LOS | PROJECT | PASSABLE | CHASM | INTERESTING
+desc:Empty space - only flying creatures can pass across without falling.  All 
+desc:spells and missiles can pass through.
+walk-msg:It's a cliff! Really step off it?
+run-msg:You have come to a cliff.  Step off it?
+hurt-msg:You fall into darkness!
+die-msg:falling off a precipice
+
+# 0x30 --> secret door
+
+code:SECRET
+name:secret door
+graphics:#:z
+mimic:GRANITE
+priority:10
+info:0:3:0
+flags:ROCK | DOOR_ANY | DOOR_CLOSED | GRANITE | TORCH
+confused-msg:bashes into a wall
+dig-msg:You uncover a secret door.
+fail-msg:You are unable to break the granite with your {name}.
+str-msg:You are not strong enough to break the granite.
+desc:A door that appears like a granite wall to untrained eyes.
+
+# 0x31 --> pile of rubble
+
+code:RUBBLE
+name:pile of rubble
+graphics:::s
+priority:13
+flags:ROCK | NO_SCENT | NO_FLOW | INTERESTING | TORCH
+info:0:1:0
+confused-msg:bumps into some rocks
+dig-msg:You clear the rubble.
+fail-msg:You are unable to shift the rubble with your {name}.
+str-msg:You are not strong enough to shift the rubble.
+desc:Ends LOS, stops missiles, bolts, and beams.  May dissolve or be tunnelled
+desc: to normal floor.
+
+# 0x33 --> quartz vein
+
+code:QUARTZ
+name:quartz vein
+graphics:%:w
+priority:11
+flags:WALL | ROCK | NO_SCENT | NO_FLOW | QUARTZ | TORCH
+info:0:2:0
+confused-msg:bashes into a wall
+dig-msg:You shatter the quartz.
+fail-msg:You are unable to break the quartz with your {name}.
+str-msg:You are not strong enough to break the quartz.
+desc:A seam of hardish rock.  It can be removed by digging or magic, and passed
+desc: through by immaterial monsters.  It stops any spells, missiles or line of
+desc: sight.
+
+# 0x38 --> granite wall -- basic
+
+code:GRANITE
+name:granite wall
+graphics:#:W
+priority:20
+flags:WALL | ROCK | GRANITE | NO_SCENT | NO_FLOW | TORCH
+info:0:3:0
+confused-msg:bashes into a wall
+dig-msg:You break through the granite.
+fail-msg:You are unable to break the granite with your {name}.
+str-msg:You are not strong enough to break the granite.
+desc:A seam of hard rock.  It can be removed by digging or magic, and passed
+desc: through by immaterial monsters.  It stops any spells, missiles or line of
+desc: sight.
+
+# 0x3F --> granite wall -- permanent
+
+code:PERM
+name:permanent wall
+graphics:#:M
+mimic:GRANITE
+priority:20
+flags:WALL | ROCK | GRANITE | PERMANENT | NO_SCENT | NO_FLOW | TORCH
+confused-msg:bashes into a wall
+desc:You can dig through most walls but these are impenetrable.  The dungeon is
+desc: surrounded by these kinds of walls and some special rooms are made of them.
+
+# 0x40 --> forge -- 0 uses
+
+code:FORGE
+name:forge
+graphics:0:s
+priority:20
+info:0:0:0
+flags:LOS | PROJECT | PASSABLE | FORGE | EASY | TORCH | INTERESTING
+desc:A forge for smithing objects.
+look-in-preposition:in
+
+# 0x46 --> good forge -- 0 uses
+
+code:FORGE_GOOD
+name:enchanted forge
+graphics:0:Y
+priority:20
+info:3:0:0
+flags:LOS | PROJECT | PASSABLE | FORGE | EASY | TORCH | INTERESTING
+desc:An enchanted forge for smithing objects.
+look-in-preposition:in
+
+# 0x4C --> unique forge -- 0 uses
+
+code:FORGE_UNIQUE
+name:forge 'Orodruth'
+graphics:0:D
+priority:20
+info:7:0:0
+flags:LOS | PROJECT | PASSABLE | FORGE | EASY | TORCH | INTERESTING
+desc:A uniquely enchanted forge for smithing objects.
+look-prefix:the
+look-in-preposition:in
+
+# # 0x11 --> visible trap -- open pit
+
+code:PIT
+name:pit
+graphics:^:s
+priority:20
+flags:LOS | PROJECT | PASSABLE | PIT | EASY | TORCH | TRAP
+info:0:0:10
+walk-msg:Are you sure you want to step in the pit? 
+run-msg:A pit blocks your path.  Step into it? 
+
+# # 0x12 --> visible trap -- spiked pit
+
+code:SPIKED_PIT
+name:spiked pit
+graphics:^:W
+priority:20
+flags:LOS | PROJECT | PASSABLE | PIT | EASY | TORCH | TRAP
+info:0:0:15
+walk-msg:Are you sure you want to step in the spiked pit? 
+run-msg:A spiked pit blocks your path.  Step into it? 
+
